@@ -54,19 +54,21 @@
   };
 </script>
 
-  <meta name="description" content="Hello, my name is Yuxuan Liu. I am currently a second-year Engineering student from the University of Cambridge. I am a logical person who holds enthusiasm about discovering new things. I am also inte">
-<meta name="keywords" content="Engineering, Python, blog, Cambridge">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+  <meta name="description" content="import numpy as np  The data type in numpy is called array  a = np.array([1,2,3]) to create a new array  a=np.arange(1,12,3) from 1 to 11 with a step of 3   i.e. [1,4,7,10]  Super useful in matplotli">
+<meta name="keywords" content="numpy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Numpy basics">
+<meta property="og:url" content="http://yoursite.com/2019/09/09/numpy_basics/index.html">
 <meta property="og:site_name" content="A critical thinker">
-<meta property="og:description" content="Hello, my name is Yuxuan Liu. I am currently a second-year Engineering student from the University of Cambridge. I am a logical person who holds enthusiasm about discovering new things. I am also inte">
+<meta property="og:description" content="import numpy as np  The data type in numpy is called array  a = np.array([1,2,3]) to create a new array  a=np.arange(1,12,3) from 1 to 11 with a step of 3   i.e. [1,4,7,10]  Super useful in matplotli">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-08T15:37:27.944Z">
+<meta property="og:image" content="file:///C:/Users/Oscar/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png">
+<meta property="og:updated_time" content="2019-09-08T16:01:59.470Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="Hello, my name is Yuxuan Liu. I am currently a second-year Engineering student from the University of Cambridge. I am a logical person who holds enthusiasm about discovering new things. I am also inte">
-  <link rel="canonical" href="http://yoursite.com/about/">
+<meta name="twitter:title" content="Numpy basics">
+<meta name="twitter:description" content="import numpy as np  The data type in numpy is called array  a = np.array([1,2,3]) to create a new array  a=np.arange(1,12,3) from 1 to 11 with a step of 3   i.e. [1,4,7,10]  Super useful in matplotli">
+<meta name="twitter:image" content="file:///C:/Users/Oscar/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png">
+  <link rel="canonical" href="http://yoursite.com/2019/09/09/numpy_basics/">
 
 
 <script id="page-configurations">
@@ -74,13 +76,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>about | A critical thinker</title>
+  <title>Numpy basics | A critical thinker</title>
   
 
 
@@ -237,65 +239,182 @@
         <div class="content-wrap">
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
           <div id="content" class="content page-post-detail">
             
 
   <div id="posts" class="posts-expand">
     
-    
-    
-    <div class="post-block page">
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/numpy_basics/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuxuan Liu">
+      <meta itemprop="description" content="Yuxuan Liu personal blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A critical thinker">
+    </span>
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">about
-
-</h1>
-
-<div class="post-meta">
-  
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
-          <p>Hello, my name is Yuxuan Liu. I am currently a second-year Engineering student from the University of Cambridge.</p>
-<p>I am a logical person who holds enthusiasm about discovering new things. I am also interested in using numerical method to solve problems in the real world. It is always excited to make up a bold solution to a problem and verify its feasibility using Mathematical and Engineering knowledge. </p>
-<p>I was willing to become a civil engineer before entering the university but I have expanded my interests to programming. It is a super powerful tool to solve problems in various fields. I am currently using Python as my primary language as it is so handy to use with the help of those powerful packages. I am currently playing around with <strong>scikit-learn and pandas</strong> gaining more experience in machine learning and data analysis.</p>
+          <h1 class="post-title" itemprop="name headline">Numpy basics
 
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 08-09-2019 23:49:15 / Modified: 17:01:59" itemprop="dateCreated datePublished" datetime="2019-09-08T23:49:15+01:00">08-09-2019</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-      
-      
+        <ol>
+<li><p><code>import numpy as np</code></p>
+</li>
+<li><p>The data type in numpy is called <strong>array</strong></p>
+</li>
+<li><p><code>a = np.array([1,2,3])</code> to create a new array</p>
+</li>
+<li><p><code>a=np.arange(1,12,3)</code> from 1 to 11 with a step of 3   i.e. <code>[1,4,7,10]</code>  Super useful in <strong>matplotlib</strong></p>
+<p>The starting value will be included for sure while the ending value may not be included.</p>
+</li>
+<li><p><code>a=np.linspace(1,13,5)</code> create an array with 5 values and the step between them will be determined accordingly i.e.<code>[1,4,7,10,13]</code> Both, beginning and ending values will be included.</p>
+</li>
+<li><p><code>a = a.reshape(3,2)</code> change the dimension of an existing array. It means 3 rows and 2 columns here(2d array). </p>
+</li>
+</ol>
+<p><img src="file:///C:/Users/Oscar/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png" alt="img"></p>
+<p>​    We may also create a multi-dimensional array manually using <code>a = np.array([(1,2),(3,4),(5,6)])</code></p>
+<a id="more"></a>
+
+<ol start="7">
+<li><p><code>print(a.shape)</code> will give us the shape of the array.</p>
+</li>
+<li><p><code>print(a.size)</code> will give us the length of the array kinda similar to <code>len(list1)</code></p>
+</li>
+<li><p><code>print(a.dtype)</code> will give us the datatype of elements inside the array.</p>
+</li>
+<li><p><code>print(a&gt;1)</code> to test the size of the array. This will automatically compare all elements inside the array with 1 and return <code>True</code> or <code>False</code> for each element.</p>
+</li>
+<li><p><code>a = a*3</code> will multiply every element in array by 3. Other Math operations can also be applied this way.</p>
+</li>
+<li><p><code>a = np.zeros((3,4))</code> This creates a 3*4 array with zeros. Similarly, we have <code>a = np.ones((1,10))</code></p>
+</li>
+<li><p><code>a = np.random.random((3,4))</code> create a 3*4 array with random decimal values under 1.</p>
+</li>
+<li><p><code>a = np.random.randint(0,10,5)</code> create an array with 5 elements random integers ranging from 0-10</p>
+</li>
+<li><ul>
+<li><code>print(a.sum())</code> will sum up all elements inside the array.</li>
+<li><code>print(a.sum(axis=1))</code> sum up elements in each row (This axis trick also works for <code>min</code>, <code>max</code>, <code>mean</code> and <code>std</code> below)</li>
+<li><code>print(a.sum(axis=0))</code> sum up elements in each column</li>
+</ul>
+</li>
+<li><p><code>print(a.min())</code> will give the minimum element.</p>
+<p><code>print(a.max())</code> will give the maximum element.</p>
+</li>
+<li><p><code>print(a.mean())</code> will give the mean of the array.</p>
+</li>
+<li><p><code>print(a.std())</code> will give the standard deviation of the array.</p>
+</li>
+<li><p><code>value = np.random.choice(a)</code> will help you choose a random value from the array <strong>a</strong>.</p>
+</li>
+<li><p><code>print(a.ndim)</code> to find the dimension of the array.</p>
+</li>
+<li><p>slicing of the array <code>a = np.array([(1,2,3),(4,5,6)])</code></p>
+<p>If we want <strong>3</strong> , <code>print(a[0,2])</code></p>
+<p>If we want <strong>3 &amp; 6</strong>, use <code>print(a[0:,2])</code> This is equivalent to <code>print(a[0:2,2])</code></p>
+</li>
+<li><p>Putting two array together. We can do it in two directions vertically &amp; horizontally</p>
+<ul>
+<li><p>Vertically:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)])</span><br><span class="line">b = np.array([(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)])</span><br><span class="line">c = np.vstack((a,b))</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Horizontally:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)])</span><br><span class="line">b = np.array([(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)])</span><br><span class="line">c = np.hstack((a,b))</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>change a multi-dimensional array to one dimension</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)])</span><br><span class="line">a = a.ravel()</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<p>We get <code>[1,2,3,4,5,6]</code></p>
+</li>
+<li><p>print a sin function using both <strong>numpy</strong> and <strong>matplotlib</strong>:</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">x = np.arange(<span class="number">0</span>,<span class="number">3</span>*np.pi,<span class="number">0.1</span>)</span><br><span class="line">y = np.sin(x)</span><br><span class="line">plt.plot(x,y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
     </div>
-    
 
     
     
     
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/numpy/" rel="tag"># numpy</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2019/09/09/python_basics/" rel="next" title="Python basics">
+                <i class="fa fa-chevron-left"></i> Python basics
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/2019/09/09/pymysql_demo/" rel="prev" title="Quick demo for Pymysql">
+                Quick demo for Pymysql <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
   </div>
 
 
@@ -513,10 +632,9 @@
 
 
   
-    <script src="/js/scrollspy.js?v=7.3.0"></script>
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
 <script src="/js/post-details.js?v=7.3.0"></script>
 
-  
 
 </body>
 </html>

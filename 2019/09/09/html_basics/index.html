@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/Header.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Header.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Header.png?v=7.3.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+  <meta name="description" content="HTML files end up with .html 1. TagsDOCTYPE1&amp;lt;!DOCTYPE html&amp;gt;  The tag as shown above will tell the internet explorer that we are writing an html file. For this tag, we don’t need an ending tag an">
+<meta name="keywords" content="HTML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML basics">
+<meta property="og:url" content="http://yoursite.com/2019/09/09/html_basics/index.html">
+<meta property="og:site_name" content="A critical thinker">
+<meta property="og:description" content="HTML files end up with .html 1. TagsDOCTYPE1&amp;lt;!DOCTYPE html&amp;gt;  The tag as shown above will tell the internet explorer that we are writing an html file. For this tag, we don’t need an ending tag an">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="c:%5CUsers%5COscar%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565290093941.png">
+<meta property="og:updated_time" content="2019-09-08T16:01:36.057Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML basics">
+<meta name="twitter:description" content="HTML files end up with .html 1. TagsDOCTYPE1&amp;lt;!DOCTYPE html&amp;gt;  The tag as shown above will tell the internet explorer that we are writing an html file. For this tag, we don’t need an ending tag an">
+<meta name="twitter:image" content="c:%5CUsers%5COscar%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565290093941.png">
+  <link rel="canonical" href="http://yoursite.com/2019/09/09/html_basics/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>HTML basics | A critical thinker</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">A critical thinker</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Keep discovering</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+      </li>
+    
+  </ul>
+
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+</div>
+    </header>
+
+    
+
+  <a href="https://github.com/oscarliu99" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/html_basics/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuxuan Liu">
+      <meta itemprop="description" content="Yuxuan Liu personal blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A critical thinker">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">HTML basics
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 08-09-2019 23:56:59 / Modified: 17:01:36" itemprop="dateCreated datePublished" datetime="2019-09-08T23:56:59+01:00">08-09-2019</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>HTML files end up with .html</p>
+<h2 id="1-Tags"><a href="#1-Tags" class="headerlink" title="1. Tags"></a>1. Tags</h2><h3 id="DOCTYPE"><a href="#DOCTYPE" class="headerlink" title="DOCTYPE"></a>DOCTYPE</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>The tag as shown above will tell the internet explorer that we are writing an html file. For this tag, we don’t need an ending tag and for other tags(container tags) we need an ending tag for each starting tag.</p>
+<h3 id="html"><a href="#html" class="headerlink" title="html"></a>html</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Here are <code>html</code> tags with a starting tag and an ending tag. <code>/</code> is used to denote that it is an ending tag. This is the highest level tag in our website, other contents are under these tags.</p>
+<h3 id="head"><a href="#head" class="headerlink" title="head"></a>head</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Another type of tags are head tags. We can define the title, description of the document and also other information related to the document. It is like the settings of the html file.</p>
+<a id="more"></a>
+
+<h3 id="body"><a href="#body" class="headerlink" title="body"></a>body</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    Hello world</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>The <code>body</code> tags are like the meat and bone of the web page. This is the main part of the website. Normally way longer than the <code>head</code> tags. We can simply put a <code>Hello World</code> inside the body tag and Chrome will print it out for us.</p>
+<h3 id="Indent"><a href="#Indent" class="headerlink" title="Indent"></a>Indent</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Pay extra attention to the indents. <code>head</code> tags and <code>body</code> tags are both inside the <code>html</code> tags. <code>&lt;html&gt;</code> is like the parents while <code>&lt;head&gt;</code>&amp;<code>&lt;body&gt;</code> are like children ish.</p>
+<p><code>&lt;head&gt;</code> and<code>&lt;body&gt;</code> are sort of siblings as they both have one tab indent.</p>
+<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>The title of the website<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Inside <code>head</code> tags, we can put an extra tag called  <code>title</code> tags. We fill the title of the web page in the tags.</p>
+<h2 id="2-More-basic-tags-in-detail"><a href="#2-More-basic-tags-in-detail" class="headerlink" title="2. More basic tags in detail"></a>2. More basic tags in detail</h2><h3 id="Meta"><a href="#Meta" class="headerlink" title="Meta"></a>Meta</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>The title of the website<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span> = <span class="string">"description"</span> <span class="attr">content</span> = <span class="string">"This is the description"</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>This tag will give us some meta data, we can put the type of character encoding inside as above.</p>
+<p>Also, we can put a description inside the meta tag. So when people search our website on Google, this description will be used for reference. <code>meta</code> tags will be introduced in detail in later sections.</p>
+<h3 id="Heading"><a href="#Heading" class="headerlink" title="Heading"></a>Heading</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br><span class="line">        The fist header</span><br><span class="line">    <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span></span><br><span class="line">        THe second header</span><br><span class="line">    <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We can create a header using the code above, <code>&lt;h1&gt;</code> will give us the largest font size of the header while <code>&lt;h6&gt;</code> will give us the smallest font size available for a header.</p>
+<h3 id="Paragraph"><a href="#Paragraph" class="headerlink" title="Paragraph"></a>Paragraph</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        Put the contents of the paragraph inside</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We can create a paragraph using <code>&lt;p&gt;</code>. All paragraphs will format itself automatically. The order of paragraphs in the html file is simply the order shown on the webpage.</p>
+<h3 id="Bold-加粗"><a href="#Bold-加粗" class="headerlink" title="Bold(加粗)"></a>Bold(加粗)</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">b</span>&gt;</span>The contents you want to bold<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Whenever you want to bold certain contents, simply put it inside <code>&lt;b&gt;</code>.</p>
+<h3 id="Italic-斜体"><a href="#Italic-斜体" class="headerlink" title="Italic(斜体)"></a>Italic(斜体)</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span>&gt;</span>The contents you want to make it italic<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Whenever you want to make certain contents italic, simply put it inside <code>&lt;i&gt;</code>.</p>
+<p>Moreover, we can superpose<code>&lt;p&gt;</code>,<code>&lt;i&gt;</code>&amp;<code>&lt;b&gt;</code>. To make a paragraph both bold and italic.</p>
+<h3 id="Whitespace"><a href="#Whitespace" class="headerlink" title="Whitespace"></a>Whitespace</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        The first paragraph</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        The second paragraph</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        The first paragraph</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        The second paragraph</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>html doesn’t read the whitespace between the codes. It only cares about what is in the tags. In other words, the codes above are technically the same.</p>
+<h3 id="Break"><a href="#Break" class="headerlink" title="Break"></a>Break</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>If we want a blank line on our web page. We could use the tag <code>&lt;br/&gt;</code> and html will read it. You can make multiple tags to create multiple blank lines.</p>
+<h3 id="Horizontal-line"><a href="#Horizontal-line" class="headerlink" title="Horizontal line"></a>Horizontal line</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hr</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We can create a horizontal line like this<img src="C:%5CUsers%5COscar%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565290093941.png" alt="1565290093941">. We may want to use it on our web page to break up contents.</p>
+<h3 id="Big-tag"><a href="#Big-tag" class="headerlink" title="Big tag"></a>Big tag</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        The <span class="tag">&lt;<span class="name">big</span>&gt;</span>first<span class="tag">&lt;/<span class="name">big</span>&gt;</span> paragraph</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>If we want to make certain contents greater in font size,  using <code>&lt;big&gt;</code> tags is one of the easiest way. Simply put the contents between <code>&lt;big&gt;</code> and <code>&lt;/big&gt;</code>. It is not that significant but will work.</p>
+<p>Things works exactly the same for <code>&lt;small&gt;</code>and <code>&lt;/small&gt;</code>.</p>
+<h3 id="Subscript-下标-amp-superscript-上标"><a href="#Subscript-下标-amp-superscript-上标" class="headerlink" title="Subscript(下标)&amp;superscript(上标)"></a>Subscript(下标)&amp;superscript(上标)</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    H<span class="tag">&lt;<span class="name">sub</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sub</span>&gt;</span>O</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>If we want to write the chemical formula for water. We need a subscript 2. It can be easily achieved in html by putting 2 between <code>&lt;sub&gt;</code>&amp;<code>&lt;/sub&gt;</code>.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    10<span class="tag">&lt;<span class="name">sup</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>If we want to write 10 square in html. We need a superscript 2. Simply do the very similar thing with <code>&lt;sup&gt;</code>&amp;<code>&lt;/sup&gt;</code>.</p>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>This tags not only works in <code>&lt;body&gt;</code>. It works in all parts of the html file where there is a text.</p>
+<h2 id="3-Comments"><a href="#3-Comments" class="headerlink" title="3. Comments"></a>3. Comments</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Put your </span></span><br><span class="line"><span class="comment">comments inside  --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Everything within <code>&lt;!--</code> <code>--&gt;</code>is comments and it may take up multiple lines.</p>
+<p>Very similar to other programming languages, it’s like a little note and can be ignored.</p>
+<h2 id="4-Style-and-colors"><a href="#4-Style-and-colors" class="headerlink" title="4. Style and colors"></a>4. Style and colors</h2><p>This is a very basic introduction of CSS(Cascading style sheets) which is used for styling. There is a separate course just for CSS</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span> = <span class="string">"color: blue"</span>&gt;</span></span><br><span class="line">        The fist paragraph</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We can  pass some attributes to  <code>&lt;p&gt;</code> tags. Here, we are passing a style attribute and set the text color to blue.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span> = <span class="string">"color: blue;backgroung-color: red"</span>&gt;</span></span><br><span class="line">        The fist paragraph</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We can also set the background color to red using the code above.</p>
+<p>These attributes also work for other tags like <code>&lt;h1&gt;</code>, even<code>&lt;body&gt;</code> tags work.</p>
+<h2 id="5-Formatting-the-website"><a href="#5-Formatting-the-website" class="headerlink" title="5. Formatting the website"></a>5. Formatting the website</h2><h3 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">nav</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">main</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">article</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Most web pages will have three sections which are headers(页眉), main and footer(页脚). Html has various tags for creating these sections as shown in the code above.</p>
+<p>Some extra things, using <code>&lt;nav&gt;</code> tags we could create a navigation table and it’s normally in the <code>&lt;header&gt;</code> part of the webpage</p>
+<p>We can also create an article(like the ones in a blog) using <code>&lt;article&gt;</code>  tags and they are normally in the <code>&lt;main&gt;</code> part of the webpage.</p>
+<h3 id="Section"><a href="#Section" class="headerlink" title="Section"></a>Section</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">main</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">article</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;section&gt;</code> tags often come with <code>&lt;article&gt;</code> tags as they make the web page well-structured.</p>
+<p>Of course, an <code>&lt;article&gt;</code> can contain multiple <code>&lt;section&gt;</code>.</p>
+<h3 id="Aside"><a href="#Aside" class="headerlink" title="Aside"></a>Aside</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aside</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>You can put something that is not directly related to the core contents in the <code>&lt;aside&gt;</code> tags. A good example is advertisements on web pages.</p>
+<h3 id="Summary-1"><a href="#Summary-1" class="headerlink" title="Summary"></a>Summary</h3><p>To be honest, all those tags are not necessary, you may create a fabulous website without these structural tags but they can make your website extremely organized and improve the readability of your code. Also, this kind of neat structure allows search engines to figure out what is inside easily.</p>
+<h2 id="6-Links-超链接"><a href="#6-Links-超链接" class="headerlink" title="6. Links(超链接)"></a>6. Links(超链接)</h2><p>Links are used in html to link your website to other websites, other parts of your website or jpg, pdf etc.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"https://www.google.com"</span>&gt;</span>Text shown for this link<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>By using  <code>&lt;a&gt;</code> tags we can create a link to a different website. Simply, put the website url inside the <code>href</code>attribute and put the text you wish to show between <code>&lt;a&gt;</code>&amp;<code>&lt;/a&gt;</code>.</p>
+<p>Attention, the code above will navigate users to the url directly so they leave your website.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"https://google.com"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span>Text shown for url<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>If we want user to open a new web page for this link, we could add an extra attribute  <code>target = &quot;_blank&quot;</code> inside  <code>&lt;a&gt;</code>tags.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"relative local address"</span>&gt;</span>another page<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>If we want to link to a different pages of our website. We can simply set the <code>href</code> attribute equal to the relative local address(It must be the relative address, the absolute address won’t work) of our html file. This can automatically navigate to this file. </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"address of picture"</span>&gt;</span>picture<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>If we want to link to a picture in your computer, it works the same, simply put the relative address of the picture inside the <code>href</code> attribute.</p>
+<h2 id="7-Images"><a href="#7-Images" class="headerlink" title="7.Images"></a>7.Images</h2><h3 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"url of the image"</span> <span class="attr">alt</span> = <span class="string">"text to show if the in scr image is not available"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>scr</code> attribute stores the source of the picture. <code>&lt;alt&gt;</code> attribute is more like a backup, it is some text that will be shown when the picture in <code>scr</code> is no longer available. It is always a good practice to write a <code>&lt;alt&gt;</code>.</p>
+<p>Besides, we don’t need an end tag for  <code>&lt;img</code> simply do <code>/&gt;</code> when you finish.</p>
+<p>Very similar to links, we can do relative address of the picture instead of the url.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span> = <span class="string">"100"</span> <span class="attr">height</span> = <span class="string">"50"</span> <span class="attr">src</span>=<span class="string">"url of the image"</span> <span class="attr">alt</span> = <span class="string">"text"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We could alter dimensions of the image by passing in <code>width</code> &amp;<code>height</code>attributes.  The unit we use here are pixels(像素).   </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span> = <span class="string">"100"</span> <span class="attr">src</span>=<span class="string">"url of the image"</span> <span class="attr">alt</span> = <span class="string">"text"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Instead of setting both height of width, we could set only one attribute of those. HTML will set the other value automatically to keep the aspect ratio(长宽比) unchanged.</p>
+<h3 id="Example-Set-an-image-as-a-link"><a href="#Example-Set-an-image-as-a-link" class="headerlink" title="Example: Set an image as a link"></a>Example: Set an image as a link</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"https://www.google.com"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span> = <span class="string">"100"</span> <span class="attr">src</span>=<span class="string">"url of the image"</span> <span class="attr">alt</span> = <span class="string">"text"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>The code above is an example of setting an image also as a link. This trick also works for other tags like<code>&lt;h1&gt;</code> etc.</p>
+<h2 id="8-Videos-amp-YouTube"><a href="#8-Videos-amp-YouTube" class="headerlink" title="8. Videos &amp; YouTube"></a>8. Videos &amp; YouTube</h2><h3 id="Basics-1"><a href="#Basics-1" class="headerlink" title="Basics"></a>Basics</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span> =<span class="string">"relative address "</span> <span class="attr">controls</span> <span class="attr">width</span> = <span class="string">"100"</span>&gt;</span>Text shows if video can't play<span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We can add a video to the website using <code>&lt;video&gt;</code>. Very similar to adding a picture we use a relative address and reserved word <code>controls</code> afterwards(very important, otherwise there will be no buttons for us to control the video ). The text between <code>&lt;video&gt;</code> and <code>&lt;/video&gt;</code>will only be shown if the browser can’t play this video.</p>
+<p>In addition, we can control dimensions of the video by passing in <code>width</code> and <code>height</code> attributes. Old tricks as we used it in previous sections already.</p>
+<h3 id="Poster"><a href="#Poster" class="headerlink" title="Poster"></a>Poster</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span> =<span class="string">"relative address"</span> <span class="attr">controls</span> <span class="attr">poster</span> = <span class="string">"relative address"</span>&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Instead of showing the first scene of the video as the poster, we could DIY our poster. Simply set an extra attribute called <code>poster</code> and pass in the relative address of our poster.</p>
+<h3 id="Auto-play-amp-loop-自动重复播放"><a href="#Auto-play-amp-loop-自动重复播放" class="headerlink" title="Auto play &amp; loop(自动重复播放)"></a>Auto play &amp; loop(自动重复播放)</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span> =<span class="string">"relative address"</span> <span class="attr">controls</span> <span class="attr">loop</span> <span class="attr">autoplay</span>&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Simply pass in extra reserved words <code>autoplay</code> and <code>loop</code>. Easy peasy, lemon squeasy!</p>
+<h3 id="YouTube-videos"><a href="#YouTube-videos" class="headerlink" title="YouTube videos"></a>YouTube videos</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">"560"</span> <span class="attr">height</span>=<span class="string">"315"</span> <span class="attr">src</span>=<span class="string">"https://www.youtube.com/embed/8JnfIa84TnU"</span> <span class="attr">frameborder</span>=<span class="string">"0"</span> <span class="attr">allow</span>=<span class="string">"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"</span> <span class="attr">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Click the <code>share</code> button of the YouTube video and choose <code>Embed</code>. This will give us some<code>&lt;iframe&gt;</code> code. We can use them to add YouTube videos to our website. Don’t worry too much about<code>&lt;iframe&gt;</code> for now. This will also give you the YouTube control panel which is awesome.</p>
+<h2 id="9-Lists"><a href="#9-Lists" class="headerlink" title="9. Lists"></a>9. Lists</h2><h3 id="Unordered-list"><a href="#Unordered-list" class="headerlink" title="Unordered list"></a>Unordered list</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"apple.com"</span>&gt;</span>Apple<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>Banana<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>Pear<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We could create an unordered list by using the <code>&lt;ul&gt;</code>tags. The <code>&lt;ul&gt;</code> tags act as a container and we can put each list item inside tags <code>&lt;li&gt;</code> .  Different types of data can be put inside one unordered list. See the Apple example, we actually put a link inside the list along with some texts.</p>
+<p>As we are creating an unordered list, each item starts with a black dot.</p>
+<h3 id="Ordered-list"><a href="#Ordered-list" class="headerlink" title="Ordered list"></a>Ordered list</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"apple.com"</span>&gt;</span>Apple<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>Banana<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>Pear<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>An ordered list actually works almost the same, except we got serial numbers at the start of each item instead of black dots. </p>
+<h3 id="Style"><a href="#Style" class="headerlink" title="Style"></a>Style</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span> <span class="attr">type</span> = <span class="string">"a"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>apple<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>bacon<span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We can change the style of the ordered list. Simply input an extra attribute called<code>type</code>. Its value can be <code>&quot;a&quot;</code>so we got a,b,c ….. It may also be <code>&quot;A&quot;</code> so we got A,B,C …… Apart from those, we can have Roman numerals(I,II,III,IV….) by inputting <code>&quot;I&quot;</code>  </p>
+<h2 id="Cascade-lists"><a href="#Cascade-lists" class="headerlink" title="Cascade lists"></a>Cascade lists</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>apple<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>banana<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>school<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>uni<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We can have lists in a list(cascade). See the example above, we have two unordered lists inside an ordered list.</p>
+<h2 id="10-Table"><a href="#10-Table" class="headerlink" title="10. Table"></a>10. Table</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">caption</span>&gt;</span>The title of the table<span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>Title_1<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>Title_2<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>Title_3<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>one<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>two<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We initialize tables in html using <code>&lt;table&gt;</code>tags. <code>&lt;tr&gt;</code> tags are placed inside to act as a row container. For elements in a row, we put every of them inside<code>&lt;td&gt;</code>tags.</p>
+<p>Here we got three elements in a row. If we want more rows or more elements, simply add more <code>&lt;tr&gt;</code>&amp;<code>&lt;td&gt;</code>.</p>
+<p>For creating table headers, it works similarly, just use <code>&lt;th&gt;</code> instead of <code>&lt;td&gt;</code>.</p>
+<p>One more thing, we can create a caption(title) for the table using<code>&lt;caption&gt;</code>tags at the very top.</p>
+<h2 id="11-Containers-in-HTML-div-span"><a href="#11-Containers-in-HTML-div-span" class="headerlink" title="11. Containers in HTML(div,span)"></a>11. Containers in HTML(div,span)</h2><h3 id="Basics-2"><a href="#Basics-2" class="headerlink" title="Basics"></a>Basics</h3><p>It is a good habit to put your HTML code inside containers. One reason is that in the future we will use CSS to formatting your web page. It makes CSS code really easy if your HTML codes are well structured in containers. <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> are two popular containers.</p>
+<h3 id="Types-of-elements"><a href="#Types-of-elements" class="headerlink" title="Types of elements"></a>Types of elements</h3><p>There are basically two types of elements in HTML. The first type is called the block elements. They will occupy the entire width of the page. The other one is called inline elements. They will only occupy the space they actually need.  See the example below.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"google.com"</span>&gt;</span>link1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"apple.com"</span>&gt;</span>link2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Link1 and link2 are clearly inline elements. As neither of them takes up the entire lines, they are actually sitting beside(in the same line with) each other.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    Paragraph 1</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    Paragraph 2</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Paragraphs here are clearly block elements. There is enough space after paragraph 1 for paragraph 2. However, these two paragraphs don’t sit beside each other. Instead, paragraph 2 switch to a different line.</p>
+<h3 id="lt-span-gt"><a href="#lt-span-gt" class="headerlink" title="&lt;span&gt;"></a><code>&lt;span&gt;</code></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>The fist span<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>The second span<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;span&gt;</code> tags are inline elements. The contents inside are able to sit beside each other.</p>
+<h3 id="lt-div-gt"><a href="#lt-div-gt" class="headerlink" title="&lt;div&gt;"></a><code>&lt;div&gt;</code></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    The fist div</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    The second div</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;div&gt;</code> tags are block elements. Either of them occupies their own line. They can’t sit beside each other.</p>
+<h3 id="Summary-2"><a href="#Summary-2" class="headerlink" title="Summary"></a>Summary</h3><p><code>&lt;div&gt;</code>  is a block element.</p>
+<p> <code>&lt;span&gt;</code> is a inline element. More popular than<code>&lt;div&gt;</code>.</p>
+<h2 id="12-Input-tags"><a href="#12-Input-tags" class="headerlink" title="12. Input tags"></a>12. Input tags</h2><h3 id="Text-box"><a href="#Text-box" class="headerlink" title="Text box"></a>Text box</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span> = <span class="string">"DPOefault text"</span>/&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>We are using a single <code>&lt;input&gt;</code> tag in html. We need to pass in a <code>type</code> attribute. The code above will generate a text box for user to type in.</p>
+<p>We can set default text for the text box by passing in a <code>value</code> attribute and set it equal to the text we want to show.</p>
+<h3 id="Password-box"><a href="#Password-box" class="headerlink" title="Password box"></a>Password box</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span> = <span class="string">"password"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Here we are creating a text box for password. This text box will automatically hide the user inputs.</p>
+<h3 id="Textarea"><a href="#Textarea" class="headerlink" title="Textarea"></a>Textarea</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span> = <span class="string">"10"</span> <span class="attr">cols</span>=<span class="string">"3"</span>&gt;</span>Default text<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>It is simply a bigger block where users can input some text. We can control its dimension by setting <code>rows</code> and <code>cols</code> attributes.</p>
+<h3 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span> = <span class="string">"date"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>The will create a box where users can select a certain date.</p>
+<h3 id="Range"><a href="#Range" class="headerlink" title="Range"></a>Range</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span> = <span class="string">"range"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>This will produce a slider.</p>
+<h3 id="File"><a href="#File" class="headerlink" title="File"></a>File</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span> = <span class="string">"file"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>This will create a button for user to choose file. The file explorer will shown up if an user click the button.</p>
+<h3 id="Checkbox"><a href="#Checkbox" class="headerlink" title="Checkbox"></a>Checkbox</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span> = <span class="string">"checkbox"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>A tiny box, user a click it to tick the box. We could tick as many checkboxes as we want.</p>
+<h3 id="Radio-button"><a href="#Radio-button" class="headerlink" title="Radio button"></a>Radio button</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span> =<span class="string">"Oscar"</span> <span class="attr">type</span> = <span class="string">"radio"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span> = <span class="string">"Oscar"</span> <span class="attr">type</span> = <span class="string">"radio"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span> = <span class="string">"Oscar"</span> <span class="attr">type</span> = <span class="string">"radio"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Radio buttons are kinda similar to checkbox. The biggest difference is that we can only tick one of the radio buttons with the same <code>name</code> attribute.</p>
+<p>There are so many types of inputs. I am only listing a number of them, there is a web page for references. Make sure to check it out <a href="https://www.w3schools.com/tags/tag_input.asp&gt;" target="_blank" rel="noopener">https://www.w3schools.com/tags/tag_input.asp&gt;</a>.</p>
+<h2 id="13-iFrame"><a href="#13-iFrame" class="headerlink" title="13. iFrame"></a>13. iFrame</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">scr</span> = <span class="string">"www.mikedane.com"</span> <span class="attr">width</span> = <span class="string">"1000"</span> <span class="attr">height</span> =<span class="string">"800"</span>&gt;</span></span><br><span class="line">    The text will be shown if iframe is not working    </span><br><span class="line">    <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>By using the <code>&lt;iframe&gt;</code> tags, we could display the website in the <code>scr</code> attribute on your website(kinda like enbedded someone else’s website on yours).</p>
+<p>The default size for<code>&lt;iframe&gt;</code> is tiny, we can change its dimensions by passing in <code>width</code> &amp;<code>height</code> attributes similar to before.</p>
+<p>One of the biggest problem for <code>iframe</code> is that many big websites(amazon.com etc) have settings preventing other developers to iframe their websites so don’t be too surprised if <code>iframe</code> is not working!</p>
+<h2 id="14-Meta-tags"><a href="#14-Meta-tags" class="headerlink" title="14. Meta tags"></a>14. Meta tags</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span> = <span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span> = <span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"Your description"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span> = <span class="string">"author"</span> <span class="attr">content</span> = <span class="string">"Name of the author"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span> = <span class="string">"keywords"</span> <span class="attr">content</span> = <span class="string">"HTML, Blog, what not"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span> = <span class="string">"viewport"</span> <span class="attr">content</span> =<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;meta&gt;</code>tags are in the <code>&lt;head&gt;</code> . They define some key information of your web page.</p>
+<p><code>charset</code> defines how your words are encoded. </p>
+<p>For the other<code>&lt;meta&gt;</code> tags, there are two attributes, the <code>name</code> will tell html what types of <code>meta</code> tags you are defining and <code>content</code> is actually the content inside your <code>meta</code> tags.</p>
+<p><code>description</code> gives a short description of your website to help search engines. Normally less than 160 characters. If too long, your website can be disadvantaged in terms of priority in search engine</p>
+<p><code>author</code> tells the author of the web page</p>
+<p><code>keywords</code> set several keywords to help search engines, are normally ignored these days but still a good practice to fill in.</p>
+<p><code>viewport</code> how your website is displayed on different devices like pc, mobile, ipad etc. It can get really complicated, for now just keep in mind using the following statement:                           </p>
+<p><code>content =&quot;width=device-width, initial-scale=1.0&quot;</code> before you become an experienced developer.</p>
+<h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2><p>Thanks for reading. These notes are abstract from the <a href="https://www.mikedane.com/web-development/html/" target="_blank" rel="noopener">HTML tutorial videos</a> created by <a href="https://www.mikedane.com/" target="_blank" rel="noopener">Mike Dane</a>(Giraffe academy).</p>
+<p>I want to express my thanks to Mike. Awesome videos as always. Make sure to check out his website, contents are absolutely amazing.</p>
+<p>If you have any problems, spot any mistake or have any suggestions. Feel free to DM or send me an email to <a href="mailto:oscarliu991110@gmail.com" target="_blank" rel="noopener">oscarliu991110@gmail.com</a> . See ya.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/HTML/" rel="tag"># HTML</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2019/09/09/Mysql_basics/" rel="next" title="Mysql basics">
+                <i class="fa fa-chevron-left"></i> Mysql basics
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/2019/09/09/c++_basics/" rel="prev" title="c++ basics">
+                c++ basics <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yuxuan Liu</p>
+  <div class="site-description motion-element" itemprop="description">Yuxuan Liu personal blog</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">tags</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/oscarliu99" title="GitHub &rarr; https://github.com/oscarliu99" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:oscarliu991110@gmail.com" title="E-Mail &rarr; mailto:oscarliu991110@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://www.facebook.com/yuxuan.liu.99" title="FB Page &rarr; https://www.facebook.com/yuxuan.liu.99" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
+      </span>
+    
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Tags"><span class="nav-number">1.</span> <span class="nav-text">1. Tags</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOCTYPE"><span class="nav-number">1.1.</span> <span class="nav-text">DOCTYPE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html"><span class="nav-number">1.2.</span> <span class="nav-text">html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#head"><span class="nav-number">1.3.</span> <span class="nav-text">head</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#body"><span class="nav-number">1.4.</span> <span class="nav-text">body</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Indent"><span class="nav-number">1.5.</span> <span class="nav-text">Indent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Title"><span class="nav-number">1.6.</span> <span class="nav-text">Title</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-More-basic-tags-in-detail"><span class="nav-number">2.</span> <span class="nav-text">2. More basic tags in detail</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Meta"><span class="nav-number">2.1.</span> <span class="nav-text">Meta</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Heading"><span class="nav-number">2.2.</span> <span class="nav-text">Heading</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Paragraph"><span class="nav-number">2.3.</span> <span class="nav-text">Paragraph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bold-加粗"><span class="nav-number">2.4.</span> <span class="nav-text">Bold(加粗)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Italic-斜体"><span class="nav-number">2.5.</span> <span class="nav-text">Italic(斜体)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Whitespace"><span class="nav-number">2.6.</span> <span class="nav-text">Whitespace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Break"><span class="nav-number">2.7.</span> <span class="nav-text">Break</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Horizontal-line"><span class="nav-number">2.8.</span> <span class="nav-text">Horizontal line</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Big-tag"><span class="nav-number">2.9.</span> <span class="nav-text">Big tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Subscript-下标-amp-superscript-上标"><span class="nav-number">2.10.</span> <span class="nav-text">Subscript(下标)&amp;superscript(上标)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Summary"><span class="nav-number">2.11.</span> <span class="nav-text">Summary</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Comments"><span class="nav-number">3.</span> <span class="nav-text">3. Comments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Style-and-colors"><span class="nav-number">4.</span> <span class="nav-text">4. Style and colors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Formatting-the-website"><span class="nav-number">5.</span> <span class="nav-text">5. Formatting the website</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Header"><span class="nav-number">5.1.</span> <span class="nav-text">Header</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Section"><span class="nav-number">5.2.</span> <span class="nav-text">Section</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Aside"><span class="nav-number">5.3.</span> <span class="nav-text">Aside</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Summary-1"><span class="nav-number">5.4.</span> <span class="nav-text">Summary</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Links-超链接"><span class="nav-number">6.</span> <span class="nav-text">6. Links(超链接)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Images"><span class="nav-number">7.</span> <span class="nav-text">7.Images</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basics"><span class="nav-number">7.1.</span> <span class="nav-text">Basics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Set-an-image-as-a-link"><span class="nav-number">7.2.</span> <span class="nav-text">Example: Set an image as a link</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Videos-amp-YouTube"><span class="nav-number">8.</span> <span class="nav-text">8. Videos &amp; YouTube</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basics-1"><span class="nav-number">8.1.</span> <span class="nav-text">Basics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Poster"><span class="nav-number">8.2.</span> <span class="nav-text">Poster</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auto-play-amp-loop-自动重复播放"><span class="nav-number">8.3.</span> <span class="nav-text">Auto play &amp; loop(自动重复播放)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YouTube-videos"><span class="nav-number">8.4.</span> <span class="nav-text">YouTube videos</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-Lists"><span class="nav-number">9.</span> <span class="nav-text">9. Lists</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Unordered-list"><span class="nav-number">9.1.</span> <span class="nav-text">Unordered list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ordered-list"><span class="nav-number">9.2.</span> <span class="nav-text">Ordered list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Style"><span class="nav-number">9.3.</span> <span class="nav-text">Style</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cascade-lists"><span class="nav-number">10.</span> <span class="nav-text">Cascade lists</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-Table"><span class="nav-number">11.</span> <span class="nav-text">10. Table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-Containers-in-HTML-div-span"><span class="nav-number">12.</span> <span class="nav-text">11. Containers in HTML(div,span)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basics-2"><span class="nav-number">12.1.</span> <span class="nav-text">Basics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Types-of-elements"><span class="nav-number">12.2.</span> <span class="nav-text">Types of elements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lt-span-gt"><span class="nav-number">12.3.</span> <span class="nav-text">&lt;span&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lt-div-gt"><span class="nav-number">12.4.</span> <span class="nav-text">&lt;div&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Summary-2"><span class="nav-number">12.5.</span> <span class="nav-text">Summary</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-Input-tags"><span class="nav-number">13.</span> <span class="nav-text">12. Input tags</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Text-box"><span class="nav-number">13.1.</span> <span class="nav-text">Text box</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Password-box"><span class="nav-number">13.2.</span> <span class="nav-text">Password box</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Textarea"><span class="nav-number">13.3.</span> <span class="nav-text">Textarea</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Date"><span class="nav-number">13.4.</span> <span class="nav-text">Date</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Range"><span class="nav-number">13.5.</span> <span class="nav-text">Range</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File"><span class="nav-number">13.6.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Checkbox"><span class="nav-number">13.7.</span> <span class="nav-text">Checkbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Radio-button"><span class="nav-number">13.8.</span> <span class="nav-text">Radio button</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-iFrame"><span class="nav-number">14.</span> <span class="nav-text">13. iFrame</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-Meta-tags"><span class="nav-number">15.</span> <span class="nav-text">14. Meta tags</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#End"><span class="nav-number">16.</span> <span class="nav-text">End</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yuxuan Liu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.3.0</div>
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    Total visitor of my blog: <span id="busuanzi_value_site_pv"></span>
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    <span id="busuanzi_value_site_uv"></span> people have read my essays.
+</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/affix.js?v=7.3.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+</body>
+</html>
