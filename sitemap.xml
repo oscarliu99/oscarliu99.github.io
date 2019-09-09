@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yuxuanliu.tech/about/index.html</loc>
+    
+    <lastmod>2019-09-09T13:24:21.427Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yuxuanliu.tech/python_revision/</loc>
     
     <lastmod>2019-09-09T11:39:20.854Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://yuxuanliu.tech/c++_basics/</loc>
     
     <lastmod>2019-09-09T11:38:11.926Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuxuanliu.tech/about/index.html</loc>
-    
-    <lastmod>2019-09-09T11:06:23.051Z</lastmod>
     
   </url>
   
