@@ -407,10 +407,18 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
 /*这是设置底部文字, 看个人需要修改*/
 }
 body #footer > div > div {
   color: #0a0a0a;
+}
+.main-inner {
+  opacity: 0.85;
 }
 .post-body {
   color: #0a0a0a;
@@ -1761,7 +1769,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff46ff;
+  background: #ddf745;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
