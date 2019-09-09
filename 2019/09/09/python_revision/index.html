@@ -241,8 +241,406 @@
             
 
   <div id="posts" class="posts-expand">
-  	
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/python_revision/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuxuan Liu">
+      <meta itemprop="description" content="Yuxuan Liu's personal blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A logical thinker">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">Python revision notes
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 08-09-2019 23:40:42 / Modified: 16:46:24" itemprop="dateCreated datePublished" datetime="2019-09-08T23:40:42+01:00">08-09-2019</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    <span class="post-meta-item-text">Comments: </span>
+  
+    <a href="/2019/09/09/python_revision/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/09/09/python_revision/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
+        <ol>
+<li><p>Switch data in two variables: <code>a,b = b,a</code> This is something unique to Python.</p>
+</li>
+<li><p><code>print(variable, end = &quot;&quot;)</code> If we don’t want to skip a line after printing <code>variable</code>. The default value for <code>end</code> attribute is <code>\n</code>(skip a line).</p>
+</li>
+<li><p>When we use comparison operators in Python(<code>&gt;</code>, <code>&lt;</code> etc.). It will always return a <code>Boolean value</code>(<code>True</code>, <code>False</code>)</p>
+</li>
+<li><p><code>print(1==True)</code>;<code>print(0==False)</code> These two statements will always return <code>True</code>. As in Python <code>1</code> also means <code>True</code> and <code>0</code> also means <code>False</code>.</p>
+</li>
+<li><p><code>print(0==0.0)</code> will also return <code>True</code> even though they are different data types.</p>
+</li>
+<li><p>There is a special operation symbol which is <code>in</code>. For example, <code>print(“a” in “abc”)</code>. This will return <code>True</code>.</p>
+</li>
+<li><p>3 types of logic order in Python: plain sequence(顺序), loop(循环) and branches(分支).</p>
+</li>
+<li><p><code>while True</code> will produce an infinite loop.</p>
+</li>
+<li><p><code>break</code> will terminate one layer of the loop.</p>
+</li>
+<li><p><code>continue</code> will only skip one element in a loop and don’t affect the remainder elements.</p>
+<a id="more"></a>
+</li>
+<li><p><code>range</code> function can take 3 parameters. For example, <code>range(1,10,2)</code> This means a series from 1 to 9 with <code>a step of 2</code>. i.e.1,3,5,7,9</p>
+</li>
+<li><p><code>list1.pop(index)</code> removes the element at the index position of the list. If we use <code>list1.pop()</code> and leave it black in brackets. It will drop the last element in the list.</p>
+</li>
+<li><p><code>print(&quot;111&quot; in list1)</code> If there is a <code>111</code> element in <code>list1</code>. It will return <code>True</code>, otherwise, it will return <code>False</code>.</p>
+</li>
+<li><p>If we want to drop a list, use <code>del list1</code>. If we <code>print(list1)</code> afterwards, it will return an error.</p>
+</li>
+<li><p>If we want to drop all elements in a list, use <code>list1.clear()</code>. If we <code>print(list1)</code> afterwards, it will return <code>[]</code></p>
+</li>
+<li><p><code>list1.index(element,start,end)</code> passing in <code>start</code> and <code>end</code>, Python will search <code>element</code> within that range. If <code>element</code> isn’t in the range, an error will show up.</p>
+<p>We could use <code>list1.find(element,start,end)</code>. If <code>element</code> is also not in that range, Python will return <code>-1</code> rather than an error.</p>
+</li>
+<li><p>There are two types of functions in Python. The first type <code>.sort()</code>, for example, it starts with a <code>.</code> It means that this function links to the data type before <code>.</code></p>
+</li>
+</ol>
+<p>The second type <code>sorted()</code>, for example, all these types of function are Python’s internal function, they do not related to the input data type. </p>
+<ol start="18">
+<li><p>Enumerate() function：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list1 = [“spring”,”summer”,”autumn”,”winter”]</span><br><span class="line">For index, content <span class="keyword">in</span> enumerate(list1):</span><br><span class="line">print(index,content)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>This will return:</p>
+<p><code>0</code> <code>&quot;spring&quot;</code></p>
+<p><code>1</code> <code>&quot;summer&quot;</code></p>
+<p><code>2</code> <code>&quot;autumn&quot;</code></p>
+<p><code>3</code> <code>&quot;winter&quot;</code>     </p>
+<p>This function are fairly convenient when tackling algorithm questions.</p>
+<ol start="19">
+<li><p>Create a list with ten <code>0</code> elements : <code>list1 = [0]*10</code> </p>
+<p>This is unique to Python as well</p>
+</li>
+<li><p>Create a 3*3 matrix filled with <code>0</code>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1 = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range <span class="number">3</span>:</span><br><span class="line">    list1.append([<span class="number">0</span>]*<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>List comprehension(列表推导)：</p>
+<ul>
+<li>numerical: </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">print([i*<span class="number">3</span> <span class="keyword">for</span> i <span class="keyword">in</span> list1])</span><br></pre></td></tr></table></figure>
+
+<p>This will return <code>[3,6,9]</code></p>
+<ul>
+<li><p>Logical:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">print([i <span class="keyword">for</span> i <span class="keyword">in</span> list1 <span class="keyword">if</span> i%<span class="number">2</span> == <span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<p>This will only print out even numbers so we get <code>[2,4]</code> as expected</p>
+</li>
+<li><p>Mixing numerical and logical</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">print([i*<span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> list1 <span class="keyword">if</span> i%<span class="number">2</span> == <span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<p>This will return even numbers in the list and multiply their values by 2 so we got <code>[4,8]</code> as expected.</p>
+</li>
+</ul>
+</li>
+<li><p>Elements within <code>dictionary</code> have no order in Python. All <code>keys</code> need to be unique, if we have two <code>values</code> with the same <code>key</code>, the <code>value</code> which shows up later will overwrite the former. </p>
+</li>
+<li><p><code>dictionary.keys()</code> will collect all keys and return a <code>list</code>.</p>
+</li>
+<li><p><code>dictionary.values()</code> will collect all values and return a <code>list</code>.</p>
+</li>
+<li><p><code>dictionary.items()</code> This will collect both keys and values made up tuples in a list. We normally use it in the following format:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dictionary = &#123;<span class="number">1</span>:<span class="string">"one"</span>,<span class="number">2</span>:<span class="string">"two"</span>,<span class="number">3</span>:<span class="string">"three"</span>,<span class="number">4</span>:<span class="string">"four"</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i,j <span class="keyword">in</span> dictionary.items():</span><br><span class="line">    print(i,j)</span><br></pre></td></tr></table></figure>
+
+<p>This will return: <code>1</code>, <code>&quot;one&quot;</code>, <code>2</code>, <code>&quot;two&quot;</code>, <code>3</code>, <code>&quot;three&quot;</code>, <code>4</code>, <code>&quot;four&quot;</code> </p>
+</li>
+<li><p>Drop an element from a dictionary: <code>dictionary.pop(key)</code> The value with the key in the bracket will be removed</p>
+</li>
+<li><p><code>.append()</code> has a low algorithm complexity while <code>.insert()</code> and  <code>.index()</code> have high algorithm complexity</p>
+</li>
+<li><p>List slicing:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list1 = [‘aaa’, ‘bbb’, ‘ccc’, ‘ddd’, ‘eee’]</span><br><span class="line">print(list1[<span class="number">1</span>:<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+
+<p>This will give <code>&quot;bbb&quot;</code> &amp; <code>&quot;ccc&quot;</code> </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list1 = [‘aaa’, ‘bbb’, ‘ccc’, ‘ddd’, ‘eee’]</span><br><span class="line">print(list1[<span class="number">1</span>:])</span><br></pre></td></tr></table></figure>
+
+<p>This will give <code>&quot;bbb&quot;</code>, <code>&quot;ccc&quot;</code>, <code>&quot;ddd&quot;</code> &amp; <code>&quot;eee&quot;</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list1 = [‘aaa’, ‘bbb’, ‘ccc’, ‘ddd’, ‘eee’]</span><br><span class="line">print(list1[:<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+
+<p>This will give <code>&quot;aaa&quot;</code>, <code>&quot;bbb&quot;</code> &amp; <code>&quot;ccc&quot;</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list1 = [‘aaa’, ‘bbb’, ‘ccc’, ‘ddd’, ‘eee’]</span><br><span class="line">print(list1[:<span class="number">-1</span>])</span><br><span class="line">print(list1[:<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>Results returned from the two <code>print</code> operations are the same which will both give  <code>&quot;aaa&quot;</code>, <code>&quot;bbb&quot;</code>, <code>&quot;ccc&quot;</code> &amp; <code>&quot;ddd&quot;</code></p>
+<p>We may pass in three parameters when slicing. <code>list1[start,end,step]</code></p>
+<p>A good and smart example: <code>print(list1[::-1])</code>    This operation will reverse the list and is equivalent to <code>.reverse()</code>.</p>
+<p>Let me quickly explain: The first <code>:</code> means starting from the end(right), <code>-1</code> means moving to the left by one element every time. The second <code>:</code> means finishing at the end but won’t include the last element. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list2 = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>]</span><br><span class="line">print(list2[<span class="number">0</span>:len(list2):<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+<p>This will give all even numbers: <code>&quot;0&quot;</code>, <code>&quot;2&quot;</code>, <code>&quot;4&quot;</code>, <code>&quot;6&quot;</code>, <code>&quot;8&quot;</code> &amp; <code>&quot;10&quot;</code></p>
+<ol start="29">
+<li><p>When we input a negative <code>step</code> parameter, we must make sure the value of <code>start</code> parameter is greater than <code>end</code> parameter otherwise Python will return a <code>[]</code>. Let’s say <code>list2[-9:-6:-1]</code>, Python will take away 1 from -9 every time and try to achieve -6. Clearly, there is no way to get -6 by taking away 1s from -9 so we get <code>[]</code>.</p>
+<p>In addition, Python don’t think list2[-1] is equivalent to list2[-12] :(</p>
+</li>
+<li><p><code>set</code>(集合): if we write <code>{}</code> in Python, by default, it will be treated as a dictionary.</p>
+</li>
+<li><p>Elements in a <code>set</code> has no order, the order of the elements changed every time we <code>print</code>. Unless, all elements are <code>int</code>, they will be shown in descending order but we still can’t do <code>index</code> operation.</p>
+</li>
+<li><p><code>set1.add()</code> Add an extra element.</p>
+</li>
+<li><p><code>set1.remove(element name)</code> Remove an element by the element name.</p>
+</li>
+<li><p><code>set1.pop()</code> Remove the FIRST element from the set, we CANNOT pass in a index in the bracket.</p>
+</li>
+<li><p>set operations：</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line">set2 = &#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">set3 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">print(set1-set2)</span><br></pre></td></tr></table></figure>
+
+<p>This will give the difference set(差集). In other words, all elements within <code>set1</code> but are not in <code>set2</code>. We get <code>1</code> here as expected.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line">set2 = &#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">set3 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">print(set1|set2)</span><br></pre></td></tr></table></figure>
+
+<p>This will give the union(合集). We get <code>1</code>, <code>2</code>, <code>3</code> &amp; <code>4</code> here as expected.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line">set2 = &#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">set3 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">print(set1^set2)</span><br></pre></td></tr></table></figure>
+
+<p>This will give the complementary set(补集). We get <code>1</code> &amp; <code>4</code> here as expected.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line">set2 = &#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">set3 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">print(set1&amp;set2)</span><br></pre></td></tr></table></figure>
+
+<p>This will give the intersection set(交集). We get <code>2</code> &amp; <code>3</code> here as expected.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line">set2 = &#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">set3 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">print(set1&lt;set2)</span><br></pre></td></tr></table></figure>
+
+<p>If <code>set1</code> is a subset(子集) of <code>set2</code>, we will get <code>True</code> , otherwise we will get <code>False</code>. we get <code>False</code> here as expected.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line">set2 = &#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">set3 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">print(set1&lt;set3)</span><br></pre></td></tr></table></figure>
+
+<p>We get a <code>True</code> here as expected.</p>
+<ol start="36">
+<li><p>Use <code>set1.update(set2)</code> to add all elements in <code>set2</code> into <code>set1</code>.</p>
+</li>
+<li><p>We could give variables in a function default values when defining:<code>def fun(a=3,b):</code></p>
+<p>We can either pass in one variable or two variables when calling the function.</p>
+<p>Criteria: variables with default values must be placed in front of variables without default values.</p>
+</li>
+<li><p>See the example below:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">trial</span><span class="params">(a,b,c)</span>:</span></span><br><span class="line">    print(<span class="string">f"<span class="subst">&#123;a&#125;</span>;<span class="subst">&#123;b&#125;</span>;<span class="subst">&#123;c&#125;</span>"</span>)</span><br><span class="line">trial(b=<span class="number">2</span>,a=<span class="number">1</span>,c=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<p>It is a good practice to passing in values of variables using this method as ORDER is not important in the above case.</p>
+</li>
+<li><p>If we want to pass in multiple values for a parameter, we could add a <code>*</code> before the variable name. See the example below:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">trial</span><span class="params">(*args)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> args:</span><br><span class="line">        print(i)</span><br><span class="line">trial(<span class="number">1</span>,<span class="number">2</span>,<span class="string">"Oscar"</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+
+<p>It is equivalent to passing in a tuple<code>(1,2,&quot;Oscar&quot;,[1,2,3])</code> to <code>args</code>.</p>
+</li>
+<li><p>If we want the values we passed in for a parameter to be treated as a <code>dictionary</code>, we could add a <code>**</code> before the variable name. See the example below:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">trial</span><span class="params">(**kwargs)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i,j <span class="keyword">in</span> kwargs.items():</span><br><span class="line">        print(i)</span><br><span class="line">        print(j)</span><br><span class="line">trial(name = <span class="string">"oscar"</span>, age = <span class="number">19</span>, gender = <span class="string">"M"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>This is equivalently to passing <code>{&quot;name&quot;:&quot;oscar&quot;,&quot;age&quot;:19,&quot;gender&quot;:&quot;M&quot;}</code> to <code>kwargs</code>.</p>
+</li>
+<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    result = <span class="string">"Hello world"</span></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line">print(type(fun))</span><br><span class="line">print(type(fun()))</span><br></pre></td></tr></table></figure>
+
+<p>For <code>type(fun)</code>, Python will return <code>&lt;class &#39;function&#39;&gt;</code>. This is because we are printing out the type of the function and of course the answer will be <code>function</code>.</p>
+<p>In terms of <code>type(fun())</code>, we are calling the function and we are actually printing out the type of the returned value i.e. type of <code>result</code> variable. That’s why we get <code>&lt;class &#39;str&#39;&gt;</code> </p>
+</li>
+<li><p>Decorator(装饰器): add some codes to a function without changing the source code of the function. There multiple ways of achieving this.</p>
+<ol>
+<li><p>Define a new function and call the old function inside the new function</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_user</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Hello"</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">re_greet_user</span><span class="params">()</span>:</span></span><br><span class="line">    greet_user()</span><br><span class="line">    print(<span class="string">"world!"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Define a new function and pass in the old function as a parameter</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_user</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Hello"</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">re_greet_user</span><span class="params">(func)</span>:</span></span><br><span class="line">    func()</span><br><span class="line">    print(<span class="string">"world"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>We need to be crystal clear that we are passing in the old function as a parameter so there is no bracket. The function is called inside the new function.</p>
+</li>
+<li><p>Define an <code>inner</code> function inside the new function so the user has a feeling we are still using <code>greet_user</code> which is the old function. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_user</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Hello"</span>)   <span class="comment">#define the old function</span></span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decorate_show</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">        print(<span class="string">"world"</span>)</span><br><span class="line">        <span class="comment">#define the inner function that will print "Hello world"</span></span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line">	<span class="comment">#The decorate_show function will return the inner funciton.</span></span><br><span class="line">    </span><br><span class="line">greet_user = decorate_show(greet_user)  <span class="comment">#call decorate_show</span></span><br><span class="line"><span class="comment">#greet_user variable is now equal to the inner with old greet_user as func.</span></span><br><span class="line">greet_user()   <span class="comment">#Call the new greet_user</span></span><br></pre></td></tr></table></figure>
+
+<p>If we need parameters for <code>func()</code>, make sure to pass it in at <code>def inner(A,B):</code>. This is basically the theory behind the <code>decorator</code></p>
+</li>
+<li><p>The final version, it is actually using the same theory as the third method but looks nicer.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decorate_show</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">        print(<span class="string">"world"</span>)</span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line"><span class="meta">@decorate_show</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">great_user</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Hello"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>We simply put <code>@decorate_function_name</code> at the line above the function we wish to decorate. To make it easier to read, we can simply replace <code>func()</code> by <code>great_user()</code>. </p>
+<p>This is really significant as we haven’t touched the source code of the original function. Besides, we can add extra codes dynamically, no need to write everything at the start.</p>
+</li>
+</ol>
+</li>
+<li><p>If we want to ignore escape characters(转义字符), we can put <code>r</code> before the <code>&quot;</code> of a string. See the example: <code>print(r”Hello\nworld”)</code> These characters will be print out directly, no new line will be created.</p>
+</li>
+<li><p><code>str1.lower()</code> convert every character in a string to the lower case.</p>
+<p><code>str1.upper()</code> convert every character in a string to the upper case.</p>
+</li>
+<li><p><code>str1.title()</code> convert the initial character of EVERY WORD in a <code>string</code> to the upper case.</p>
+<p><code>str1.capitalize()</code> convert the initial character of the FIRST WORD in a string to the upper case.</p>
+</li>
+<li><p><code>print(str1.center(20, “*”))</code> This means put <code>str1</code> in the middle. If its length is shorter than 20 characters, <code>*</code> will be used to fill the remainder. </p>
+<p>Similarly, we have <code>str1.ljust(20, “*”)</code> and <code>str1.rjust(20, “*”)</code>. The difference is where <code>str1</code> will be placed(left, right or middle) in the new string.</p>
+</li>
+<li><p><code>str1.count(sub,start,end)</code> give how many times <code>sub</code>  appears in <code>str1</code> within the <code>start</code>, <code>end</code> range. By leave <code>start</code> and <code>end</code> parameters away, Python will search the whole string.</p>
+</li>
+<li><p><code>str1.index(sub,start,end)</code> search from the left and return the position where  <code>sub</code> first time appears within the <code>start</code>, <code>end</code> range. If <code>sub</code> isn’t found, an error will appear.</p>
+<p><code>str1.rindex(object,start,end)</code> Do the very similar but start searching from the right.</p>
+</li>
+<li><p><code>str1.endswith(“xxx”)</code> return <code>True</code> if <code>str1</code> ends with “xxx”, otherwise <code>False</code>.   <code>str1.startswith(“xxx”)</code> return <code>True</code> if <code>str1</code> starts with “xxx”, otherwise <code>False</code>.</p>
+</li>
+<li><p><code>str1.isalpha()</code> return <code>True</code> if every character in <code>str1</code> in a letter, otherwise <code>False</code>.  It is a powerful tool for filtration when using with the <code>for</code> loop. See the example below.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"a1b2c3d4"</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> str1:</span><br><span class="line">    <span class="keyword">if</span> i.isalpha() == <span class="literal">True</span>:</span><br><span class="line">        print(i, end = <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Similarly, we have <code>str1.isdigit()</code>. It will return <code>True</code>, if every character in <code>str1</code> in a number, otherwise <code>False</code>.</p>
+</li>
+<li><p><code>str1.isspace()</code> return <code>True</code> if every character in <code>str1</code> is a <code>space</code>, otherwise <code>False</code>. May also be used for filtration.</p>
+</li>
+<li><p><code>str1.strip()</code> If <code>str1</code> starts with a <code>space</code>, that <code>space</code> will be removed.</p>
+<p><code>str1.lstrip()</code> If <code>str1</code> ends up with a <code>space</code>, that <code>space</code> will be removed.</p>
+</li>
+<li><p><code>str1.replace(old,new,times)</code> If the <code>old</code> string appears in <code>str1</code>, it will be replaced by <code>new</code>. By default, this operation will keep going until no <code>old</code> string is in <code>str1</code> any more. We may limit the times this operation is called, by passing in a <code>times</code> parameter.</p>
+</li>
+<li><p><code>str1.split(&quot;a&quot;)</code> <code>str1</code> will be separated into two pieces every time there is <code>&quot;a&quot;</code>. See the example,</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"bbbacccadddaeee"</span></span><br><span class="line">print(str1.split(<span class="string">"a"</span>))</span><br></pre></td></tr></table></figure>
+
+<p>This will return <code>[bbb,ccc,ddd,eee]</code></p>
+</li>
+<li><p><code>str1.splitlines()</code>  <code>str1</code> will be separated into two pieces every time there is <code>&quot;\n&quot;</code>.</p>
+</li>
+<li><p><code>list1.join()</code> Every element inside <code>list1</code> will be attached together and make up a <code>string</code></p>
+</li>
+<li><p>If we have a list of values and we want to find its <code>mean</code>, we can use the <code>statistics</code> package.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> statistics <span class="keyword">import</span> mean</span><br><span class="line">print(mean([<span class="number">1</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">8</span>]))</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>We can also find median(中位数), mode(众数) and variance(方差) exact the same way just by replacing mean in the statements above.</p>
+<ol start="58">
+<li><p>If another <code>file2.py</code> file is in the same folder as the <code>file1.py</code> we are currently running. We can use <code>import file2</code> to import it directly. If not we can use either the absolute address or the relative address. </p>
+</li>
+<li><p><code>print(dir(variable_name))</code> We can print out all functions that may be applied to this variable(data type) </p>
+<p>If we do <code>print(dir(package_name))</code>, we can print out all functions that are inside that package.</p>
+</li>
+<li><p><code>pip list</code> show all packages that we have installed</p>
+<p><code>pip install</code> install a  package</p>
+</li>
+</ol>
+<p>​    <code>pip uninstall</code> uninstall a package</p>
+<ol start="61">
+<li><p><code>print(os.getcwd())</code> give the absolute address of the file we are currently running.</p>
+</li>
+<li><p><code>os.makedirs(“folder name”)</code>  Create a new folder, will return an error if already exists.</p>
+</li>
+<li><p><code>os.removedirs(“Folder name”)</code> Remove an empty folder, will report an error if there is any content inside.</p>
+</li>
+<li><p><code>print(os.listdir())</code> Print all documents in the current folder.</p>
+</li>
+<li><p><code>os.remove(“filename”)</code> Remove a file</p>
+</li>
+<li><p><code>os.chdir(“address”)</code> It is just like the <code>cd</code> operation in the cmd</p>
+</li>
+<li><p><code>os.curdir()</code> return to the folder where current <code>.py</code> file is located.</p>
+</li>
+<li><p>If we <code>.read()</code>, <code>.readlines()</code> or <code>.readline()</code>  a file in <code>a+</code> and <code>w+</code> mode, nothing will be returned. This is because <code>w+</code> will clear the file by default before the read operation. <code>a+</code> will move the cursor to the end of the text to get ready for the appending operation. A way to fix it is by using <code>file.seek(0,0)</code> to move the cursor back to the start of the file.</p>
+</li>
+<li><p>Another method to open a file so we don’t need to close it</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(“filename”, “r”, encoding = ) <span class="keyword">as</span> file:</span><br><span class="line">    content = file.read()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Combining two list1 into a dictionary: <code>dict(zip(list_keys,list_values))</code></p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+      <div>
+        
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Yuxuan Liu</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://yoursite.com/2019/09/09/python_revision/" title="Python revision notes">http://yoursite.com/2019/09/09/python_revision/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/en" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+
+      </div>
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/2019/09/09/python_basics/" rel="prev" title="Python basics">
+                Python basics <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
   </div>
 
 
