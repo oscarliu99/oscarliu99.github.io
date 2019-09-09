@@ -384,13 +384,6 @@ td {
   background: #00c4b6;
   color: #f7f7f7;
 }
-.post {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  padding: 25px;
-  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
-  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
-}
 .posts-expand .post-title-link::before {
   content: "";
   position: absolute;
@@ -414,11 +407,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
 /*这是设置底部文字, 看个人需要修改*/
 }
 body #footer > div > div {
@@ -1773,7 +1761,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff6ae0;
+  background: #ff46ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
