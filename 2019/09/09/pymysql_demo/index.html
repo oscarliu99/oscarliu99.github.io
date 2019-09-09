@@ -241,140 +241,16 @@
             
 
   <div id="posts" class="posts-expand">
-    
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/pymysql_demo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yuxuan Liu">
-      <meta itemprop="description" content="Yuxuan Liu's personal blog">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A logical thinker">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">Quick demo for Pymysql
-
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 08-09-2019 23:52:07 / Modified: 16:56:30" itemprop="dateCreated datePublished" datetime="2019-09-08T23:52:07+01:00">08-09-2019</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+  	
       
-        <h1 id="Pymysql-notes"><a href="#Pymysql-notes" class="headerlink" title="Pymysql notes"></a>Pymysql notes</h1><ol>
-<li><p>import pymysql</p>
-</li>
-<li><p>Search</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">conn = pymysql.connect(host=<span class="string">"localhost"</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"root"</span>,db=<span class="string">"python_summer"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> conn:</span><br><span class="line">    </span><br><span class="line">    print(<span class="string">"success"</span>)</span><br><span class="line"></span><br><span class="line">cur = conn.cursor()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cur.execute(<span class="string">"SELECT * FROM student"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">all_info = cur.fetchall()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(all_info)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> all_info:</span><br><span class="line">    </span><br><span class="line">    print(i[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cur.close()</span><br><span class="line"></span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-</li>
-<li><p>Alter</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">conn = pymysql.connect(host=<span class="string">"localhost"</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"root"</span>,db=<span class="string">"python_summer"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> conn:</span><br><span class="line">    </span><br><span class="line">    print(<span class="string">"success"</span>)</span><br><span class="line"></span><br><span class="line">cur = conn.cursor()</span><br><span class="line"></span><br><span class="line">num = cur.execute(<span class="string">"UPDATE student SET student.student_name = 'Yuxuan Liu' WHERE student.student_name = 'Oscar'"</span>)</span><br><span class="line"></span><br><span class="line">print(num)</span><br><span class="line"></span><br><span class="line">conn.commit()</span><br><span class="line"></span><br><span class="line">cur.close()</span><br><span class="line"></span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>append</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">conn = pymysql.connect(host=<span class="string">"localhost"</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"root"</span>,db=<span class="string">"python_summer"</span>)</span><br><span class="line"></span><br><span class="line">cur = conn.cursor()</span><br><span class="line"></span><br><span class="line">num = cur.execute(<span class="string">"INSERT INTO student(student_name,student_subject,student_gpa) VALUES('Jim','Engineering','3.93')"</span>)</span><br><span class="line"></span><br><span class="line">print(num)</span><br><span class="line"></span><br><span class="line">conn.commit()</span><br><span class="line"></span><br><span class="line">cur.close()</span><br><span class="line"></span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>delete</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">conn = pymysql.connect(host=<span class="string">"localhost"</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"root"</span>,db=<span class="string">"python_summer"</span>)</span><br><span class="line"></span><br><span class="line">cur = conn.cursor()</span><br><span class="line"></span><br><span class="line">num = cur.execute(<span class="string">"DELETE FROM student WHERE student.student_name = 'Jim'"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> num == <span class="number">1</span>:</span><br><span class="line">    </span><br><span class="line">    conn.commit()</span><br><span class="line"></span><br><span class="line">conn.close()</span><br><span class="line"></span><br><span class="line">cur.close()</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-
-    </div>
-
-    
-    
-    
-      <div>
-        
-
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>Post author:  </strong>Yuxuan Liu</li>
-  <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="http://yoursite.com/2019/09/09/pymysql_demo/" title="Quick demo for Pymysql">http://yoursite.com/2019/09/09/pymysql_demo/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/en" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
-</ul>
-
-      </div>
-
-    <footer class="post-footer">
-          
-        
-        <div class="post-tags">
-            <a href="/tags/Pymysql/" rel="tag"># Pymysql</a>
-          
-        </div>
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-              <a href="/2019/09/09/numpy_basics/" rel="next" title="Numpy basics">
-                <i class="fa fa-chevron-left"></i> Numpy basics
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-              <a href="/2019/09/09/Mysql_basics/" rel="prev" title="Mysql basics">
-                Mysql basics <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
   </div>
 
 
           </div>
           
+    
+    <div class="comments" id="comments"></div>
+  
 
 
         </div>
@@ -619,6 +495,32 @@
   <script src="/js/scrollspy.js?v=7.3.0"></script>
 <script src="/js/post-details.js?v=7.3.0"></script>
 
+
+    
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', function() {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: '5yS5iCBBQeh4I83PJnNiPhWn-gzGzoHsz',
+    appKey: '3gi8JsrdAcPMFzGdPSnOGuuW',
+    placeholder: 'Please feel free to leave a comment :)',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'en' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
 
 </body>
 </html>
