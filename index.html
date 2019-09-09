@@ -794,7 +794,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/python_basics/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/pymysql_demo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Liu">
@@ -810,7 +810,7 @@
         
           <h1 class="post-title" itemprop="name headline">
               
-              <a href="/2019/09/09/python_basics/" class="post-title-link" itemprop="url">Python basics</a>
+              <a href="/2019/09/09/pymysql_demo/" class="post-title-link" itemprop="url">Quick demo for Pymysql</a>
             
           </h1>
         
@@ -826,7 +826,7 @@
                 
               
 
-              <time title="Created: 08-09-2019 23:47:01" itemprop="dateCreated datePublished" datetime="2019-09-08T23:47:01+01:00">08-09-2019</time>
+              <time title="Created: 08-09-2019 23:52:07" itemprop="dateCreated datePublished" datetime="2019-09-08T23:52:07+01:00">08-09-2019</time>
             </span>
           
             
@@ -837,7 +837,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 09-09-2019 08:41:26" itemprop="dateModified" datetime="2019-09-09T08:41:26+01:00">09-09-2019</time>
+                <time title="Modified: 09-09-2019 08:46:53" itemprop="dateModified" datetime="2019-09-09T08:46:53+01:00">09-09-2019</time>
               </span>
             
           
@@ -865,8 +865,8 @@
     </span>
     <span class="post-meta-item-text">Comments: </span>
   
-    <a href="/2019/09/09/python_basics/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/09/09/python_basics/" itemprop="commentCount"></span>
+    <a href="/2019/09/09/pymysql_demo/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/09/09/pymysql_demo/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -882,24 +882,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ol>
-<li><p><code>\n</code> will create a new line in a string. <code>print(&quot;apple\npear&quot;)</code></p>
+          <h1 id="Pymysql-notes"><a href="#Pymysql-notes" class="headerlink" title="Pymysql notes"></a>Pymysql notes</h1><ol>
+<li><p>import Pymysql</p>
 </li>
-<li><p><code>string.lower()</code> will change every character in a string to lower cases.</p>
-</li>
-<li><p><code>string.upper()</code> will change every character in a string to upper cases.</p>
-</li>
-<li><p><code>len(string)</code> will return the length of the string.</p>
-</li>
-<li><p><code>string[3]</code> will could index a string(start from zero)</p>
-</li>
-<li><p><code>string.index(A)</code> will return the position where <code>A</code> first time appear in the string. If <code>A</code> is consisted of multiple characters, it will return the position of the first character in <code>A</code>. If <code>A</code> can’t be found in the string, you will get an error</p>
-</li>
-<li><p><code>string.find(A)</code> very similar to <code>.index(A)</code>. The difference is that if we couldn’t find <code>A</code> in the string, it will return <code>-1</code> instead of an error.</p>
+<li><p>Search</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">conn = pymysql.connect(host=<span class="string">"localhost"</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"root"</span>,db=<span class="string">"python_summer"</span>)</span><br><span class="line"><span class="keyword">if</span> conn:</span><br><span class="line">    print(<span class="string">"success"</span>)</span><br><span class="line">cur = conn.cursor()</span><br><span class="line">cur.execute(<span class="string">"SELECT * FROM student"</span>)</span><br><span class="line">all_info = cur.fetchall()</span><br><span class="line">print(all_info)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> all_info:</span><br><span class="line">    print(i[<span class="number">1</span>])</span><br><span class="line">cur.close()</span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/09/09/python_basics/#more" rel="contents">
+              <a class="btn" href="/2019/09/09/pymysql_demo/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -962,7 +953,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -970,6 +961,10 @@
       
       
       <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
         
         
         
@@ -979,7 +974,7 @@
         
         <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span>
-        
+        </a>
       </div>
     
       
@@ -1002,7 +997,11 @@
         
           
         
-        <span class="site-state-item-count">5</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>
