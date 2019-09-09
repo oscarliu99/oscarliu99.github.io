@@ -54,18 +54,18 @@
   };
 </script>
 
-  <meta name="description" content="Pymysql notes import pymysql  Search 1234567891011121314151617181920212223242526conn = pymysql.connect(host=&quot;localhost&quot;,user=&quot;root&quot;,passwd=&quot;root&quot;,db=&quot;python_summer&quot;)if conn:        print(&quot;success&quot;)cur">
+  <meta name="description" content="Pymysql notes import Pymysql  Search 1234567891011conn = pymysql.connect(host=&quot;localhost&quot;,user=&quot;root&quot;,passwd=&quot;root&quot;,db=&quot;python_summer&quot;)if conn:    print(&quot;success&quot;)cur = conn.cursor()cur.execute(&quot;SELEC">
 <meta name="keywords" content="Pymysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Quick demo for Pymysql">
 <meta property="og:url" content="http://yoursite.com/2019/09/09/pymysql_demo/index.html">
 <meta property="og:site_name" content="A logical thinker">
-<meta property="og:description" content="Pymysql notes import pymysql  Search 1234567891011121314151617181920212223242526conn = pymysql.connect(host=&quot;localhost&quot;,user=&quot;root&quot;,passwd=&quot;root&quot;,db=&quot;python_summer&quot;)if conn:        print(&quot;success&quot;)cur">
+<meta property="og:description" content="Pymysql notes import Pymysql  Search 1234567891011conn = pymysql.connect(host=&quot;localhost&quot;,user=&quot;root&quot;,passwd=&quot;root&quot;,db=&quot;python_summer&quot;)if conn:    print(&quot;success&quot;)cur = conn.cursor()cur.execute(&quot;SELEC">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-09T05:35:51.559Z">
+<meta property="og:updated_time" content="2019-09-09T06:06:05.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Quick demo for Pymysql">
-<meta name="twitter:description" content="Pymysql notes import pymysql  Search 1234567891011121314151617181920212223242526conn = pymysql.connect(host=&quot;localhost&quot;,user=&quot;root&quot;,passwd=&quot;root&quot;,db=&quot;python_summer&quot;)if conn:        print(&quot;success&quot;)cur">
+<meta name="twitter:description" content="Pymysql notes import Pymysql  Search 1234567891011conn = pymysql.connect(host=&quot;localhost&quot;,user=&quot;root&quot;,passwd=&quot;root&quot;,db=&quot;python_summer&quot;)if conn:    print(&quot;success&quot;)cur = conn.cursor()cur.execute(&quot;SELEC">
   <link rel="canonical" href="http://yoursite.com/2019/09/09/pymysql_demo/">
 
 
@@ -290,7 +290,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 09-09-2019 06:35:51" itemprop="dateModified" datetime="2019-09-09T06:35:51+01:00">09-09-2019</time>
+                <time title="Modified: 09-09-2019 07:06:05" itemprop="dateModified" datetime="2019-09-09T07:06:05+01:00">09-09-2019</time>
               </span>
             
           
@@ -323,10 +323,12 @@
 
       
         <h1 id="Pymysql-notes"><a href="#Pymysql-notes" class="headerlink" title="Pymysql notes"></a>Pymysql notes</h1><ol>
-<li><p>import pymysql</p>
+<li><p>import Pymysql</p>
 </li>
 <li><p>Search</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">conn = pymysql.connect(host=<span class="string">"localhost"</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"root"</span>,db=<span class="string">"python_summer"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> conn:</span><br><span class="line">    </span><br><span class="line">    print(<span class="string">"success"</span>)</span><br><span class="line"></span><br><span class="line">cur = conn.cursor()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cur.execute(<span class="string">"SELECT * FROM student"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">all_info = cur.fetchall()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(all_info)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> all_info:</span><br><span class="line">    </span><br><span class="line">    print(i[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cur.close()</span><br><span class="line"></span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">conn = pymysql.connect(host=<span class="string">"localhost"</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"root"</span>,db=<span class="string">"python_summer"</span>)</span><br><span class="line"><span class="keyword">if</span> conn:</span><br><span class="line">    print(<span class="string">"success"</span>)</span><br><span class="line">cur = conn.cursor()</span><br><span class="line">cur.execute(<span class="string">"SELECT * FROM student"</span>)</span><br><span class="line">all_info = cur.fetchall()</span><br><span class="line">print(all_info)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> all_info:</span><br><span class="line">    print(i[<span class="number">1</span>])</span><br><span class="line">cur.close()</span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 </li>
 <li><p>Alter</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">conn = pymysql.connect(host=<span class="string">"localhost"</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"root"</span>,db=<span class="string">"python_summer"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> conn:</span><br><span class="line">    </span><br><span class="line">    print(<span class="string">"success"</span>)</span><br><span class="line"></span><br><span class="line">cur = conn.cursor()</span><br><span class="line"></span><br><span class="line">num = cur.execute(<span class="string">"UPDATE student SET student.student_name = 'Yuxuan Liu' WHERE student.student_name = 'Oscar'"</span>)</span><br><span class="line"></span><br><span class="line">print(num)</span><br><span class="line"></span><br><span class="line">conn.commit()</span><br><span class="line"></span><br><span class="line">cur.close()</span><br><span class="line"></span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
@@ -543,7 +545,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">© Yuxuan Liu 2019. All rights reserved.</span>
+  <span class="author" itemprop="copyrightHolder">Yuxuan Liu 2019. All rights reserved.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
 <div>
