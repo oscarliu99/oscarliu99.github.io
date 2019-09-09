@@ -420,6 +420,13 @@ body #footer > div > div {
 .main-inner {
   opacity: 0.85;
 }
+.post {
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  padding: 1em;
+  -webkit-box-shadow: 0 0 0.5em rgba(202,203,203,0.5);
+}
 .post-body {
   color: #0a0a0a;
 }
@@ -1769,7 +1776,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ddf745;
+  background: #175e7d;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
