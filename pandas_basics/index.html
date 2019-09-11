@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="Pandas(Python data analysis library) basics 12import numpy as npimport pandas as pd  pd.Series() is similar to np.array() but we can assign series with a string or datetime index rather than just nume">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-11T15:38:07.611Z">
+<meta property="og:updated_time" content="2019-09-11T15:42:02.350Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pandas basics">
 <meta name="twitter:description" content="Pandas(Python data analysis library) basics 12import numpy as npimport pandas as pd  pd.Series() is similar to np.array() but we can assign series with a string or datetime index rather than just nume">
@@ -291,7 +291,7 @@
                 
               
 
-              <time title="Created: 11-09-2019 23:36:17 / Modified: 16:38:07" itemprop="dateCreated datePublished" datetime="2019-09-11T23:36:17+01:00">11-09-2019</time>
+              <time title="Created: 11-09-2019 23:36:17 / Modified: 16:42:02" itemprop="dateCreated datePublished" datetime="2019-09-11T23:36:17+01:00">11-09-2019</time>
             </span>
           
             
@@ -348,6 +348,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">list1 = [<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>]</span><br><span class="line">array1 = np.array([<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>])</span><br><span class="line">dict1 = &#123;<span class="number">1</span>:<span class="number">10</span>,<span class="number">2</span>:<span class="number">20</span>,<span class="number">3</span>:<span class="number">30</span>,<span class="number">4</span>:<span class="number">40</span>&#125;</span><br><span class="line">series1 = pd.Series(list1)</span><br><span class="line">series2 = pd.Series(array1)</span><br><span class="line">series3 = pd.Series(dict1)</span><br><span class="line">print(series1)</span><br><span class="line">print(series2)</span><br><span class="line">print(series3)</span><br></pre></td></tr></table></figure>
 
 <p>By default, we have ascending numerical index</p>
+<a id="more"></a>
 </li>
 <li><p>Assign index to a series</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">index1 = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>]</span><br><span class="line">list1 = [<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>]</span><br><span class="line">array1 = np.array([<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>])</span><br><span class="line">dict1 = &#123;<span class="string">"a"</span>:<span class="number">10</span>,<span class="string">"b"</span>:<span class="number">20</span>,<span class="string">"c"</span>:<span class="number">30</span>,<span class="string">"d"</span>:<span class="number">40</span>&#125;</span><br><span class="line">series1 = pd.Series(list1,index1)</span><br><span class="line">series2 = pd.Series(array1,index1)</span><br><span class="line">series3 = pd.Series(dict1)</span><br><span class="line">print(series1)</span><br><span class="line">print(series2)</span><br><span class="line">print(series3)</span><br></pre></td></tr></table></figure>
