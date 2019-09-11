@@ -2,9 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yuxuanliu.tech/numpy_basics/</loc>
+    <loc>https://yuxuanliu.tech/pandas_basics/</loc>
     
-    <lastmod>2019-09-10T16:51:53.390Z</lastmod>
+    <lastmod>2019-09-11T15:38:07.611Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuxuanliu.tech/Mysql_basics/</loc>
+    
+    <lastmod>2019-09-11T15:34:43.946Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuxuanliu.tech/python_revision/</loc>
+    
+    <lastmod>2019-09-11T15:34:22.900Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuxuanliu.tech/html_basics/</loc>
+    
+    <lastmod>2019-09-11T15:33:59.211Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuxuanliu.tech/pymysql_demo/</loc>
+    
+    <lastmod>2019-09-11T15:33:01.882Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuxuanliu.tech/c++_basics/</loc>
+    
+    <lastmod>2019-09-11T15:32:46.789Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuxuanliu.tech/finance_basics/</loc>
+    
+    <lastmod>2019-09-11T15:32:23.425Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuxuanliu.tech/numpy_notes/</loc>
+    
+    <lastmod>2019-09-11T15:32:03.487Z</lastmod>
     
   </url>
   
@@ -16,51 +65,9 @@
   </url>
   
   <url>
-    <loc>https://yuxuanliu.tech/python_revision/</loc>
-    
-    <lastmod>2019-09-09T11:39:20.854Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://yuxuanliu.tech/python_basics/</loc>
     
     <lastmod>2019-09-09T11:39:13.106Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuxuanliu.tech/Mysql_basics/</loc>
-    
-    <lastmod>2019-09-09T11:38:46.861Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuxuanliu.tech/html_basics/</loc>
-    
-    <lastmod>2019-09-09T11:38:34.141Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuxuanliu.tech/finance_basics/</loc>
-    
-    <lastmod>2019-09-09T11:38:20.924Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuxuanliu.tech/c++_basics/</loc>
-    
-    <lastmod>2019-09-09T11:38:11.926Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuxuanliu.tech/pymysql_demo/</loc>
-    
-    <lastmod>2019-09-09T11:00:31.864Z</lastmod>
     
   </url>
   
