@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="1. Handling missing data Creating a dataframe with NaN: 12345import numpy as npimport pandas as pddict1 = &amp;#123;&quot;A&quot;:[1,2,3],&quot;B&quot;:[1,2,np.nan],&quot;C&quot;:[1,np.nan,np.nan]&amp;#125;df = pd.DataFrame(dict1)print(df">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-12T10:23:08.817Z">
+<meta property="og:updated_time" content="2019-09-12T10:32:57.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pandas advanced">
 <meta name="twitter:description" content="1. Handling missing data Creating a dataframe with NaN: 12345import numpy as npimport pandas as pddict1 = &amp;#123;&quot;A&quot;:[1,2,3],&quot;B&quot;:[1,2,np.nan],&quot;C&quot;:[1,np.nan,np.nan]&amp;#125;df = pd.DataFrame(dict1)print(df">
@@ -302,7 +302,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 12-09-2019 11:23:08" itemprop="dateModified" datetime="2019-09-12T11:23:08+01:00">12-09-2019</time>
+                <time title="Modified: 12-09-2019 11:32:57" itemprop="dateModified" datetime="2019-09-12T11:32:57+01:00">12-09-2019</time>
               </span>
             
           
@@ -618,10 +618,6 @@
 </tr>
 </tbody></table>
 </li>
-</ul>
-</li>
-</ol>
-<ul>
 <li><p>We have a compound index which are <code>A</code> and <code>B</code></p>
 </li>
 <li><p>We have column names which are in <code>C</code></p>
@@ -629,6 +625,8 @@
 <li><p>Values are allocated according to index and columns</p>
 </li>
 </ul>
+</li>
+</ol>
 <h2 id="5-Data-input-amp-output"><a href="#5-Data-input-amp-output" class="headerlink" title="5. Data input &amp; output"></a>5. Data input &amp; output</h2><ol>
 <li><p>Main data input:</p>
 <ul>
@@ -665,19 +663,20 @@
 <li><p>A number of packages need to be installed for reading data from HTML</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install lxml</span><br><span class="line">pip install html5lib</span><br><span class="line">pip install BeautifulSoup4</span><br></pre></td></tr></table></figure>
 
-
+<ul>
+<li><p>data = <code>pd.read_html(&quot;link_of_the_data&quot;)</code> read data between <code>&lt;table&gt; &lt;/table&gt;</code></p>
+<p>This returns a Python list with tables as elements inside. Use <code>data[0]</code> to access them.</p>
+</li>
+<li><p>Data obtained from HTML may get messy. Some operations are needed to tidy up.</p>
+</li>
+<li><p><code>df.to_html(&quot;filename.html&quot;)</code> convert a dataframe to HTML.</p>
 </li>
 </ul>
 </li>
-</ol>
-<pre><code>- data = `pd.read_html(&quot;link_of_the_data&quot;)` read data between `&lt;table&gt; &lt;/table&gt;`
-
-  This returns a Python list with tables as elements inside. Use `data[0]` to access them.
-
-- Data obtained from HTML may get messy. Some operations are needed to tidy up.
-
-- `df.to_html(&quot;filename.html&quot;)` convert a dataframe to HTML.</code></pre><ol start="6">
-<li>SQL database: use external packages such as <strong>Pymysql</strong> to read data from SQL database.</li>
+</ul>
+</li>
+<li><p>SQL database: use external packages such as <strong>Pymysql</strong> to read data from SQL database.</p>
+</li>
 </ol>
 
     </div>
@@ -709,8 +708,8 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/pandas_basics/" rel="next" title="Pandas basics">
-                <i class="fa fa-chevron-left"></i> Pandas basics
+              <a href="/numpy_notes/" rel="next" title="Numpy notes">
+                <i class="fa fa-chevron-left"></i> Numpy notes
               </a>
             
           </div>
@@ -718,6 +717,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+              <a href="/pandas_basics/" rel="prev" title="Pandas basics">
+                Pandas basics <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
     </footer>
