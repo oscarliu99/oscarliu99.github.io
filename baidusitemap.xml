@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yuxuanliu.tech/pandas_advanced/</loc>
+    <lastmod>2019-09-12</lastmod>
+  </url>  <url>
     <loc>https://yuxuanliu.tech/pandas_basics/</loc>
-    <lastmod>2019-09-11</lastmod>
+    <lastmod>2019-09-12</lastmod>
   </url>  <url>
     <loc>https://yuxuanliu.tech/Mysql_basics/</loc>
     <lastmod>2019-09-11</lastmod>
