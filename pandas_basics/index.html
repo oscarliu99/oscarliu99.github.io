@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="Pandas(Python data analysis library) basics 12import numpy as npimport pandas as pd  pd.Series() is similar to np.array() but we can assign series with a string or datetime index rather than just nume">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-12T10:25:12.625Z">
+<meta property="og:updated_time" content="2019-09-12T12:29:02.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pandas basics">
 <meta name="twitter:description" content="Pandas(Python data analysis library) basics 12import numpy as npimport pandas as pd  pd.Series() is similar to np.array() but we can assign series with a string or datetime index rather than just nume">
@@ -302,7 +302,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 12-09-2019 11:25:12" itemprop="dateModified" datetime="2019-09-12T11:25:12+01:00">12-09-2019</time>
+                <time title="Modified: 12-09-2019 13:29:02" itemprop="dateModified" datetime="2019-09-12T13:29:02+01:00">12-09-2019</time>
               </span>
             
           
@@ -368,7 +368,34 @@
 
 <p>There are two ways of indexing, see above. </p>
 <p>Also, we can do mathematical operations between two series. Pandas will only carry out operations between values with the same index. For those index without a matching index in the other series, their value will be set to <code>NaN</code>. See below</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CHINA      <span class="number">4.0</span></span><br><span class="line">FRANCE     NaN</span><br><span class="line">GERMANY    NaN</span><br><span class="line">IRELAND    NaN</span><br><span class="line">UK         NaN</span><br><span class="line">USA        <span class="number">2.0</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>CHINA</th>
+<th>4.0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FRANCE</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>GERMANY</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>IRELAND</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>UK</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>USA</td>
+<td>2.0</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 </li>
@@ -465,7 +492,7 @@
 <li><ul>
 <li><p><code>df.rename(columns = &quot;old name&quot;: &quot;new name&quot;, inplace = True)</code> to change a column name</p>
 </li>
-<li><p><code>df = df.rename(columns = &quot;old name&quot;: &quot;new name&quot;)</code> do exactly the same</p>
+<li><p><code>df = df.rename(columns = &quot;old name&quot;: &quot;new name&quot;)</code> does exactly the same</p>
 </li>
 <li><p>Change multiple column names:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">new_name = [<span class="string">"new_date"</span>,<span class="string">"new_value"</span>,<span class="string">"new_ratio"</span>]</span><br><span class="line">df.columns = new_name</span><br></pre></td></tr></table></figure>
@@ -492,8 +519,8 @@
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th>Group</th>
+<th>Num</th>
 <th>A</th>
 <th>B</th>
 </tr>
@@ -536,15 +563,15 @@
 </tr>
 </tbody></table>
 </li>
-</ul>
+<li><p>If we want to index 0.412580 at the bottom right corner, use the code below.</p>
 </li>
-</ol>
-<pre><code>- If we want to index 0.412580 at the bottom right corner, use the code below.
-
+</ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df.loc[<span class="string">"G2"</span>].loc[<span class="number">3</span>,<span class="string">"B"</span>])</span><br></pre></td></tr></table></figure>
 
 
-- `df.loc[&quot;G2&quot;]` returns a dataframe with 3 rows under G2. Do `.loc` again inside this dataframe.
+</li>
+</ol>
+<pre><code>- `df.loc[&quot;G2&quot;]` returns a dataframe with 3 rows under G2. Do `.loc` again inside this dataframe.
 
 - `df.index.names = [&apos;Group&apos;,&apos;Num&apos;]` assign column names to compound index
 
