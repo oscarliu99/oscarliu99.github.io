@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="Pandas(Python data analysis library) basics 12import numpy as npimport pandas as pd  pd.Series() is similar to np.array() but we can assign series with a string or datetime index rather than just nume">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-12T09:49:00.335Z">
+<meta property="og:updated_time" content="2019-09-12T10:03:43.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pandas basics">
 <meta name="twitter:description" content="Pandas(Python data analysis library) basics 12import numpy as npimport pandas as pd  pd.Series() is similar to np.array() but we can assign series with a string or datetime index rather than just nume">
@@ -302,7 +302,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 12-09-2019 10:49:00" itemprop="dateModified" datetime="2019-09-12T10:49:00+01:00">12-09-2019</time>
+                <time title="Modified: 12-09-2019 11:03:43" itemprop="dateModified" datetime="2019-09-12T11:03:43+01:00">12-09-2019</time>
               </span>
             
           
@@ -489,23 +489,74 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">outside = [<span class="string">'G1'</span>,<span class="string">'G1'</span>,<span class="string">'G1'</span>,<span class="string">'G2'</span>,<span class="string">'G2'</span>,<span class="string">'G2'</span>]</span><br><span class="line">inside = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">hier_index = list(zip(outside,inside))</span><br><span class="line">hier_index = pd.MultiIndex.from_tuples(hier_index)</span><br><span class="line">df = pd.DataFrame(np.random.randn(<span class="number">6</span>,<span class="number">2</span>),index=hier_index,columns=[<span class="string">'A'</span>,<span class="string">'B'</span>])</span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
 
 <p>This will produce the following dataframe with two columns of index.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">		A	     B</span><br><span class="line">   <span class="number">1</span> <span class="number">0.153661</span>  <span class="number">0.167638</span></span><br><span class="line">G1 <span class="number">2</span> <span class="number">-0.765930</span> <span class="number">0.962299</span></span><br><span class="line">   <span class="number">3</span> <span class="number">0.902826</span>  <span class="number">-0.537909</span></span><br><span class="line">   <span class="number">1</span> <span class="number">-1.549671</span> <span class="number">0.435253</span></span><br><span class="line">G2 <span class="number">2</span> <span class="number">1.259904</span>  <span class="number">-0.447898</span></span><br><span class="line">   <span class="number">3</span> <span class="number">0.266207</span>  <span class="number">0.412580</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>A</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>1</td>
+<td>0.153661</td>
+<td>0.167638</td>
+</tr>
+<tr>
+<td>G1</td>
+<td>2</td>
+<td>-0.765930</td>
+<td>0.962299</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>0.902826</td>
+<td>-0.537909</td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>-1.549671</td>
+<td>0.435253</td>
+</tr>
+<tr>
+<td>G2</td>
+<td>2</td>
+<td>1.259904</td>
+<td>-0.447898</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>0.266207</td>
+<td>0.412580</td>
+</tr>
+</tbody></table>
 </li>
+</ul>
+</li>
+</ol>
+<ul>
 <li><p>If we want to index 0.412580 at the bottom right corner, use the code below.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df.loc[<span class="string">"G2"</span>].loc[<span class="number">3</span>,<span class="string">"B"</span>])</span><br></pre></td></tr></table></figure>
 
-<p><code>df.loc[&quot;G2&quot;]</code> returns a dataframe with 3 rows under G2. Do <code>.loc</code> again inside this dataframe.</p>
+
 </li>
+</ul>
+<p>  <code>df.loc[&quot;G2&quot;]</code> returns a dataframe with 3 rows under G2. Do <code>.loc</code> again inside this dataframe.</p>
+<ul>
 <li><p><code>df.index.names = [&#39;Group&#39;,&#39;Num&#39;]</code> assign column names to compound index</p>
 </li>
 <li><p>What if rows with inside index <code>Num=1</code> are needed? It is a bit tedious to use <code>.loc</code> multiple times. There is another method:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df.xs(<span class="number">1</span>,level=<span class="string">'Num'</span>))</span><br></pre></td></tr></table></figure>
 
-<p>The <code>level</code> attribute specifies the column inside the compound index.</p>
+
 </li>
 </ul>
-</li>
-</ol>
+<p>  The <code>level</code> attribute specifies the column inside the compound index.</p>
 
     </div>
 
