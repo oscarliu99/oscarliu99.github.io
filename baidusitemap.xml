@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yuxuanliu.tech/python_revision/</loc>
+    <lastmod>2019-09-12</lastmod>
+  </url>  <url>
+    <loc>https://yuxuanliu.tech/python_basics/</loc>
+    <lastmod>2019-09-12</lastmod>
+  </url>  <url>
     <loc>https://yuxuanliu.tech/pandas_basics/</loc>
     <lastmod>2019-09-12</lastmod>
   </url>  <url>
     <loc>https://yuxuanliu.tech/pandas_advanced/</loc>
     <lastmod>2019-09-12</lastmod>
   </url>  <url>
-    <loc>https://yuxuanliu.tech/Mysql_basics/</loc>
-    <lastmod>2019-09-11</lastmod>
+    <loc>https://yuxuanliu.tech/numpy_notes/</loc>
+    <lastmod>2019-09-12</lastmod>
   </url>  <url>
-    <loc>https://yuxuanliu.tech/python_revision/</loc>
+    <loc>https://yuxuanliu.tech/Mysql_basics/</loc>
     <lastmod>2019-09-11</lastmod>
   </url>  <url>
     <loc>https://yuxuanliu.tech/html_basics/</loc>
@@ -24,11 +30,5 @@
   </url>  <url>
     <loc>https://yuxuanliu.tech/finance_basics/</loc>
     <lastmod>2019-09-11</lastmod>
-  </url>  <url>
-    <loc>https://yuxuanliu.tech/numpy_notes/</loc>
-    <lastmod>2019-09-11</lastmod>
-  </url>  <url>
-    <loc>https://yuxuanliu.tech/python_basics/</loc>
-    <lastmod>2019-09-09</lastmod>
   </url>
 </urlset>

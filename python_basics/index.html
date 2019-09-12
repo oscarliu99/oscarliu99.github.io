@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="\n will create a new line in a string. print(&amp;quot;apple\npear&amp;quot;)  string.lower() will change every character in a string to lower cases.  string.upper() will change every character in a string t">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-09T11:39:13.106Z">
+<meta property="og:updated_time" content="2019-09-12T10:25:38.259Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python basics">
 <meta name="twitter:description" content="\n will create a new line in a string. print(&amp;quot;apple\npear&amp;quot;)  string.lower() will change every character in a string to lower cases.  string.upper() will change every character in a string t">
@@ -302,7 +302,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 09-09-2019 12:39:13" itemprop="dateModified" datetime="2019-09-09T12:39:13+01:00">09-09-2019</time>
+                <time title="Modified: 12-09-2019 11:25:38" itemprop="dateModified" datetime="2019-09-12T11:25:38+01:00">12-09-2019</time>
               </span>
             
           
@@ -434,8 +434,8 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">translate</span><span class="params">(phrase)</span>:</span></span><br><span class="line">     translation = <span class="string">""</span></span><br><span class="line">     <span class="keyword">for</span> letter <span class="keyword">in</span> phrase:</span><br><span class="line">          <span class="keyword">if</span> letter.lower() <span class="keyword">in</span> <span class="string">"aeiou"</span>:</span><br><span class="line">               <span class="keyword">if</span> letter.isupper():</span><br><span class="line">                    translation = translation + <span class="string">"G"</span></span><br><span class="line">               <span class="keyword">else</span>:</span><br><span class="line">                    translation = translation + <span class="string">"g"</span></span><br><span class="line">          <span class="keyword">else</span>:</span><br><span class="line">               translation = translation + letter</span><br><span class="line">     <span class="keyword">return</span> translation</span><br></pre></td></tr></table></figure>
 
 <ol start="34">
-<li><p><code>Try</code>&amp; <code>except</code> method</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Try:</span><br><span class="line">    In=int(input(<span class="string">"Fill in the answer"</span>))</span><br><span class="line">Except:</span><br><span class="line">    Print(<span class="string">"Invalid input, not an integer"</span>)</span><br></pre></td></tr></table></figure>
+<li><p><code>try</code>&amp; <code>except</code> method</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    In=int(input(<span class="string">"Fill in the answer"</span>))</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    Print(<span class="string">"Invalid input, not an integer"</span>)</span><br></pre></td></tr></table></figure>
 
 <p>Here, if the input isn’t an integer, an error will show up. By using <code>try</code>, <code>except</code> method, operations in <code>except</code> will run if and only if there is an error.</p>
 <p>We can also specify the type of error after <code>expect</code>, refer to the example below.</p>
