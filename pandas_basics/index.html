@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="Pandas(Python data analysis library) basics 12import numpy as npimport pandas as pd  pd.Series() is similar to np.array() but we can assign series with a string or datetime index rather than just nume">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-12T12:29:02.295Z">
+<meta property="og:updated_time" content="2019-09-16T16:42:37.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pandas basics">
 <meta name="twitter:description" content="Pandas(Python data analysis library) basics 12import numpy as npimport pandas as pd  pd.Series() is similar to np.array() but we can assign series with a string or datetime index rather than just nume">
@@ -302,7 +302,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 12-09-2019 13:29:02" itemprop="dateModified" datetime="2019-09-12T13:29:02+01:00">12-09-2019</time>
+                <time title="Modified: 16-09-2019 17:42:37" itemprop="dateModified" datetime="2019-09-16T17:42:37+01:00">16-09-2019</time>
               </span>
             
           
@@ -563,24 +563,18 @@
 </tr>
 </tbody></table>
 </li>
-<li><p>If we want to index 0.412580 at the bottom right corner, use the code below.</p>
+<li><p>If we want to index 0.412580 at the bottom right corner, use: <code>print(df.loc[&quot;G2&quot;].loc[3,&quot;B&quot;])</code></p>
+</li>
+<li><p><code>df.loc[&quot;G2&quot;]</code> returns a dataframe with 3 rows under G2. Do <code>.loc</code> again inside this dataframe.</p>
+</li>
+<li><p><code>df.index.names = [&#39;Group&#39;,&#39;Num&#39;]</code> assign column names to compound index</p>
+</li>
+<li><p>What if rows with inside index <code>Num=1</code> are needed? It is a bit tedious to use <code>.loc</code> multiple times. There is another method: <code>print(df.xs(1,level=&#39;Num&#39;))</code> The <code>level</code> attribute specifies the column inside the compound index.</p>
 </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df.loc[<span class="string">"G2"</span>].loc[<span class="number">3</span>,<span class="string">"B"</span>])</span><br></pre></td></tr></table></figure>
-
-
 </li>
 </ol>
-<pre><code>- `df.loc[&quot;G2&quot;]` returns a dataframe with 3 rows under G2. Do `.loc` again inside this dataframe.
 
-- `df.index.names = [&apos;Group&apos;,&apos;Num&apos;]` assign column names to compound index
-
-- What if rows with inside index `Num=1` are needed? It is a bit tedious to use `.loc` multiple times. There is another method:
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df.xs(<span class="number">1</span>,level=<span class="string">'Num'</span>))</span><br></pre></td></tr></table></figure>
-
-
-The `level` attribute specifies the column inside the compound index.</code></pre>
     </div>
 
     

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yuxuanliu.tech/pandas_basics/</loc>
+    
+    <lastmod>2019-09-16T16:42:37.653Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yuxuanliu.tech/datetime_summary/</loc>
     
     <lastmod>2019-09-16T16:19:00.903Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://yuxuanliu.tech/pandas_advanced/</loc>
     
     <lastmod>2019-09-12T17:25:57.980Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuxuanliu.tech/pandas_basics/</loc>
-    
-    <lastmod>2019-09-12T12:29:02.295Z</lastmod>
     
   </url>
   
