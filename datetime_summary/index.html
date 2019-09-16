@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="import datetime 1. datetime.date datetime.date.today() return the date of today.   Accessing year, month and date attributes: 1234a = datetime.date.today()print(a.year)print(a.month)print(a.day)  b =">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-16T16:05:30.644Z">
+<meta property="og:updated_time" content="2019-09-16T16:12:56.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python datetime summary">
 <meta name="twitter:description" content="import datetime 1. datetime.date datetime.date.today() return the date of today.   Accessing year, month and date attributes: 1234a = datetime.date.today()print(a.year)print(a.month)print(a.day)  b =">
@@ -302,7 +302,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 16-09-2019 17:05:30" itemprop="dateModified" datetime="2019-09-16T17:05:30+01:00">16-09-2019</time>
+                <time title="Modified: 16-09-2019 17:12:56" itemprop="dateModified" datetime="2019-09-16T17:12:56+01:00">16-09-2019</time>
               </span>
             
           
@@ -411,7 +411,7 @@
 <li><p><code>.isoformat()</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">day = datetime.date(<span class="number">2019</span>,<span class="number">9</span>,<span class="number">3</span>)</span><br><span class="line">str_format = day.isoformat()</span><br><span class="line">print(str_format)</span><br><span class="line"><span class="comment">#"2019-09-03"</span></span><br></pre></td></tr></table></figure>
 
-<p>Change <code>datetime.date</code> into a string(“%Y-%n-%d”)</p>
+<p>Change <code>datetime.date</code> into a string(“%Y-%m-%d”)</p>
 </li>
 <li><p><code>.__format__()</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">day = datetime.date(<span class="number">2019</span>,<span class="number">9</span>,<span class="number">3</span>)</span><br><span class="line">str_format = day.__format(<span class="string">"%d/%m/%Y"</span>)</span><br><span class="line">print(str_format)</span><br><span class="line"><span class="comment">#"03/09/2019"</span></span><br></pre></td></tr></table></figure>
@@ -437,12 +437,12 @@
 </li>
 </ol>
 <h2 id="2-datetime-time"><a href="#2-datetime-time" class="headerlink" title="2. datetime.time()"></a>2. datetime.time()</h2><ol>
-<li><p>Create a <code>datetime.time()</code> object manually: <code>b = datetime.date(Hour,Minute,Second,microsecond)</code></p>
+<li><p>Create a <code>datetime.time()</code> object manually: <code>b = datetime.time(Hour,Minute,Second,microsecond)</code></p>
 </li>
 <li><p>Accessing hour, minute, second, microsecond attributes</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = datetime.time(<span class="number">19</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">113232</span>)</span><br><span class="line">print(a)</span><br><span class="line">print(a.hour)</span><br><span class="line">print(a.minute)</span><br><span class="line">print(a.second)</span><br><span class="line">print(a.microsecond)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Compare size between <code>datetime.time</code> objects: Works the same as <code>datetime.date</code></p>
+<li><p>Compare size between <code>datetime.time</code> objects: works the same as <code>datetime.date</code></p>
 </li>
 <li><p>String formatting:</p>
 <ul>
@@ -460,7 +460,7 @@
 <li><p>Accessing date and time attributes:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">b = datetime.datetime(<span class="number">2019</span>,<span class="number">9</span>,<span class="number">17</span>,<span class="number">9</span>,<span class="number">13</span>,<span class="number">42</span>,<span class="number">352445</span>)</span><br><span class="line">print(b.date())</span><br><span class="line">print(b.time())</span><br></pre></td></tr></table></figure>
 
-<p>Split <code>datetime.datetime</code> into <code>datetime.date</code> and <code>datetime.time</code></p>
+<p>In other words, splitting <code>datetime.datetime</code> into <code>datetime.date</code> and <code>datetime.time</code></p>
 </li>
 <li><p><code>datetime.datetime.now()</code> return the current datetime</p>
 </li>
@@ -472,7 +472,7 @@
 <li><p>Difference between two <code>datetime.datetime</code> objects:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">a = datetime.datetime.now()</span><br><span class="line">b = datetime.datetime(<span class="number">2019</span>,<span class="number">9</span>,<span class="number">17</span>,<span class="number">9</span>,<span class="number">13</span>,<span class="number">42</span>,<span class="number">352445</span>)</span><br><span class="line">diff = b-a</span><br><span class="line">print(diff)</span><br></pre></td></tr></table></figure>
 
-<p><strong>diff</strong> is a <code>datetime.timedelta</code> object, we can also add a <code>datetime.timedelta</code> to another <code>datetime.datetime</code> to obtain a<code>datetime.datetime</code>.</p>
+<p><strong>diff</strong> is a <code>datetime.timedelta</code> object, we can also add a <code>datetime.timedelta</code> to another <code>datetime.datetime</code> to obtain a <code>datetime.datetime</code>.</p>
 </li>
 </ol>
 <h1 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h1><table>
