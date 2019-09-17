@@ -56,14 +56,14 @@
 </script>
 
   <meta name="description" content="1. Introduction First do activate pyfinance to activate the conda environment. Then do jupyter notebook to run the note book  2. Python review 0 also means False in python. 0.1 is True [1,2,3] can als">
-<meta name="keywords" content="Python,Numpy">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python for Finance part 1">
 <meta property="og:url" content="https://yuxuanliu.tech/Python_for_Finance_1/index.html">
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="1. Introduction First do activate pyfinance to activate the conda environment. Then do jupyter notebook to run the note book  2. Python review 0 also means False in python. 0.1 is True [1,2,3] can als">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-17T09:50:31.023Z">
+<meta property="og:updated_time" content="2019-09-17T09:55:50.462Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python for Finance part 1">
 <meta name="twitter:description" content="1. Introduction First do activate pyfinance to activate the conda environment. Then do jupyter notebook to run the note book  2. Python review 0 also means False in python. 0.1 is True [1,2,3] can als">
@@ -291,7 +291,7 @@
                 
               
 
-              <time title="Created: 17-09-2019 17:43:30 / Modified: 10:50:31" itemprop="dateCreated datePublished" datetime="2019-09-17T17:43:30+01:00">17-09-2019</time>
+              <time title="Created: 17-09-2019 17:43:30 / Modified: 10:55:50" itemprop="dateCreated datePublished" datetime="2019-09-17T17:43:30+01:00">17-09-2019</time>
             </span>
           
             
@@ -418,15 +418,15 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas_datareader.data <span class="keyword">as</span> pdr</span><br><span class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">yf.pdr_override()</span><br><span class="line">start = datetime.date(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">1</span>).__format__(<span class="string">'%Y-%m-%d'</span>)</span><br><span class="line">end = datetime.date(<span class="number">2019</span>,<span class="number">6</span>,<span class="number">6</span>).__format__(<span class="string">'%Y-%m-%d'</span>)</span><br><span class="line">data = pdr.get_data_yahoo(<span class="string">"FB"</span>,start,end)</span><br><span class="line">print(data.head())</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Using Pandas-datareader to access Quandl:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas_datareader.data <span class="keyword">as</span> pdr</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">api_key= <span class="string">"6Sgb9hL6nYbwry7gMyks"</span></span><br><span class="line">start = datetime.date(<span class="number">2014</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">end = datetime.date(<span class="number">2015</span>,<span class="number">6</span>,<span class="number">6</span>)</span><br><span class="line">data = pdr.DataReader(<span class="string">"WIKI/FB"</span>,<span class="string">"quandl"</span>,start,end,access_key=api_key)</span><br><span class="line">print(data.head())</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas_datareader.data <span class="keyword">as</span> pdr</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">api_key= <span class="string">"Fill in your api key"</span></span><br><span class="line">start = datetime.date(<span class="number">2014</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">end = datetime.date(<span class="number">2015</span>,<span class="number">6</span>,<span class="number">6</span>)</span><br><span class="line">data = pdr.DataReader(<span class="string">"WIKI/FB"</span>,<span class="string">"quandl"</span>,start,end,access_key=api_key)</span><br><span class="line">print(data.head())</span><br></pre></td></tr></table></figure>
 
 <p><code>&quot;WIKI/FB&quot;</code> is the key on Quandl, which is in the format of <code>DB_name/Sticker_name</code>. You can find out these keys on their website. </p>
 </li>
-<li><p>Using the Quandl package to access data:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> quandl</span><br><span class="line">quandl.ApiConfig.api_key = <span class="string">"6Sgb9hL6nYbwry7gMyks"</span></span><br><span class="line">data = quandl.get(<span class="string">"WIKI/FB"</span>)</span><br><span class="line">print(data.head())</span><br></pre></td></tr></table></figure>
-
-</li>
 </ul>
+</li>
+<li><p>Quandl</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> quandl</span><br><span class="line">quandl.ApiConfig.api_key = <span class="string">"Fill in your api key"</span></span><br><span class="line">data = quandl.get(<span class="string">"WIKI/FB"</span>)</span><br><span class="line">print(data.head())</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <h2 id="7-Pandas-with-time-series-data"><a href="#7-Pandas-with-time-series-data" class="headerlink" title="7. Pandas with time series data"></a>7. Pandas with time series data</h2><ol>
@@ -599,8 +599,6 @@
         
         <div class="post-tags">
             <a href="/tags/Python/" rel="tag"># Python</a>
-          
-            <a href="/tags/Numpy/" rel="tag"># Numpy</a>
           
         </div>
         <div class="post-widgets">
