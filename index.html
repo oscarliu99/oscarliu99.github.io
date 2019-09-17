@@ -258,6 +258,148 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yuxuanliu.tech/Python_for_Finance_1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuxuan Liu">
+      <meta itemprop="description" content="Welcome to my personal blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Logical thinking">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/Python_for_Finance_1/" class="post-title-link" itemprop="url">Python for Finance part 1</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 17-09-2019 17:43:30 / Modified: 10:45:46" itemprop="dateCreated datePublished" datetime="2019-09-17T17:43:30+01:00">17-09-2019</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming/Finance/" itemprop="url" rel="index"><span itemprop="name">Finance</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    <span class="post-meta-item-text">Comments: </span>
+  
+    <a href="/Python_for_Finance_1/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Python_for_Finance_1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><ol>
+<li>First do <code>activate pyfinance</code> to activate the conda environment. Then do <code>jupyter notebook</code> to run the note book</li>
+</ol>
+<h2 id="2-Python-review"><a href="#2-Python-review" class="headerlink" title="2. Python review"></a>2. Python review</h2><ol>
+<li><p><code>0</code> also means <code>False</code> in python. <code>0.1</code> is <code>True</code></p>
+<p><code>[1,2,3]</code> can also means <code>True</code> but <code>[]</code> means <code>False</code></p>
+<p>If you have something, we can say it is <code>True</code>. If there is nothing(empty), we can say it is <code>False</code>.</p>
+</li>
+<li><p><code>.format()</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"My name is &#123;x&#125;, I am &#123;y&#125; years old"</span>.format(y=<span class="number">19</span>,x=<span class="string">"Oscar"</span>))</span><br><span class="line">print(<span class="string">"My name is &#123;&#125;, I am &#123;&#125; years old"</span>.format(<span class="string">"Oscar"</span>,<span class="number">19</span>))</span><br></pre></td></tr></table></figure>
+
+<p>The two methods above are equivalent.</p>
+</li>
+<li><p>Lambda expression: anonymous function, we don’t have to write the whole <code>def</code> structure.</p>
+<ul>
+<li><p>Basics:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="keyword">lambda</span> x,y:x+y</span><br><span class="line">print(a(<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plus</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br><span class="line">print(plus(<span class="number">1</span>,<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+<p>These two methods are equivalent.</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Python_for_Finance_1/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+    
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://yuxuanliu.tech/pandas_visulisation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -759,139 +901,6 @@
     
     
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuxuanliu.tech/pandas_basics/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yuxuan Liu">
-      <meta itemprop="description" content="Welcome to my personal blog">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Logical thinking">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/pandas_basics/" class="post-title-link" itemprop="url">Pandas basics</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 11-09-2019 23:36:17" itemprop="dateCreated datePublished" datetime="2019-09-11T23:36:17+01:00">11-09-2019</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 16-09-2019 17:42:37" itemprop="dateModified" datetime="2019-09-16T17:42:37+01:00">16-09-2019</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="fa fa-comment-o"></i>
-    </span>
-    <span class="post-meta-item-text">Comments: </span>
-  
-    <a href="/pandas_basics/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/pandas_basics/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Pandas-Python-data-analysis-library-basics"><a href="#Pandas-Python-data-analysis-library-basics" class="headerlink" title="Pandas(Python data analysis library) basics"></a>Pandas(Python data analysis library) basics</h2><ol>
-<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>pd.Series()</code> is similar to <code>np.array()</code> but we can assign series with a <strong>string</strong> or <strong>datetime</strong> index rather than just numerical index.</p>
-<ul>
-<li><p>Convert list, array and dictionary to a series:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">list1 = [<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>]</span><br><span class="line">array1 = np.array([<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>])</span><br><span class="line">dict1 = &#123;<span class="number">1</span>:<span class="number">10</span>,<span class="number">2</span>:<span class="number">20</span>,<span class="number">3</span>:<span class="number">30</span>,<span class="number">4</span>:<span class="number">40</span>&#125;</span><br><span class="line">series1 = pd.Series(list1)</span><br><span class="line">series2 = pd.Series(array1)</span><br><span class="line">series3 = pd.Series(dict1)</span><br><span class="line">print(series1)</span><br><span class="line">print(series2)</span><br><span class="line">print(series3)</span><br></pre></td></tr></table></figure>
-
-<p>By default, we have ascending numerical index</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/pandas_basics/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-    
-    
   </section>
 
   
@@ -929,7 +938,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -948,7 +957,9 @@
         
           
         
-        <span class="site-state-item-count">2</span>
+          
+        
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span>
         </a>
       </div>

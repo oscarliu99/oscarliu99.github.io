@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yuxuanliu.tech/Python_for_Finance_1/</loc>
+    
+    <lastmod>2019-09-17T09:45:46.173Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yuxuanliu.tech/pandas_basics/</loc>
     
     <lastmod>2019-09-16T16:42:37.653Z</lastmod>
