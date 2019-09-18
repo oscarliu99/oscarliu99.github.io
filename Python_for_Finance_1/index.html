@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="1. Introduction First do activate pyfinance to activate the conda environment. Then do jupyter notebook to run the note book  2. Python review 0 also means False in python. 0.1 is True [1,2,3] can als">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-17T09:55:50.462Z">
+<meta property="og:updated_time" content="2019-09-18T14:10:00.829Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python for Finance part 1">
 <meta name="twitter:description" content="1. Introduction First do activate pyfinance to activate the conda environment. Then do jupyter notebook to run the note book  2. Python review 0 also means False in python. 0.1 is True [1,2,3] can als">
@@ -291,11 +291,19 @@
                 
               
 
-              <time title="Created: 17-09-2019 17:43:30 / Modified: 10:55:50" itemprop="dateCreated datePublished" datetime="2019-09-17T17:43:30+01:00">17-09-2019</time>
+              <time title="Created: 17-09-2019 17:43:30" itemprop="dateCreated datePublished" datetime="2019-09-17T17:43:30+01:00">17-09-2019</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 18-09-2019 15:10:00" itemprop="dateModified" datetime="2019-09-18T15:10:00+01:00">18-09-2019</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -445,9 +453,9 @@
 </li>
 <li><p>Methods of datetime index:</p>
 <ul>
-<li><code>df.index.argmax()</code>: return the index position of the latest date.</li>
+<li><code>df.index.argmax()</code>: return the index of the latest date.</li>
 <li><code>df.index.max()</code>: return the latest date.</li>
-<li><code>df.index.argmin()</code>: return the index position of the earliest date.</li>
+<li><code>df.index.argmin()</code>: return the index of the earliest date.</li>
 <li><code>df.index.min()</code>: return the earliest date.</li>
 </ul>
 </li>
@@ -582,6 +590,69 @@
 <li>20 days <strong>closing moving average</strong> is used(20MA)</li>
 <li>Upper band = 20MA + 2$\times$ std(20 days)</li>
 <li>Lower band = 20MA - 2$\times$ std(20 days)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="8-Notes-on-the-capstone-project"><a href="#8-Notes-on-the-capstone-project" class="headerlink" title="8. Notes on the capstone project"></a>8. Notes on the capstone project</h2><ol>
+<li><p>Two ways of finding the index of the maximum value in a column:</p>
+<ul>
+<li><code>data3.sort_values(&quot;Volume&quot;,ascending= False).iloc[0:1].index</code></li>
+<li><code>data3[&quot;Volume&quot;].argmax()</code></li>
+</ul>
+</li>
+<li><p>Market cap = share price $\times$ total units of stock present</p>
+<p>A company with higher share price does not necessary be more valuable than the other with a lower share price as we also need to take into account the total units of stock present.</p>
+</li>
+<li><p>Plotting scatter matrix:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pandas.plotting <span class="keyword">import</span> scatter_matrix</span><br><span class="line">scatter_matrix(df1,figsize=(<span class="number">16</span>,<span class="number">8</span>),alpha = <span class="number">0.2</span>,hist_kwds= &#123;<span class="string">'bins'</span>:<span class="number">30</span>&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Candlestick chart(K线图):</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas_datareader <span class="keyword">as</span> pdr</span><br><span class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</span><br><span class="line"><span class="keyword">from</span> mpl_finance <span class="keyword">import</span> candlestick_ohlc</span><br><span class="line"><span class="keyword">from</span> matplotlib.dates <span class="keyword">import</span> DateFormatter, date2num, WeekdayLocator, DayLocator, MONDAY</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Fetching data</span></span><br><span class="line">yf.pdr_override()</span><br><span class="line">start = datetime.date(<span class="number">2019</span>,<span class="number">8</span>,<span class="number">16</span>).__format__(<span class="string">"%d-%m-%Y"</span>)</span><br><span class="line">end = datetime.date(<span class="number">2019</span>,<span class="number">9</span>,<span class="number">16</span>).__format__(<span class="string">"%d-%m-%Y"</span>)</span><br><span class="line">data = pdr.get_data_yahoo(<span class="string">"TSLA"</span>,start,end)</span><br><span class="line"><span class="comment">#Reset index because there is no .apply() method on datetimeindex, we need to change it into a normal column first.</span></span><br><span class="line">df2 = data.reset_index()</span><br><span class="line"></span><br><span class="line"><span class="comment">#Change datetime.date into integer days so it can be recognised by Matplotlib</span></span><br><span class="line">df2[<span class="string">"date in num"</span>] = df2[<span class="string">"Date"</span>].apply(<span class="keyword">lambda</span> x:date2num(x))</span><br><span class="line"></span><br><span class="line"><span class="comment">#candlestick_ohlc() is taking a list with tuples(date_num,Open,High,Low,Close) inside</span></span><br><span class="line">list_for_plotting = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(df2[<span class="string">"Date"</span>])):</span><br><span class="line">    info=(float(df2.loc[i,<span class="string">"date in num"</span>]),float(df2.loc[i,<span class="string">"Open"</span>]),float(df2.loc[i,<span class="string">"High"</span>]),float(df2.loc[i,<span class="string">"Low"</span>]),float(df2.loc[i,<span class="string">"Close"</span>]))</span><br><span class="line">    list_for_plotting.append(info)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#Formatting candlestick chart</span></span><br><span class="line">mondays = WeekdayLocator(MONDAY)        <span class="comment"># major ticks on the mondays</span></span><br><span class="line">alldays = DayLocator()              <span class="comment"># minor ticks on the days</span></span><br><span class="line">weekFormatter = DateFormatter(<span class="string">'%b %d'</span>)  <span class="comment"># e.g., Jan 12</span></span><br><span class="line">dayFormatter = DateFormatter(<span class="string">'%d'</span>)      <span class="comment"># e.g., 12</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Plot it</span></span><br><span class="line">fig, ax = plt.subplots(figsize = (<span class="number">16</span>,<span class="number">8</span>))</span><br><span class="line">fig.subplots_adjust(bottom=<span class="number">0.2</span>)</span><br><span class="line">ax.xaxis.set_major_locator(mondays)</span><br><span class="line">ax.xaxis.set_minor_locator(alldays)</span><br><span class="line">ax.xaxis.set_major_formatter(weekFormatter)</span><br><span class="line">candlestick_ohlc(ax, list_for_plotting, width=<span class="number">0.6</span>, colorup=<span class="string">'g'</span>,colordown=<span class="string">'r'</span>)</span><br><span class="line">ax.set_title(<span class="string">"Candlestick chart for Tesla between 17/8/2019 and 17/9/2015"</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Daily percentage change(Daily return) = $\frac{P_{t}}{P_{t-1}}-1$</p>
+<ul>
+<li><p>$P_{t}$: price at time <strong>t</strong></p>
+</li>
+<li><p>$P_{t-1}$: price at time <strong>t-1</strong></p>
+</li>
+<li><p>Percentage of gain in one day relative to <strong>the price of yesterday</strong>.</p>
+</li>
+<li><p>If you plot daily return in a histogram and it is wide means high volatility</p>
+</li>
+<li><p>Python code:</p>
+<ul>
+<li><p>Method 1:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">"daily return"</span>] = (df[<span class="string">"Close"</span>]/df.shift(<span class="number">1</span>)[<span class="string">"Close"</span>]) - <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Method 2”</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">"daily return"</span>] = df[<span class="string">"Close"</span>].pct_change(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p><code>.pct_change(1)</code> means percentage change in a period of 1 day and it is exactly what we do in method 1.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Cumulative daily returns:</p>
+<ul>
+<li><p>The aggregate amount an investment has gained or lost over time, independent of the period of time involved.</p>
+</li>
+<li><p>Daily return is useful but it doesn’t give a insight into how much a investor is actually making. Cumulative return is computed relatively to <strong>the day investment is made</strong>.</p>
+</li>
+<li><p>Formula: $i_{i}=(1+r_{t})\times i_{t-1}$</p>
+</li>
+<li><p>Python code:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">"daily_cumulative_return"</span>] = ( <span class="number">1</span> + df[<span class="string">"daily_return"</span>] ).cumprod()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Assume we invest $1 on the first day, we are finding out how much we actually have today. </p>
+</li>
+<li><p>We need to find daily return first before finding daily cumulative return.</p>
+</li>
+<li><p><code>.cumprod()</code> means cumulative product. Old $i_{i}$ becomes $i_{t-1}$ to calculate new $i_{i}$</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -824,7 +895,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Introduction"><span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Python-review"><span class="nav-text">2. Python review</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Numpy-introduction"><span class="nav-text">3. Numpy introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Pandas-introduction"><span class="nav-text">4. Pandas introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Matplotlib-introduction"><span class="nav-text">5. Matplotlib introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Data-sources"><span class="nav-text">6. Data sources</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Pandas-with-time-series-data"><span class="nav-text">7. Pandas with time series data</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Introduction"><span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Python-review"><span class="nav-text">2. Python review</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Numpy-introduction"><span class="nav-text">3. Numpy introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Pandas-introduction"><span class="nav-text">4. Pandas introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Matplotlib-introduction"><span class="nav-text">5. Matplotlib introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Data-sources"><span class="nav-text">6. Data sources</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Pandas-with-time-series-data"><span class="nav-text">7. Pandas with time series data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Notes-on-the-capstone-project"><span class="nav-text">8. Notes on the capstone project</span></a></li></ol></div>
             
 
           </div>
