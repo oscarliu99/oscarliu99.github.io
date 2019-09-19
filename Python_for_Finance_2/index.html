@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="9. Time series analysis Key words related to time series:  Trend: Upward, Horizontal/Stationary and Downward. Seasonality(季节性): repeated trends Cyclical(周期性): trends with no set repetition   Statsmode">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-19T14:20:51.352Z">
+<meta property="og:updated_time" content="2019-09-19T14:24:34.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python for Finance part 2">
 <meta name="twitter:description" content="9. Time series analysis Key words related to time series:  Trend: Upward, Horizontal/Stationary and Downward. Seasonality(季节性): repeated trends Cyclical(周期性): trends with no set repetition   Statsmode">
@@ -291,7 +291,7 @@
                 
               
 
-              <time title="Created: 19-09-2019 22:11:11 / Modified: 15:20:51" itemprop="dateCreated datePublished" datetime="2019-09-19T22:11:11+01:00">19-09-2019</time>
+              <time title="Created: 19-09-2019 22:11:11 / Modified: 15:24:34" itemprop="dateCreated datePublished" datetime="2019-09-19T22:11:11+01:00">19-09-2019</time>
             </span>
           
             
@@ -421,43 +421,52 @@
 <li>All we need to define is $\omega _{i}$ and it depends on the <strong>adjust</strong> parameter you provided.</li>
 </ul>
 </li>
-<li><p>If <code>adjust = True</code>:<br>$$<br>y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + …</p>
-<ul>
-<li>(1 - \alpha)^t x_{0}}{1 + (1 - \alpha) + (1 - \alpha)^2 + …</li>
-<li>(1 - \alpha)^t}<br>$$</li>
-</ul>
-<ul>
-<li>By default, <code>adjust = True</code>.</li>
-<li>$0&lt; \alpha &lt;1$ </li>
-<li>This is basically the same as the first expression.</li>
-<li>We are taking all historical values into account.</li>
-<li>$\omega _{i}= (1-\alpha)^{i}$</li>
+<li><p>If <code>adjust = True</code>:</p>
+</li>
 </ul>
 </li>
-<li><p>If <code>adjust = False</code>:<br>$$<br>\begin{split}y_0 &amp;= x_0 \<br>y_t &amp;= (1 - \alpha) y_{t-1} + \alpha x_t,\end{split}<br>$$</p>
+</ol>
+<p>$$<br>     y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + …+ (1 - \alpha)^t x_{0}}{1 + (1 - \alpha) + (1 - \alpha)^2 + …+ (1 - \alpha)^t}<br>     $$</p>
+<pre><code>- By default, `adjust = True`.
+- $0&lt; \alpha &lt;1$ </code></pre><ul>
+<li><p>This is basically the same as the first expression.</p>
 <ul>
-<li>$0&lt; \alpha &lt;1$ </li>
-<li>A bit different</li>
-<li>We only take into account the input at <strong>t</strong> and the output at <strong>t-1</strong></li>
+<li><p>We are taking all historical values into account.</p>
+</li>
+<li><p>$\omega _{i}= (1-\alpha)^{i}$</p>
+<ul>
+<li>If <code>adjust = False</code>:<br>$$<br>\begin{split}y_0 &amp;= x_0 \<br>y_t &amp;= (1 - \alpha) y_{t-1} + \alpha x_t,\end{split}<br>$$</li>
 </ul>
+</li>
+<li><p>$0&lt; \alpha &lt;1$ </p>
+</li>
+<li><p>A bit different</p>
+<ul>
+<li><p>We only take into account the input at <strong>t</strong> and the output at <strong>t-1</strong></p>
 </li>
 <li><p>From the above expressions, we still need to determine $\alpha$. There are three ways:</p>
-<ul>
-<li><p>Span:<br>$$<br>\alpha = \frac{2}{s + 1},\text{for span}\ s \geq 1<br>$$<br>Span corresponds to what is commonly called an <strong>“N-day EWMA”</strong>.</p>
 </li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Span:<br>   $$<br>\alpha = \frac{2}{s + 1},\text{for span}\ s \geq 1<br>$$<br>   Span corresponds to what is commonly called an <strong>“N-day EWMA”</strong>.</p>
+<ul>
 <li><p>Center of mass:<br>$$<br>\alpha = \frac{1}{1 + c},\text{for center of mass}\ c \geq 0<br>$$<br>Center of mass has more physical interpretation and can be thought of in terms of span: $c=\frac{s−1}{2}$</p>
 </li>
 <li><p>Half-life:<br>$$<br>\alpha = 1 - \exp^{\frac{\log 0.5}{h}},\text{for half-life}\ h &gt; 0<br>$$<br>Half-life is the period of time for the exponential weight to reduce to one half.</p>
 </li>
 </ul>
+<ul>
+<li>Demo:</li>
+</ul>
 </li>
-<li><p>Demo:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas_datareader <span class="keyword">as</span> pdr</span><br><span class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="comment">#Fetching data</span></span><br><span class="line">yf.pdr_override()</span><br><span class="line">start = datetime.date(<span class="number">2019</span>,<span class="number">8</span>,<span class="number">1</span>)	</span><br><span class="line">end = datetime.date(<span class="number">2019</span>,<span class="number">9</span>,<span class="number">16</span>)</span><br><span class="line">data = pdr.get_data_yahoo(<span class="string">"TSLA"</span>,start,end)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Plotting data</span></span><br><span class="line">fig,axe = plt.subplots(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">data[<span class="string">"Close"</span>].plot(label = <span class="string">"Raw data"</span>)</span><br><span class="line"><span class="comment">#data["Close"].rolling(7).mean().plot(label = "7MA")</span></span><br><span class="line">data[<span class="string">"Close"</span>].ewm(span = <span class="number">7</span>).mean().plot(label = <span class="string">"7EWMA"</span>)</span><br><span class="line"></span><br><span class="line">axe.set_xlabel(<span class="string">"Price"</span>)</span><br><span class="line">axe.set_ylabel(<span class="string">"Time"</span>)</span><br><span class="line">axe.set_title(<span class="string">"7 days EWMA analysis on Tesla"</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas_datareader <span class="keyword">as</span> pdr</span><br><span class="line">   <span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</span><br><span class="line">   <span class="keyword">import</span> datetime</span><br><span class="line">   </span><br><span class="line">   <span class="comment">#Fetching data</span></span><br><span class="line">   yf.pdr_override()</span><br><span class="line">   start = datetime.date(<span class="number">2019</span>,<span class="number">8</span>,<span class="number">1</span>)	</span><br><span class="line">   end = datetime.date(<span class="number">2019</span>,<span class="number">9</span>,<span class="number">16</span>)</span><br><span class="line">   data = pdr.get_data_yahoo(<span class="string">"TSLA"</span>,start,end)</span><br><span class="line">   </span><br><span class="line">   <span class="comment">#Plotting data</span></span><br><span class="line">   fig,axe = plt.subplots(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">   data[<span class="string">"Close"</span>].plot(label = <span class="string">"Raw data"</span>)</span><br><span class="line">   <span class="comment">#data["Close"].rolling(7).mean().plot(label = "7MA")</span></span><br><span class="line">   data[<span class="string">"Close"</span>].ewm(span = <span class="number">7</span>).mean().plot(label = <span class="string">"7EWMA"</span>)</span><br><span class="line">   </span><br><span class="line">   axe.set_xlabel(<span class="string">"Price"</span>)</span><br><span class="line">   axe.set_ylabel(<span class="string">"Time"</span>)</span><br><span class="line">   axe.set_title(<span class="string">"7 days EWMA analysis on Tesla"</span>)</span><br><span class="line">   plt.legend()</span><br><span class="line">   plt.show()</span><br></pre></td></tr></table></figure>
+
 
 </li>
 </ul>
-</li>
-</ol>
 
     </div>
 
