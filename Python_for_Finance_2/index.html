@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="\n will create a new line in a string. print(&amp;quot;apple\npear&amp;quot;)  string.lower() will change every character in a string to lower cases.  string.upper() will change every character in a string t">
+  <meta name="description" content="9. Time series analysis Key words related to time series:  Trend: Upward, Horizontal/Stationary and Downward. Seasonality(季节性): repeated trends Cyclical(周期性): trends with no set repetition   Statsmode">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python basics">
-<meta property="og:url" content="https://yuxuanliu.tech/python_basics/index.html">
+<meta property="og:title" content="Python for Finance part 2">
+<meta property="og:url" content="https://yuxuanliu.tech/Python_for_Finance_2/index.html">
 <meta property="og:site_name" content="Logical thinking">
-<meta property="og:description" content="\n will create a new line in a string. print(&amp;quot;apple\npear&amp;quot;)  string.lower() will change every character in a string to lower cases.  string.upper() will change every character in a string t">
+<meta property="og:description" content="9. Time series analysis Key words related to time series:  Trend: Upward, Horizontal/Stationary and Downward. Seasonality(季节性): repeated trends Cyclical(周期性): trends with no set repetition   Statsmode">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-12T10:25:38.259Z">
+<meta property="og:updated_time" content="2019-09-19T14:14:54.543Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python basics">
-<meta name="twitter:description" content="\n will create a new line in a string. print(&amp;quot;apple\npear&amp;quot;)  string.lower() will change every character in a string to lower cases.  string.upper() will change every character in a string t">
-  <link rel="canonical" href="https://yuxuanliu.tech/python_basics/">
+<meta name="twitter:title" content="Python for Finance part 2">
+<meta name="twitter:description" content="9. Time series analysis Key words related to time series:  Trend: Upward, Horizontal/Stationary and Downward. Seasonality(季节性): repeated trends Cyclical(周期性): trends with no set repetition   Statsmode">
+  <link rel="canonical" href="https://yuxuanliu.tech/Python_for_Finance_2/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>Python basics | Logical thinking</title>
+  <title>Python for Finance part 2 | Logical thinking</title>
   
 
 
@@ -260,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuxuanliu.tech/python_basics/">
+    <link itemprop="mainEntityOfPage" href="https://yuxuanliu.tech/Python_for_Finance_2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Liu">
@@ -274,7 +274,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">Python basics
+          <h1 class="post-title" itemprop="name headline">Python for Finance part 2
 
             
           </h1>
@@ -291,19 +291,11 @@
                 
               
 
-              <time title="Created: 08-09-2019 11:32:01" itemprop="dateCreated datePublished" datetime="2019-09-08T11:32:01+01:00">08-09-2019</time>
+              <time title="Created: 19-09-2019 22:11:11 / Modified: 15:14:54" itemprop="dateCreated datePublished" datetime="2019-09-19T22:11:11+01:00">19-09-2019</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 12-09-2019 11:25:38" itemprop="dateModified" datetime="2019-09-12T11:25:38+01:00">12-09-2019</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -313,6 +305,13 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Finance/" itemprop="url" rel="index"><span itemprop="name">Finance</span></a></span>
 
                 
                 
@@ -330,8 +329,8 @@
     </span>
     <span class="post-meta-item-text">Comments: </span>
   
-    <a href="/python_basics/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/python_basics/" itemprop="commentCount"></span>
+    <a href="/Python_for_Finance_2/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Python_for_Finance_2/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -347,125 +346,112 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ol>
-<li><p><code>\n</code> will create a new line in a string. <code>print(&quot;apple\npear&quot;)</code></p>
+        <h2 id="9-Time-series-analysis"><a href="#9-Time-series-analysis" class="headerlink" title="9. Time series analysis"></a>9. Time series analysis</h2><ol>
+<li><p>Key words related to time series:</p>
+<ul>
+<li>Trend: Upward, Horizontal/Stationary and Downward.</li>
+<li>Seasonality(季节性): repeated trends</li>
+<li>Cyclical(周期性): trends with no set repetition</li>
+</ul>
 </li>
-<li><p><code>string.lower()</code> will change every character in a string to lower cases.</p>
+<li><p>Statsmodels:</p>
+<ul>
+<li><p><code>import statsmodels.api as sm</code></p>
 </li>
-<li><p><code>string.upper()</code> will change every character in a string to upper cases.</p>
-</li>
-<li><p><code>len(string)</code> will return the length of the string.</p>
-</li>
-<li><p><code>string[3]</code> will could index a string(start from zero)</p>
-</li>
-<li><p><code>string.index(A)</code> will return the position where <code>A</code> first time appear in the string. If <code>A</code> is consisted of multiple characters, it will return the position of the first character in <code>A</code>. If <code>A</code> can’t be found in the string, you will get an error</p>
-</li>
-<li><p><code>string.find(A)</code> very similar to <code>.index(A)</code>. The difference is that if we couldn’t find <code>A</code> in the string, it will return <code>-1</code> instead of an error.</p>
+<li><p>Demo: Hodrick-Prescott filter: $\min_{\{ \tau_{t}\} }\sum_{t}^{T}\zeta_{t}^{2}+\lambda\sum_{t=1}^{T}\left[\left(\tau_{t}-\tau_{t-1}\right)-\left(\tau_{t-1}-\tau_{t-2}\right)\right]^{2}$</p>
 <a id="more"></a>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Fetching data</span></span><br><span class="line">yf.pdr_override()</span><br><span class="line">start = datetime.date(<span class="number">2018</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">end = datetime.date(<span class="number">2019</span>,<span class="number">9</span>,<span class="number">16</span>)</span><br><span class="line">data = pdr.get_data_yahoo(<span class="string">"TSLA"</span>,start,end)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Applying Hodrick-Prescott filter, We get back a tuple with two elements, the first is the cycle pandas series and the second is the trend pandas series.</span></span><br><span class="line">close_cycle, close_trend = sm.tsa.filters.hpfilter(data[<span class="string">"Close"</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#Plotting</span></span><br><span class="line">fig,axe = plt.subplots(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line"><span class="comment">#data["Close"].plot(label = "Raw data")</span></span><br><span class="line"><span class="comment">#close_cycle.plot(label = "Cycle")</span></span><br><span class="line">close_trend.plot(label = <span class="string">"Trend"</span>)</span><br><span class="line">data[<span class="string">"Close"</span>].rolling(<span class="number">20</span>).mean().plot(label = <span class="string">"20MA"</span>)</span><br><span class="line">axe.set_xlabel(<span class="string">"Price"</span>)</span><br><span class="line">axe.set_ylabel(<span class="string">"Time"</span>)</span><br><span class="line">axe.set_title(<span class="string">"Hodrick-Prescott filter analysis on Tesla"</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Splitting data into two components: <strong>trend</strong> and <strong>cycle</strong>.</li>
+<li>We can find some similarities between the 20MA plot and the trend plot.</li>
+</ul>
 </li>
-<li><p><code>string.replace(old,new,times)</code> The <code>old</code> parameter inside the string will be replaced by the <code>new</code> parameter. Without specify <code>times</code>, all <code>old</code> substring will be replaced by <code>new</code>. We may only want to replace <code>old</code> substring certain number of times, simply fill in the <code>times</code> parameter.</p>
+</ul>
 </li>
-<li><p><code>*</code> means multiply in Python. <code>**</code> means exponential. We can also use <code>pow(A,B)</code> which stands for <code>A</code> to the power of <code>B</code>.</p>
+<li><p>ETS model(Error-Trend-Seasonality):</p>
+<ul>
+<li><p>ETS decomposition: decompose the time series data into those three main factors:</p>
+<ul>
+<li>Seasonal patterns</li>
+<li>General trends</li>
+<li>Error</li>
+</ul>
 </li>
-<li><p><code>%</code> will return the remainder of the division. </p>
+<li><p>Demo:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas_datareader <span class="keyword">as</span> pdr</span><br><span class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">from</span> statsmodels.tsa.seasonal <span class="keyword">import</span> seasonal_decompose</span><br><span class="line"></span><br><span class="line"><span class="comment">#Fetching data</span></span><br><span class="line">start = datetime.date(<span class="number">2013</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">end = datetime.date(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">yf.pdr_override()</span><br><span class="line">data = pdr.get_data_yahoo(<span class="string">"TSLA"</span>,start,end)</span><br><span class="line"></span><br><span class="line"><span class="comment">#whether to use EWMA values</span></span><br><span class="line"><span class="comment">#data1["Close"] = data1["Close"].ewm(span = 7).mean()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Filter dates</span></span><br><span class="line">data1 = data.reset_index()</span><br><span class="line">data1 = data1[(data1[<span class="string">"Date"</span>].apply(<span class="keyword">lambda</span> x:x.day == <span class="number">10</span>))|(data1[<span class="string">"Date"</span>].apply(<span class="keyword">lambda</span> x:x.day == <span class="number">20</span>)) | (data1[<span class="string">"Date"</span>].apply(<span class="keyword">lambda</span> x:x.day == <span class="number">30</span>))]</span><br><span class="line">data1 = data1.set_index(<span class="string">"Date"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Plotting data</span></span><br><span class="line">seasonal_decompose(data1[<span class="string">"Close"</span>],freq = <span class="number">36</span>,model=<span class="string">'multiplicative'</span>).plot()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>seasonal_decompose()</code> has two main parameters. <code>freq</code> equals 52 for weekly data, equals 12 for monthly data etc. <code>model</code> has two options, by default it is <strong>additive</strong> and we can also choose to use <strong>multiplicative</strong>.</li>
+<li>I use two sets of data(raw and EWMA) and set frequencies to be every 5 days or every 10 days for comparison purpose.</li>
+<li>Result: <a href="https://i.loli.net/2019/09/19/ayBLv3FfcD9RhPl.png" target="_blank" rel="noopener">raw data every 5 days</a>; <a href="https://i.loli.net/2019/09/19/8BtjGodQwYuElAx.png" target="_blank" rel="noopener">raw data every 10 days</a>; <a href="https://i.loli.net/2019/09/19/UzK1M7hDQsIVrv6.png" target="_blank" rel="noopener">EWMA data every 5 days</a>, <a href="https://i.loli.net/2019/09/19/O2E69k3nVxj1CaX.png" target="_blank" rel="noopener">EWMA data every 10 days</a>.</li>
+</ul>
 </li>
-<li><p><code>1//</code> means division and round down the answer. Remainder: <code>print(5//2)</code> will return 2 while <code>print(-5//2)</code> will return -3.</p>
+</ul>
 </li>
-<li><p><code>type(A)</code> will return the data type of <code>A</code>.</p>
+<li><p>EWMA model(Exponentially Weighted Moving Average):</p>
+<ul>
+<li><p>We have Simple Moving average by using <code>.rolling()</code> in Pandas but it has some cons:</p>
+<ul>
+<li>Smaller window will still lead to noise.</li>
+<li>Always lag by the size of the window(missing data at the beginning).</li>
+<li>Never reach the full peak or valley due to the averaging nature.</li>
+<li>Can’t estimate future behavior as all SMA does is describing the trend in the past.</li>
+</ul>
 </li>
-<li><p><code>max(A,B,C)</code> will return the greatest numerical value in <code>A,B,C</code>. <code>min(A,B,C)</code> does exactly the opposite.</p>
+<li><p>Key nature about EWMA:</p>
+<ul>
+<li>Overcome the cons of SMA.</li>
+<li>Put more weight on values that occurred more recently.</li>
+<li>The weight applied depends on the actual parameters used and the window size.</li>
+<li><code>.ewm()</code> has parameters: <code>com</code>(center of mass); <code>span</code>, <code>halflife</code> and <code>adjust</code>.</li>
+</ul>
 </li>
-<li><p><code>round(A)</code> will help us rounding A. i.e. 5.4 becomes 5 and 4.7 becomes 5.</p>
+<li><p>Formula for the EWMA:<br>$$<br>y_t =   \frac{\sum\limits_{i=0}^t w_i x_{t-i}}{\sum\limits_{i=0}^t w_i}<br>$$</p>
+<ul>
+<li>$y_{t}$ is the output value at time t</li>
+<li>$x_{t}$ is the input value at time t</li>
+<li>All we need to define is $\omega _{i}$ and it depends on the <strong>adjust</strong> parameter you provided.</li>
+</ul>
 </li>
-<li><p><code>list1[0]</code> A list can be indexed. <code>[-1]</code> will return the last element in the list, <code>[-2]</code> will return the second last element etc. <code>[1:]</code> will give all elements include and after position 1. <code>[1:3]</code> will return elements at position 1 &amp; 2 but won’t include 3(左闭右开).</p>
+<li><p>If <code>adjust = True</code>:<br>$$<br>y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + …</p>
+<ul>
+<li>(1 - \alpha)^t x_{0}}{1 + (1 - \alpha) + (1 - \alpha)^2 + …</li>
+<li>(1 - \alpha)^t}<br>$$</li>
+</ul>
+<ul>
+<li>By default, <code>adjust = True</code>.</li>
+<li>$0&lt; \alpha &lt;1$ </li>
+<li>This is basically the same as the first expression.</li>
+<li>We are taking all historical values into account.</li>
+<li>$\omega _{i}= (1-\alpha)^{i}$</li>
+</ul>
 </li>
-<li><p><code>list1[1] = new_value</code> We can re-define an element value inside a list using this method.</p>
+<li><p>If <code>adjust = False</code>:<br>$$<br>\begin{split}y_0 &amp;= x_0 \<br>y_t &amp;= (1 - \alpha) y_{t-1} + \alpha x_t,\end{split}<br>$$</p>
+<ul>
+<li>$0&lt; \alpha &lt;1$ </li>
+<li>A bit different</li>
+<li>We only take into account the input at <strong>t</strong> and the output at <strong>t-1</strong></li>
+</ul>
 </li>
-<li><p><code>name = [&quot;Oscar&quot;, &quot;Jack&quot; , &quot;Michael&quot;]</code> <code>number = [3,5,6,7]</code> . If we want to combine these two lists, we could use <code>name.append(number)</code>. This will return <code>[&quot;Oscar&quot;, &quot;Jack&quot; , &quot;Michael&quot;,[3,5,6,7]]</code>. In other words, adding a list into a list. We can also do <code>name.extend(number)</code>. This will return <code>[&quot;Oscar&quot;, &quot;Jack&quot; , &quot;Michael&quot;,3,5,6,7]</code></p>
+<li><p>From the above expressions, we still need to determine $\alpha$. There are three ways:</p>
+<ul>
+<li><p>Span:<br>$$<br>\alpha = \frac{2}{s + 1},\text{for span}\ s \geq 1<br>$$<br>Span corresponds to what is commonly called an <strong>“N-day EWMA”</strong>.</p>
+</li>
+<li><p>Center of mass:<br>$$<br>\alpha = \frac{1}{1 + c},\text{for center of mass}\ c \geq 0<br>$$<br>Center of mass has more physical interpretation and can be thought of in terms of span: $c=\frac{s−1}{2}$</p>
+</li>
+<li><p>Half-life:<br>$$<br>\alpha = 1 - \exp^{\frac{\log 0.5}{h}},\text{for half-life}\ h &gt; 0<br>$$<br>Half-life is the period of time for the exponential weight to reduce to one half.</p>
+</li>
+</ul>
+</li>
+<li><p>Demo:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas_datareader <span class="keyword">as</span> pdr</span><br><span class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="comment">#Fetching data</span></span><br><span class="line">yf.pdr_override()</span><br><span class="line">start = datetime.date(<span class="number">2019</span>,<span class="number">8</span>,<span class="number">1</span>)	</span><br><span class="line">end = datetime.date(<span class="number">2019</span>,<span class="number">9</span>,<span class="number">16</span>)</span><br><span class="line">data = pdr.get_data_yahoo(<span class="string">"TSLA"</span>,start,end)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Plotting data</span></span><br><span class="line">fig,axe = plt.subplots(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">data[<span class="string">"Close"</span>].plot(label = <span class="string">"Raw data"</span>)</span><br><span class="line"><span class="comment">#data["Close"].rolling(7).mean().plot(label = "7MA")</span></span><br><span class="line">data[<span class="string">"Close"</span>].ewm(span = <span class="number">7</span>).mean().plot(label = <span class="string">"7EWMA"</span>)</span><br><span class="line"></span><br><span class="line">axe.set_xlabel(<span class="string">"Price"</span>)</span><br><span class="line">axe.set_ylabel(<span class="string">"Time"</span>)</span><br><span class="line">axe.set_title(<span class="string">"7 days EWMA analysis on Tesla"</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
 </li>
 </ol>
-<p>18 . Adding an element to a certain position in a list, we could use <code>list1.insert(A,B)</code>. This means we want to put <code>B</code>(element) at position <code>A</code>.</p>
-<ol start="19">
-<li><p><code>list1.remove(A)</code> remove <code>A</code>(element) from the list.</p>
-</li>
-<li><p><code>list1.pop()</code> remove the last element from the list.</p>
-</li>
-<li><p><code>list1.count(A)</code> count how many times <code>A</code>(element) appears in a list.</p>
-</li>
-<li><p><code>list1.sort()</code> sort the list in default ascending order(numerical,alphabet). If we want to sort in descending order, use <code>list1.sort(reverse = True)</code>.</p>
-</li>
-<li><p><code>list1.reverse()</code> This will reverse the order of the list.</p>
-</li>
-<li><p><code>tuple1 = (A,B,C)</code> use a small bracket to define. Its value can’t be changed once defined. We can have a list of tuples <code>[(1,2),(3,4),(8,9)]</code></p>
-</li>
-<li><p><code>if</code> statement: the condition after <code>if</code> must be either <code>True</code> or <code>False</code>. Further Boolean algebra can be applied: <code>or</code>, <code>and</code>, <code>nor</code> etc.</p>
-</li>
-<li><p><code>!=</code> means not equal in python</p>
-</li>
-<li><p><code>dictionary1 = {key:value}</code> In other words, key-value pairs are used to define a dictionary</p>
-</li>
-<li><p>There are two ways of getting values in the dictionary. <code>result=dictionary1[key]</code>. This method will return an error if the <code>key</code> doesn’t exist. <code>result=dictionary.get(key,default_value)</code> If the key doesn’t exist, it will return <code>None</code>. We may also fill in a default value(optional) which will only be returned if the key doesn’t exist.</p>
-</li>
-<li><p><code>While</code> loop will keep running until the condition afterwards becomes <code>False</code>.</p>
-</li>
-<li><p>Get out of one loop: <code>break</code></p>
-</li>
-<li><p>A <code>string</code> can be sliced. See the example.</p>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> “Love”:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
-
-<p>This will return “l”,”o”,”v”,”e”</p>
-<ol start="32">
-<li><p><code>for i in range(3)</code> means from 1 to 3 excluding 3. i.e. 1,2</p>
-</li>
-<li><p>We can put lists inside a list to make it a 2D(3D) array. </p>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list1 = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">        [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],</span><br><span class="line">         [<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]]</span><br></pre></td></tr></table></figure>
-
-<p>We can easily slicing the array by<code>list1[1][2]</code>. This means obtaining the data at row 1 and column 2. We have 6 in this case. </p>
-<p>Nasty <code>for</code> means: cascading <code>for loops</code>. Here, we can have:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list1 = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">        [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],</span><br><span class="line">         [<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]]</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> list1:</span><br><span class="line">    <span class="keyword">for</span> column <span class="keyword">in</span> rows:</span><br><span class="line">        <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
-<p>Know what I mean, makes the logic really clear.</p>
-<p>A really beautiful example applying <code>for</code> loops, successfully solve the problem without cascading <code>for</code> loops. </p>
-<p>Problem: replace a(A), e(E), i(I), o(O), u(U) in a word by g(G).</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">translate</span><span class="params">(phrase)</span>:</span></span><br><span class="line">     translation = <span class="string">""</span></span><br><span class="line">     <span class="keyword">for</span> letter <span class="keyword">in</span> phrase:</span><br><span class="line">          <span class="keyword">if</span> letter.lower() <span class="keyword">in</span> <span class="string">"aeiou"</span>:</span><br><span class="line">               <span class="keyword">if</span> letter.isupper():</span><br><span class="line">                    translation = translation + <span class="string">"G"</span></span><br><span class="line">               <span class="keyword">else</span>:</span><br><span class="line">                    translation = translation + <span class="string">"g"</span></span><br><span class="line">          <span class="keyword">else</span>:</span><br><span class="line">               translation = translation + letter</span><br><span class="line">     <span class="keyword">return</span> translation</span><br></pre></td></tr></table></figure>
-
-<ol start="34">
-<li><p><code>try</code>&amp; <code>except</code> method</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    In=int(input(<span class="string">"Fill in the answer"</span>))</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    Print(<span class="string">"Invalid input, not an integer"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>Here, if the input isn’t an integer, an error will show up. By using <code>try</code>, <code>except</code> method, operations in <code>except</code> will run if and only if there is an error.</p>
-<p>We can also specify the type of error after <code>expect</code>, refer to the example below.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    answer = <span class="number">10</span> / int(input(<span class="string">"Enter Number: "</span>))</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError <span class="keyword">as</span> e:</span><br><span class="line">    print(e)</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">"Caught any exception"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>If the input is zero, it will print out the error type in <code>except</code> because we only specified <code>ZeroDivisionError</code>. For any other types of errors, it will print out <code>caught any exception</code>. </p>
-<p>We can also specify other types of error such as <code>ValueError</code> etc.</p>
-</li>
-<li><p><code>text = open(“filename.txt”, “mode”)</code></p>
-<p>Modes we have: <code>“r”</code>: read; <code>“w”</code>: overwrite existing file; <code>“a”</code>: append; <code>“r+”</code>:  read &amp; overwrite, <code>“a+”</code>: read &amp; append; <code>“b”</code>: read the text in binary</p>
-<p>Make sure to close the file using <code>text.close()</code>once opened a file.</p>
-</li>
-<li><p>To read all the content, using <code>text.read()</code></p>
-<p>To read a certain line, use <code>text.readline()</code>. This will read the first line when we run it for the first time and read the second line when we run it for the second time etc.</p>
-<p>Also,we could use <code>text.readlines()</code>. This will put every line in a <code>list</code>, we could fetch any line using the index method.</p>
-</li>
-<li><p>If we want to write(append) a file, make sure to change <code>“r”</code> into <code>&quot;w&quot;</code>(<code>&quot;a&quot;</code>) </p>
-</li>
-</ol>
-<p>Using :<code>text.write(“Whatever you want to add”)</code></p>
-<ol start="38">
-<li>By creating a new class, we are actually creating a new datatype in some ways. When we use a class, we need to instantiate the class like <code>oscar = Student()</code>. oscar here is no longer a <code>class</code> instead it becomes an <code>object</code>.</li>
-<li>Inheritance: We can create a new class that contains all the functions and the attributes in the old class. Quick demo: <code>class New(Old)</code>. I will write a separate note to introduce it in detail.</li>
-<li>If we want to change a float(decimal) to a fraction using the method below:</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> fractions <span class="keyword">import</span> Fraction</span><br><span class="line">print(str(Fraction(<span class="number">0.25</span>)))</span><br></pre></td></tr></table></figure>
-
-<p>​     This will return <code>&quot;1/4&quot;</code> </p>
-<h1 id="End"><a href="#End" class="headerlink" title="End"></a>End</h1><p>Thanks for reading. These notes are abstract from the <a href="https://www.mikedane.com/programming-languages/python/" target="_blank" rel="noopener">Python introduction course</a> created by <a href="https://www.mikedane.com/" target="_blank" rel="noopener">Mike Dane</a>(Giraffe academy).</p>
-<p>I want to express my thanks to Mike. Awesome videos as always. Make sure to check out his website, contents are absolutely amazing.</p>
 
     </div>
 
@@ -494,15 +480,15 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+              <a href="/Python_for_Finance_1/" rel="next" title="Python for Finance part 1">
+                <i class="fa fa-chevron-left"></i> Python for Finance part 1
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-              <a href="/Mysql_basics/" rel="prev" title="Mysql basics">
-                Mysql basics <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
     </footer>
@@ -703,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#End"><span class="nav-text">End</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-Time-series-analysis"><span class="nav-text">9. Time series analysis</span></a></li></ol></div>
             
 
           </div>
