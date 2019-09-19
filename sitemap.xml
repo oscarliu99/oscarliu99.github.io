@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yuxuanliu.tech/finance_basics/</loc>
+    
+    <lastmod>2019-09-19T15:52:41.512Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yuxuanliu.tech/Python_for_Finance_2/</loc>
     
     <lastmod>2019-09-19T14:51:42.194Z</lastmod>
@@ -96,13 +103,6 @@
     <loc>https://yuxuanliu.tech/c++_basics/</loc>
     
     <lastmod>2019-09-11T15:32:46.789Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuxuanliu.tech/finance_basics/</loc>
-    
-    <lastmod>2019-09-11T15:32:23.425Z</lastmod>
     
   </url>
   
