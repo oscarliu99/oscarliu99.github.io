@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="1. Introduction First do activate pyfinance to activate the conda environment. Then do jupyter notebook to run the note book  2. Python review 0 also means False in python. 0.1 is True [1,2,3] can als">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-18T14:10:00.829Z">
+<meta property="og:updated_time" content="2019-09-19T16:52:01.447Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python for Finance part 1">
 <meta name="twitter:description" content="1. Introduction First do activate pyfinance to activate the conda environment. Then do jupyter notebook to run the note book  2. Python review 0 also means False in python. 0.1 is True [1,2,3] can als">
@@ -302,7 +302,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 18-09-2019 15:10:00" itemprop="dateModified" datetime="2019-09-18T15:10:00+01:00">18-09-2019</time>
+                <time title="Modified: 19-09-2019 17:52:01" itemprop="dateModified" datetime="2019-09-19T17:52:01+01:00">19-09-2019</time>
               </span>
             
           
@@ -641,19 +641,7 @@
 </li>
 <li><p>Daily return is useful but it doesn’t give a insight into how much a investor is actually making. Cumulative return is computed relatively to <strong>the day investment is made</strong>.</p>
 </li>
-<li><p>Formula: $i_{i}=(1+r_{t})\times i_{t-1}$</p>
-</li>
-<li><p>Python code:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">"daily_cumulative_return"</span>] = ( <span class="number">1</span> + df[<span class="string">"daily_return"</span>] ).cumprod()</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>Assume we invest $1 on the first day, we are finding out how much we actually have today. </p>
-</li>
-<li><p>We need to find daily return first before finding daily cumulative return.</p>
-</li>
-<li><p><code>.cumprod()</code> means cumulative product. Old $i_{i}$ becomes $i_{t-1}$ to calculate new $i_{i}$</p>
-</li>
-</ul>
+<li><p>Formula: $R_{c} = \frac{P_{t}}{P_{0}}-1$</p>
 </li>
 </ul>
 </li>
