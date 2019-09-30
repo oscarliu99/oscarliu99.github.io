@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/Header1.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Header1.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Header1.png?v=7.3.0">
+  <meta name="baidu-site-verification" content="4Z230QvLFPWJYfG5">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.3.0',
+    sidebar: {"position":"left","display":"always","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+  <meta name="description" content="11. Portfolio optimization Monte Carlo Simulation: randomly assign a weight to each security in our portfolio, then calculate the mean daily return, daily return std and Sharp ratio  Plot results on a">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python for Finance part 3">
+<meta property="og:url" content="https://yuxuanliu.tech/Python_for_Finance_3/index.html">
+<meta property="og:site_name" content="Logical thinking">
+<meta property="og:description" content="11. Portfolio optimization Monte Carlo Simulation: randomly assign a weight to each security in our portfolio, then calculate the mean daily return, daily return std and Sharp ratio  Plot results on a">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-30T03:25:15.330Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python for Finance part 3">
+<meta name="twitter:description" content="11. Portfolio optimization Monte Carlo Simulation: randomly assign a weight to each security in our portfolio, then calculate the mean daily return, daily return std and Sharp ratio  Plot results on a">
+  <link rel="canonical" href="https://yuxuanliu.tech/Python_for_Finance_3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Python for Finance part 3 | Logical thinking</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Logical thinking</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Keep exploring</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+      </li>
+    
+  </ul>
+
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+</div>
+    </header>
+
+    
+
+  <a href="https://github.com/oscarliu99" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yuxuanliu.tech/Python_for_Finance_3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuxuan Liu">
+      <meta itemprop="description" content="Welcome to my personal blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Logical thinking">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">Python for Finance part 3
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 30-09-2019 10:59:42 / Modified: 04:25:15" itemprop="dateCreated datePublished" datetime="2019-09-30T10:59:42+01:00">30-09-2019</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Finance/" itemprop="url" rel="index"><span itemprop="name">Finance</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    <span class="post-meta-item-text">Comments: </span>
+  
+    <a href="/Python_for_Finance_3/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Python_for_Finance_3/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="11-Portfolio-optimization"><a href="#11-Portfolio-optimization" class="headerlink" title="11. Portfolio optimization"></a>11. Portfolio optimization</h2><ol>
+<li><p>Monte Carlo Simulation: randomly assign a weight to each security in our portfolio, then calculate the mean daily return, daily return std and Sharp ratio</p>
+</li>
+<li><p>Plot results on a chart showing <strong>Return against Volatility and colored by Sharp Ratio</strong>.</p>
+</li>
+<li><p>Full code for Monte Carlo:</p>
+<a id="more"></a>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"></span><br><span class="line"><span class="comment">#Load data</span></span><br><span class="line">TESLA = pd.read_csv(<span class="string">"Tesla_data.csv"</span>,index_col=<span class="string">"Date"</span>,parse_dates=<span class="literal">True</span>)</span><br><span class="line">GOOGLE = pd.read_csv(<span class="string">"Google_data.csv"</span>,index_col=<span class="string">"Date"</span>,parse_dates=<span class="literal">True</span>)</span><br><span class="line">GM = pd.read_csv(<span class="string">"GM_data.csv"</span>,index_col=<span class="string">"Date"</span>,parse_dates=<span class="literal">True</span>)</span><br><span class="line">APPLE = pd.read_csv(<span class="string">"Apple_data.csv"</span>,index_col=<span class="string">"Date"</span>,parse_dates=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Create a new dataframe with adjusted close prices only</span></span><br><span class="line">df_close = pd.concat([TESLA[<span class="string">"Adj Close"</span>],GOOGLE[<span class="string">"Adj Close"</span>],GM[<span class="string">"Adj Close"</span>],APPLE[<span class="string">"Adj Close"</span>]],axis = <span class="number">1</span>)</span><br><span class="line">df_close.columns = [<span class="string">"TESLA"</span>,<span class="string">"GOOGLE"</span>,<span class="string">"GM"</span>,<span class="string">"APPLE"</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#Find daily return in the log scale</span></span><br><span class="line">df_daily_return = np.log(df_close/df_close.shift(<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#Create several arries to store data</span></span><br><span class="line">array_return = np.zeros(<span class="number">5000</span>)</span><br><span class="line">array_variance = np.zeros(<span class="number">5000</span>)</span><br><span class="line">array_sharp = np.zeros(<span class="number">5000</span>)</span><br><span class="line">array_allocation = np.zeros((<span class="number">5000</span>,<span class="number">4</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#5000 iteration(Monte Carlo method)</span></span><br><span class="line"><span class="keyword">for</span> m <span class="keyword">in</span> range(<span class="number">5000</span>):</span><br><span class="line">    <span class="comment">#Create a random allocation and normalise it.</span></span><br><span class="line">    allocation = np.random.random(<span class="number">4</span>)</span><br><span class="line">    allocation = allocation/np.sum(allocation)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#Find the total daily return which has taken into account allocation</span></span><br><span class="line">    allo_ret = (df_daily_return*allocation).sum(axis = <span class="number">1</span>)</span><br><span class="line">    <span class="comment">#Change daily average return to yearly</span></span><br><span class="line">    exp_ret = allo_ret.mean()*<span class="number">252</span></span><br><span class="line">    <span class="comment">#Find the expected volatility(standard deviation)</span></span><br><span class="line">    exp_vol = allo_ret.std()*sqrt(<span class="number">252</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#We may also use the line of code below to make calculations faster.</span></span><br><span class="line">    <span class="comment">#exp_vol = np.sqrt(np.dot(allocation.T, np.dot(df_daily_return.cov() * 252, allocation)))</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#Store data</span></span><br><span class="line">    array_return[m] = exp_ret</span><br><span class="line">    array_variance[m] = exp_vol</span><br><span class="line">    array_sharp[m] = exp_ret/exp_vol</span><br><span class="line">    array_allocation[m] = allocation</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Plot data</span></span><br><span class="line">plt.figure(figsize=(<span class="number">12</span>,<span class="number">8</span>))</span><br><span class="line">plt.scatter(array_variance,array_return,c=array_sharp,cmap=<span class="string">'plasma'</span>)</span><br><span class="line">position = array_sharp.argmax()</span><br><span class="line">print(array_allocation[position])</span><br><span class="line">plt.colorbar(label=<span class="string">'Sharpe Ratio'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'Volatility(standard deviation)'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'Return'</span>) </span><br><span class="line">plt.scatter(array_variance[position],array_return[position],c=<span class="string">'blue'</span>,s=<span class="number">40</span>,edgecolors=<span class="string">'black'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>We can either use arithmetic daily return = $\frac {P_{t}}{P_{t-1}}-1$ or logarithm daily return = $\lg \frac{P_{t}}{P_{t-1}}$ for portfolio optimization. However, logarithm daily return is recommended as it has better performance.</p>
+</li>
+<li><p>Random guessing is not really efficient, we can also use math to find the optimal Sharp Ratio for any given portfolio.</p>
+</li>
+<li><p>The idea of using math is to build a minimizer to find:<br>$$<br>S’ = -\frac{R_{p}-R_{f}}{\sigma_{p}}<br>$$<br>the minimum of the <strong>negative</strong> of the Sharpe ratio leaving us the maximum of the Sharpe ratio.</p>
+</li>
+<li><p>Full code for minimizer(Scipy):</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> minimize</span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"></span><br><span class="line"><span class="comment">#Load data</span></span><br><span class="line">TESLA = pd.read_csv(<span class="string">"Tesla_data.csv"</span>,index_col=<span class="string">"Date"</span>,parse_dates=<span class="literal">True</span>)</span><br><span class="line">GOOGLE = pd.read_csv(<span class="string">"Google_data.csv"</span>,index_col=<span class="string">"Date"</span>,parse_dates=<span class="literal">True</span>)</span><br><span class="line">GM = pd.read_csv(<span class="string">"GM_data.csv"</span>,index_col=<span class="string">"Date"</span>,parse_dates=<span class="literal">True</span>)</span><br><span class="line">APPLE = pd.read_csv(<span class="string">"Apple_data.csv"</span>,index_col=<span class="string">"Date"</span>,parse_dates=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Create a new dataframe with adjusted close prices only</span></span><br><span class="line">df_close = pd.concat([TESLA[<span class="string">"Adj Close"</span>],GOOGLE[<span class="string">"Adj Close"</span>],GM[<span class="string">"Adj Close"</span>],APPLE[<span class="string">"Adj Close"</span>]],axis = <span class="number">1</span>)</span><br><span class="line">df_close.columns = [<span class="string">"TESLA"</span>,<span class="string">"GOOGLE"</span>,<span class="string">"GM"</span>,<span class="string">"APPLE"</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#Find daily return</span></span><br><span class="line">df_daily_return = np.log(df_close/df_close.shift(<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#A function returns sharpe ratio</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_return_vol_sharp</span><span class="params">(allocation)</span>:</span></span><br><span class="line">    allocation = allocation/np.sum(allocation)</span><br><span class="line">    allo_ret = (df_daily_return*allocation).sum(axis = <span class="number">1</span>)</span><br><span class="line">    exp_ret = allo_ret.mean()*<span class="number">252</span></span><br><span class="line">    exp_vol = allo_ret.std()*sqrt(<span class="number">252</span>)</span><br><span class="line">    exp_sharpe = exp_ret/exp_vol</span><br><span class="line">    <span class="keyword">return</span> np.array([exp_ret,exp_vol,exp_sharpe])</span><br><span class="line"></span><br><span class="line"><span class="comment">#Another function returns negaive sharpe ratio so we want to minimise it to maximise sharpe ratio</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">neg_sharpe</span><span class="params">(allocation)</span>:</span></span><br><span class="line">    <span class="keyword">return</span>  get_return_vol_sharp(allocation)[<span class="number">2</span>] * <span class="number">-1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_sum</span><span class="params">(allocation)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    Returns 0 if sum of weights is 1.0</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="keyword">return</span> np.sum(allocaiton) - <span class="number">1</span></span><br><span class="line">cons = (&#123;<span class="string">'type'</span>:<span class="string">'eq'</span>,<span class="string">'fun'</span>: check_sum&#125;)</span><br><span class="line"></span><br><span class="line">bounds = ((<span class="number">0</span>, <span class="number">1</span>), (<span class="number">0</span>, <span class="number">1</span>), (<span class="number">0</span>, <span class="number">1</span>), (<span class="number">0</span>, <span class="number">1</span>))</span><br><span class="line">init_guess = [<span class="number">0.25</span>,<span class="number">0.25</span>,<span class="number">0.25</span>,<span class="number">0.25</span>]</span><br><span class="line"><span class="comment">#opt_results = minimize(neg_sharpe, init_guess, method='SLSQP', bounds=bounds, constraints=cons)</span></span><br><span class="line">opt_results = minimize(neg_sharpe, init_guess, method=<span class="string">'SLSQP'</span>, bounds=bounds)</span><br><span class="line">print(opt_results)</span><br><span class="line">print(get_return_vol_sharp(opt_results.x))</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Firstly, we need to create a function we wish to maximize. Then create another function returning the negative. This second function is what we want to minimize.</li>
+<li><code>constraints = cons</code> is a parameter of the constraint. This means that the value returned from the function must equal to 0 otherwise it will be filtered.</li>
+<li>We need to set <code>bonds</code>(boundaries) for each input. It is quite helpful and easy to understand as the sum for <code>allocation</code> is 1.</li>
+<li>Set an initial guess, often we do even allocation.</li>
+</ul>
+</li>
+<li><p>Full code for efficient frontier:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> minimize</span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="comment">#Load data</span></span><br><span class="line">TESLA = pd.read_csv(<span class="string">"Tesla_data.csv"</span>,index_col=<span class="string">"Date"</span>,parse_dates=<span class="literal">True</span>)</span><br><span class="line">GOOGLE = pd.read_csv(<span class="string">"Google_data.csv"</span>,index_col=<span class="string">"Date"</span>,parse_dates=<span class="literal">True</span>)</span><br><span class="line">GM = pd.read_csv(<span class="string">"GM_data.csv"</span>,index_col=<span class="string">"Date"</span>,parse_dates=<span class="literal">True</span>)</span><br><span class="line">APPLE = pd.read_csv(<span class="string">"Apple_data.csv"</span>,index_col=<span class="string">"Date"</span>,parse_dates=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Create a new dataframe with adjusted close prices only</span></span><br><span class="line">df_close = pd.concat([TESLA[<span class="string">"Adj Close"</span>],GOOGLE[<span class="string">"Adj Close"</span>],GM[<span class="string">"Adj Close"</span>],APPLE[<span class="string">"Adj Close"</span>]],axis = <span class="number">1</span>)</span><br><span class="line">df_close.columns = [<span class="string">"TESLA"</span>,<span class="string">"GOOGLE"</span>,<span class="string">"GM"</span>,<span class="string">"APPLE"</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#Find daily return</span></span><br><span class="line">df_daily_return = np.log(df_close/df_close.shift(<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#A function returns sharpe ratio</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_return_vol_sharp</span><span class="params">(allocation)</span>:</span></span><br><span class="line">    allocation = allocation/np.sum(allocation)</span><br><span class="line">    allo_ret = (df_daily_return*allocation).sum(axis = <span class="number">1</span>)</span><br><span class="line">    exp_ret = allo_ret.mean()*<span class="number">252</span></span><br><span class="line">    exp_vol = allo_ret.std()*sqrt(<span class="number">252</span>)</span><br><span class="line">    <span class="keyword">return</span> np.array([exp_ret,exp_vol])</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">volati</span><span class="params">(allocation)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> get_return_vol_sharp(allocation)[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_sum</span><span class="params">(allocation)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    Returns 0 if sum of weights is 1.0</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="keyword">return</span> np.sum(allocation) - <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">bounds = ((<span class="number">0</span>, <span class="number">1</span>), (<span class="number">0</span>, <span class="number">1</span>), (<span class="number">0</span>, <span class="number">1</span>), (<span class="number">0</span>, <span class="number">1</span>))</span><br><span class="line">init_guess = [<span class="number">0.25</span>,<span class="number">0.25</span>,<span class="number">0.25</span>,<span class="number">0.25</span>]</span><br><span class="line">y_axis = np.linspace(<span class="number">0</span>,<span class="number">0.4</span>,<span class="number">30</span>)</span><br><span class="line">list_x = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> y_axis:</span><br><span class="line">    cons = (&#123;<span class="string">'type'</span>:<span class="string">'eq'</span>,<span class="string">'fun'</span>: check_sum&#125;,&#123;<span class="string">'type'</span>:<span class="string">'eq'</span>,<span class="string">'fun'</span>: <span class="keyword">lambda</span> w: get_return_vol_sharp(w)[<span class="number">0</span>] - i&#125;)</span><br><span class="line">    opt_results = minimize(volati, init_guess, method=<span class="string">'SLSQP'</span>, bounds=bounds, constraints=cons)</span><br><span class="line">    list_x.append(opt_results[<span class="string">"fun"</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Create several arries to store data</span></span><br><span class="line">array_return = np.zeros(<span class="number">3000</span>)</span><br><span class="line">array_variance = np.zeros(<span class="number">3000</span>)</span><br><span class="line">array_sharp = np.zeros(<span class="number">3000</span>)</span><br><span class="line">array_allocation = np.zeros((<span class="number">3000</span>,<span class="number">4</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#3000 iteration(Monte Carlo method)</span></span><br><span class="line"><span class="keyword">for</span> m <span class="keyword">in</span> range(<span class="number">3000</span>):</span><br><span class="line">    <span class="comment">#Create a random allocation and normalise it.</span></span><br><span class="line">    allocation = np.random.random(<span class="number">4</span>)</span><br><span class="line">    allocation = allocation/np.sum(allocation)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#Find the total daily return which has taken into account allocation</span></span><br><span class="line">    allo_ret = (df_daily_return*allocation).sum(axis = <span class="number">1</span>)</span><br><span class="line">    <span class="comment">#Change daily average return to yearly</span></span><br><span class="line">    exp_ret = allo_ret.mean()*<span class="number">252</span></span><br><span class="line">    <span class="comment">#Find the expected volatility(standard deviation)</span></span><br><span class="line">    exp_vol = allo_ret.std()*sqrt(<span class="number">252</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#We may also use the line of code below to make calculations faster.</span></span><br><span class="line">    <span class="comment">#exp_vol = np.sqrt(np.dot(allocation.T, np.dot(df_daily_return.cov() * 252, allocation)))</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#Store data</span></span><br><span class="line">    array_return[m] = exp_ret</span><br><span class="line">    array_variance[m] = exp_vol</span><br><span class="line">    array_sharp[m] = exp_ret/exp_vol</span><br><span class="line">    array_allocation[m] = allocation</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Plot data</span></span><br><span class="line">plt.scatter(array_variance,array_return,c=array_sharp,cmap=<span class="string">'plasma'</span>)</span><br><span class="line">position = array_sharp.argmax()</span><br><span class="line">print(array_allocation[position])</span><br><span class="line">plt.colorbar(label=<span class="string">'Sharpe Ratio'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'Volatility(standard deviation)'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'Return'</span>) </span><br><span class="line">plt.scatter(array_variance[position],array_return[position],c=<span class="string">'blue'</span>,s=<span class="number">40</span>,edgecolors=<span class="string">'black'</span>)</span><br><span class="line">plt.plot(list_x,y_axis,<span class="string">'g--'</span>,linewidth=<span class="number">3</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>Find the range of y and minimise x within this range to find efficient frontier.</p>
+</li>
+</ol>
+<h2 id="12-Finance-concepts"><a href="#12-Finance-concepts" class="headerlink" title="12. Finance concepts"></a>12. Finance concepts</h2><ol>
+<li><p>Types of funds:</p>
+<ul>
+<li>ETF(Exchange Traded Funds):<ul>
+<li>Holdings are transparent and public</li>
+<li>Individuals can trade ETF just like stocks(Liquidity)</li>
+<li>Expense ratio: 0.01%-0.1% asset under management(<strong>AUM</strong>)</li>
+</ul>
+</li>
+<li>Mutual Funds(公募基金):<ul>
+<li>A pool of funds collected from investors for the purpose of investing in securities</li>
+<li>Operated by fund managers</li>
+<li>Normally disclose their holdings once a quarter(may vary)</li>
+<li>Individuals can trade at the end of the day through broker(掮客)</li>
+<li>Expense ratio: 0.5%-3% AUM</li>
+</ul>
+</li>
+<li>Hedge funds(对冲基金):<ul>
+<li>Alternative investments using pooled funds</li>
+<li>Less regulation and only open to accredited investors</li>
+<li>No need to disclose strategy</li>
+<li>Trading of hedge funds depends on agreements.</li>
+<li>Expense ratio: 2% of AUM and 20% of the profit</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Order books:</p>
+<ul>
+<li>An order is created when you click <strong>BUY</strong> on your stock trading APP(broker).</li>
+<li>An order includes the following information:<ul>
+<li>Buy or sell</li>
+<li>Symbol(sticker) of the stock</li>
+<li>Number of shares</li>
+<li>Limit(only buy share under certain price) or market(buy share at the current market price)</li>
+<li>Price(only required if it is an limit order)</li>
+</ul>
+</li>
+<li>The order is sent to exchanges and goes into an order book.</li>
+<li>Your order may not actually be sent to the exchange due to the reasons below:<ul>
+<li>Order can be done within the broker</li>
+<li>Order is done within the darkpool(private exchanges between brokers)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>High frequency trading(HFT):</p>
+<ul>
+<li>HFT firms make profit using the latency(潜在) differences due to geographical distance.</li>
+<li>Latency arbitrage: A bank purchases a large amount of share. It needs to send orders to multiple exchanges, it takes some time(2ms) for the order to travel between exchanges. HFT firm builds colocated server to detect this large order so they can send orders to other exchanges faster than the bank. The price is almost guaranteed to go up due to the large buy-in so HFT makes money. </li>
+</ul>
+</li>
+<li><p>Short-selling(抛空):</p>
+<ul>
+<li>If you believe the price for a share will go down, you can go to the broker and borrow someone else’s share.</li>
+<li>Sell these shares and buy back when it goes down. You end up making money.</li>
+<li>However, you will end up losing money if the price goes up.</li>
+</ul>
+</li>
+<li><p>Capital asset pricing model(CAPM):</p>
+<ul>
+<li><p>Return of the portfolio:  $r_{p}(t) = cw_{i}r_{i}(t)$ </p>
+</li>
+<li><p>We can also image the whole market as a portfolio to find the <strong>return of market</strong>: $r_{m}(t) = \sum_{i}^{n}w_{m}r_{i}(t)$ where $w_{m}$ is the market capital of a company over the market capital of the market.</p>
+</li>
+<li><p>CAPM equation for a stock: $r_{i}(t) = \beta_{i}r_{m}(t)+\alpha_{i}(t)$</p>
+<ul>
+<li>Return of any share is just a weight of the return of market plus $\alpha_{i}$ which is the residual term.</li>
+<li>We are expecting $\alpha_{i}$ to be zero and we are trying to predict $\alpha_{i}$</li>
+</ul>
+</li>
+<li><p>CAPM equation for a portfolio: $r_{p}(t) = \beta_{p}r_{m}(t)+\sum_{i}^{n}w_{i}\alpha_{i}(t)$</p>
+</li>
+<li><p>Full code for CAPM demo:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br><span class="line"><span class="keyword">import</span> pandas_datareader <span class="keyword">as</span> pdr</span><br><span class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">yf.pdr_override()</span><br><span class="line">start = datetime.date(<span class="number">2015</span>,<span class="number">9</span>,<span class="number">30</span>)</span><br><span class="line">end = datetime.date(<span class="number">2019</span>,<span class="number">9</span>,<span class="number">30</span>)</span><br><span class="line">GM = pdr.get_data_yahoo(<span class="string">"GM"</span>,start,end)</span><br><span class="line">spy = pdr.get_data_yahoo(<span class="string">"SPY"</span>,start,end)</span><br><span class="line">GM[<span class="string">"Daily return"</span>] = (GM[<span class="string">"Close"</span>]/GM.shift(<span class="number">1</span>)[<span class="string">"Close"</span>])<span class="number">-1</span></span><br><span class="line">spy[<span class="string">"Daily return"</span>] = (spy[<span class="string">"Close"</span>]/spy.shift(<span class="number">1</span>)[<span class="string">"Close"</span>])<span class="number">-1</span></span><br><span class="line">beta,alpha,r_value,p_value,std_err = stats.linregress(GM[<span class="string">'Daily return'</span>].iloc[<span class="number">1</span>:],spy[<span class="string">'Daily return'</span>].iloc[<span class="number">1</span>:])</span><br><span class="line">print(beta)</span><br><span class="line">print(alpha)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>A few notes</p>
+<ul>
+<li>When the price for a share is extremely high, the company may split up a share in to two or three. This will cause a big jump in the share price which will affect our trading algorithm.</li>
+<li>The price for a stock will go up before dividends pay-out being announced and go down afterwards. This will affect our trading algorithm as well.</li>
+<li>Adjusted close will remove the influence above. You should use the adjusted close where possible.</li>
+<li>Survivorship bias: companies with poor performance are removed from S&amp;P 500 as time move on. Leaving only companies with good performance. This will cause bias, making us too optimistic about our strategy. In other words, companies in S&amp;P 500 in 2006 are different from today.</li>
+<li>EMH(Efficient Market Hypothesis):<ul>
+<li>stocks always trade at their fair value on stock exchanges, making it impossible for investors to either purchase undervalued stocks or sell stocks for inflated prices.</li>
+<li>The only way to gain higher return is by purchasing riskier investments.</li>
+<li>We believe EMH is NOT true and market is not 100% efficient otherwise there is no point doing analysis. Besides, large hedge funds keep making money is also evidence that the market is not 100% efficient.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+        </div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/Python_for_Finance_2/" rel="next" title="Python for Finance part 2">
+                <i class="fa fa-chevron-left"></i> Python for Finance part 2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="comments"></div>
+  
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yuxuan Liu</p>
+  <div class="site-description motion-element" itemprop="description">Welcome to my personal blog</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">tags</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/oscarliu99" title="GitHub &rarr; https://github.com/oscarliu99" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:oscarliu991110@gmail.com" title="E-Mail &rarr; mailto:oscarliu991110@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://www.linkedin.com/in/yuxuan-liu-588090134/" title="Linkedin &rarr; https://www.linkedin.com/in/yuxuan-liu-588090134/" rel="noopener" target="_blank"><i class="fa fa-fw fa-linkedin"></i>Linkedin</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://www.facebook.com/yuxuan.liu.99" title="FB Page &rarr; https://www.facebook.com/yuxuan.liu.99" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://i.loli.net/2019/09/09/agwTuhdslZc63xe.jpg" title="Wechat &rarr; https://i.loli.net/2019/09/09/agwTuhdslZc63xe.jpg" rel="noopener" target="_blank"><i class="fa fa-fw fa-weixin"></i>Wechat</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/oscarliu99/Qunar_crawl/raw/master/CV.pdf" title="Résumé &rarr; https://github.com/oscarliu99/Qunar_crawl/raw/master/CV.pdf" rel="noopener" target="_blank"><i class="fa fa-fw fa-file"></i>Résumé</a>
+      </span>
+    
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/en" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#11-Portfolio-optimization"><span class="nav-text">11. Portfolio optimization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-Finance-concepts"><span class="nav-text">12. Finance concepts</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user-circle"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yuxuan Liu. All rights reserved.</span>
+</div>
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    Total visitor: <span id="busuanzi_value_site_pv"></span>
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    <span id="busuanzi_value_site_uv"></span> people have read my articles.
+</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+  <div class="addthis_inline_share_toolbox">
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d760fe3ab778431" async="async"></script>
+</div>
+
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/affix.js?v=7.3.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 20845,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', function() {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', function() {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: '5yS5iCBBQeh4I83PJnNiPhWn-gzGzoHsz',
+    appKey: '3gi8JsrdAcPMFzGdPSnOGuuW',
+    placeholder: 'Please feel free to leave a comment :)',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'en' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>

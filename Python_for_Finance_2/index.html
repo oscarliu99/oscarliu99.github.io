@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="9. Time series analysis Key words related to time series:  Trend: Upward, Horizontal/Stationary and Downward. Seasonality(季节性): repeated trends Cyclical(周期性): trends with no set repetition   Statsmode">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-20T14:58:45.105Z">
+<meta property="og:updated_time" content="2019-09-30T03:00:39.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python for Finance part 2">
 <meta name="twitter:description" content="9. Time series analysis Key words related to time series:  Trend: Upward, Horizontal/Stationary and Downward. Seasonality(季节性): repeated trends Cyclical(周期性): trends with no set repetition   Statsmode">
@@ -302,7 +302,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 20-09-2019 15:58:45" itemprop="dateModified" datetime="2019-09-20T15:58:45+01:00">20-09-2019</time>
+                <time title="Modified: 30-09-2019 04:00:39" itemprop="dateModified" datetime="2019-09-30T04:00:39+01:00">30-09-2019</time>
               </span>
             
           
@@ -490,16 +490,13 @@
 <li><p>Implanting ideas in Python:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas_datareader <span class="keyword">as</span> pdr</span><br><span class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"></span><br><span class="line"><span class="comment">#Fetching data</span></span><br><span class="line">start = datetime.date(<span class="number">2013</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">end = datetime.date(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">yf.pdr_override()</span><br><span class="line">TESLA = pdr.get_data_yahoo(<span class="string">"TSLA"</span>,start,end)</span><br><span class="line">GOOGLE = pdr.get_data_yahoo(<span class="string">"GOOGL"</span>,start,end)</span><br><span class="line">GM = pdr.get_data_yahoo(<span class="string">"GM"</span>,start,end)</span><br><span class="line">APPLE = pdr.get_data_yahoo(<span class="string">"AAPL"</span>,start,end)</span><br><span class="line">allocation = np.array([<span class="number">0.4</span>,<span class="number">0.2</span>,<span class="number">0.1</span>,<span class="number">0.3</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#Set a new dataframe with close prices only</span></span><br><span class="line">df = pd.concat([TESLA[<span class="string">"Close"</span>],GOOGLE[<span class="string">"Close"</span>],GM[<span class="string">"Close"</span>],APPLE[<span class="string">"Close"</span>]],axis = <span class="number">1</span>)</span><br><span class="line">df.columns = [<span class="string">"TESLA"</span>,<span class="string">"GOOGLE"</span>,<span class="string">"GM"</span>,<span class="string">"APPLE"</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#Find daily return</span></span><br><span class="line">daily_return = ((df/df.shift(<span class="number">1</span>))<span class="number">-1</span>)*allocation</span><br><span class="line">Total_daily_return = daily_return.sum(axis = <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Find mean and std of daily return</span></span><br><span class="line">daily_return_mean = Total_daily_return.mean()</span><br><span class="line">daily_return_std = Total_daily_return.std()</span><br><span class="line"></span><br><span class="line"><span class="comment">#Find SR and ASR</span></span><br><span class="line">SR = daily_return_mean/daily_return_std</span><br><span class="line">ASR = SR*sqrt(<span class="number">252</span>)</span><br><span class="line">print(ASR)</span><br></pre></td></tr></table></figure>
 
-
-
-
 </li>
 </ol>
 </li>
 </ul>
 </li>
 </ol>
-<pre><code>Nothing new here, just implanting ideas explained above into Python.</code></pre>
+
     </div>
 
     
@@ -536,6 +533,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+              <a href="/Python_for_Finance_3/" rel="prev" title="Python for Finance part 3">
+                Python for Finance part 3 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
     </footer>
@@ -590,7 +591,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
