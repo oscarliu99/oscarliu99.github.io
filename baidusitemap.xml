@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yuxuanliu.tech/IB_Analogue_circuit_and_devices_part_1/</loc>
+    <lastmod>2019-12-17</lastmod>
+  </url>  <url>
+    <loc>https://yuxuanliu.tech/c++_basics/</loc>
+    <lastmod>2019-12-14</lastmod>
+  </url>  <url>
     <loc>https://yuxuanliu.tech/IB_Linear_system_1/</loc>
     <lastmod>2019-10-24</lastmod>
   </url>  <url>
@@ -47,9 +53,6 @@
     <lastmod>2019-09-11</lastmod>
   </url>  <url>
     <loc>https://yuxuanliu.tech/pymysql_demo/</loc>
-    <lastmod>2019-09-11</lastmod>
-  </url>  <url>
-    <loc>https://yuxuanliu.tech/c++_basics/</loc>
     <lastmod>2019-09-11</lastmod>
   </url>
 </urlset>
