@@ -70,7 +70,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/12/17/nKDsRyCoEANdpge.png">
 <meta property="og:image" content="https://i.loli.net/2019/12/17/IsAxXo3ZPTa5Nd1.png">
 <meta property="og:image" content="https://i.loli.net/2019/12/17/wxsB51IQ3YuohKG.png">
-<meta property="og:updated_time" content="2019-12-17T14:37:55.582Z">
+<meta property="og:updated_time" content="2019-12-17T14:44:43.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IB Analogue circuit and devices notes part 1">
 <meta name="twitter:description" content="1. Bipolar transistor DC properties p-n junction:  p-type silicon: substitute silicon by Group Ⅲ element. Majority charge carrier: holes; minority change carrier: electrons. n-type silicon: substitute">
@@ -299,7 +299,7 @@
                 
               
 
-              <time title="Created: 17-12-2019 22:32:03 / Modified: 14:37:55" itemprop="dateCreated datePublished" datetime="2019-12-17T22:32:03Z">17-12-2019</time>
+              <time title="Created: 17-12-2019 22:32:03 / Modified: 14:44:43" itemprop="dateCreated datePublished" datetime="2019-12-17T22:32:03Z">17-12-2019</time>
             </span>
           
             
@@ -413,20 +413,29 @@
 </li>
 <li><p>How $I_{C}$ will change if we change $V_{CE}$ and $I_{B}$ slightly. </p>
 </li>
-<li><p>$$<br>\because i_{c}=\left.\frac{\partial I_{c}}{\partial I_{B}}\right|<em>{V</em>{CE}}i_{b}+\left.\frac{\partial I_{c}}{\partial V_{C E}}\right|<em>{I</em>{B}} V_{ce}\<br>\frac{\partial I_{c}}{\partial I_{B}}=h_{fe}\<br>\frac{\partial I_{c}}{\partial V_{C E}}=h_{oe}\<br>\therefore i_{c}=h_{f e} i_{b}+h_{o e} v_{c e}<br>$$</p>
+<li><p>$$<br>\because i_{c}=\left.\frac{\partial I_{c}}{\partial I_{B}}\right|<em>{V</em>{CE}}i_{b}+\left.\frac{\partial I_{c}}{\partial V_{C E}}\right|<em>{I</em>{B}} V_{ce}\<br>$$</p>
+<p>$$<br>\frac{\partial I_{c}}{\partial I_{B}}=h_{fe}\<br>$$</p>
+<p>$$<br>\frac{\partial I_{c}}{\partial V_{C E}}=h_{oe}\<br>$$</p>
+<p>$$<br>\therefore i_{c}=h_{f e} i_{b}+h_{o e} v_{c e}<br>$$</p>
 </li>
+</ul>
+</li>
+</ol>
+<ul>
 <li><p>How $V_{BE}$ will change if we change $I_{B}$ and $V_{CE}$ slightly.</p>
 </li>
-<li><p>$$<br>\because v_{be}=\left.\frac{\partial V_{BE}}{\partial I_{B}}\right|<em>{V</em>{CE}}i_{b}+\left.\frac{\partial V_{BE}}{\partial V_{C E}}\right|<em>{I</em>{B}} V_{ce}\<br>\frac{\partial V_{BE}}{\partial I_{B}}=h_{ie}\<br>\frac{\partial V_{BE}}{\partial V_{CE}}=h_{re}\<br>\therefore v_{be}=h_{ie} i_{b}+h_{re} v_{ce}<br>$$</p>
+<li><p>$$<br>\because v_{be}=\left.\frac{\partial V_{BE}}{\partial I_{B}}\right|<em>{V</em>{CE}}i_{b}+\left.\frac{\partial V_{BE}}{\partial V_{C E}}\right|<em>{I</em>{B}} V_{ce}\<br>$$</p>
+<p>$$<br>\frac{\partial V_{BE}}{\partial I_{B}}=h_{ie}\<br>$$</p>
+<p>$$<br>\frac{\partial V_{BE}}{\partial V_{CE}}=h_{re}\<br>$$</p>
+<p>$$<br>\therefore v_{be}=h_{ie} i_{b}+h_{re} v_{ce}<br>$$</p>
 <p>$h_{re}$ can be neglected in most cases.</p>
 </li>
 <li><p>Full ssm diagram:</p>
 <p><img src="https://i.loli.net/2019/12/17/xXe3suD6V9NZfo5.png" alt="1571182027668"></p>
 </li>
 </ul>
-</li>
-<li><p>Some tips:</p>
-<ul>
+<ol start="3">
+<li>Some tips:<ul>
 <li>All dc parameters are grounded in ssm.</li>
 <li>$i_{b}$ by defemination is the current flow into $h_{ie}$ rather than the current in base.</li>
 <li>$i_{b}$ and $i_{c}$ are current so they just flow into the ground. However, $h_{fe}i_{b}$ is a current source so current must flow back.</li>
