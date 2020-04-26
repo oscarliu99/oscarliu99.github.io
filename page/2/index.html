@@ -258,6 +258,151 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yuxuanliu.tech/Python_for_Finance_2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuxuan Liu">
+      <meta itemprop="description" content="Welcome to my personal blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Logical thinking">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/Python_for_Finance_2/" class="post-title-link" itemprop="url">Python for Finance part 2</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 19-09-2019 22:11:11" itemprop="dateCreated datePublished" datetime="2019-09-19T22:11:11+01:00">19-09-2019</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 30-09-2019 04:32:52" itemprop="dateModified" datetime="2019-09-30T04:32:52+01:00">30-09-2019</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Finance/" itemprop="url" rel="index"><span itemprop="name">Finance</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    <span class="post-meta-item-text">Comments: </span>
+  
+    <a href="/Python_for_Finance_2/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Python_for_Finance_2/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="9-Time-series-analysis"><a href="#9-Time-series-analysis" class="headerlink" title="9. Time series analysis"></a>9. Time series analysis</h2><ol>
+<li><p>Key words related to time series:</p>
+<ul>
+<li>Trend: Upward, Horizontal/Stationary and Downward.</li>
+<li>Seasonality(季节性): repeated trends</li>
+<li>Cyclical(周期性): trends with no set repetition</li>
+</ul>
+</li>
+<li><p>Statsmodels:</p>
+<ul>
+<li><p><code>import statsmodels.api as sm</code></p>
+</li>
+<li><p>Demo: Hodrick-Prescott filter: $\min_{\{ \tau_{t}\} }\sum_{t}^{T}\zeta_{t}^{2}+\lambda\sum_{t=1}^{T}\left[\left(\tau_{t}-\tau_{t-1}\right)-\left(\tau_{t-1}-\tau_{t-2}\right)\right]^{2}$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Fetching data</span></span><br><span class="line">yf.pdr_override()</span><br><span class="line">start = datetime.date(<span class="number">2018</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">end = datetime.date(<span class="number">2019</span>,<span class="number">9</span>,<span class="number">16</span>)</span><br><span class="line">data = pdr.get_data_yahoo(<span class="string">"TSLA"</span>,start,end)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Applying Hodrick-Prescott filter, We get back a tuple with two elements, the first is the cycle pandas series and the second is the trend pandas series.</span></span><br><span class="line">close_cycle, close_trend = sm.tsa.filters.hpfilter(data[<span class="string">"Close"</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#Plotting</span></span><br><span class="line">fig,axe = plt.subplots(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line"><span class="comment">#data["Close"].plot(label = "Raw data")</span></span><br><span class="line"><span class="comment">#close_cycle.plot(label = "Cycle")</span></span><br><span class="line">close_trend.plot(label = <span class="string">"Trend"</span>)</span><br><span class="line">data[<span class="string">"Close"</span>].rolling(<span class="number">20</span>).mean().plot(label = <span class="string">"20MA"</span>)</span><br><span class="line">axe.set_xlabel(<span class="string">"Price"</span>)</span><br><span class="line">axe.set_ylabel(<span class="string">"Time"</span>)</span><br><span class="line">axe.set_title(<span class="string">"Hodrick-Prescott filter analysis on Tesla"</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Python_for_Finance_2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+    
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://yuxuanliu.tech/Python_for_Finance_1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -783,132 +928,6 @@
     
     
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuxuanliu.tech/pandas_advanced/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yuxuan Liu">
-      <meta itemprop="description" content="Welcome to my personal blog">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Logical thinking">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/pandas_advanced/" class="post-title-link" itemprop="url">Pandas advanced</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 12-09-2019 15:21:17 / Modified: 18:25:57" itemprop="dateCreated datePublished" datetime="2019-09-12T15:21:17+01:00">12-09-2019</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="fa fa-comment-o"></i>
-    </span>
-    <span class="post-meta-item-text">Comments: </span>
-  
-    <a href="/pandas_advanced/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/pandas_advanced/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-Handling-missing-data"><a href="#1-Handling-missing-data" class="headerlink" title="1. Handling missing data"></a>1. Handling missing data</h2><ol>
-<li><p>Creating a dataframe with <code>NaN</code>:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">dict1 = &#123;<span class="string">"A"</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],<span class="string">"B"</span>:[<span class="number">1</span>,<span class="number">2</span>,np.nan],<span class="string">"C"</span>:[<span class="number">1</span>,np.nan,np.nan]&#125;</span><br><span class="line">df = pd.DataFrame(dict1)</span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Drop missing values:</p>
-<ul>
-<li><code>df = df.dropna()</code> drop rows with at least one <code>NaN</code> inside</li>
-<li><code>df = df.dropna(axis = 1)</code> drop columns with at least one <code>NaN</code> inside</li>
-<li><code>df = df.dropna(axis = 1,thresh = 2)</code> The column won’t be dropped if there are at least two non-<code>NaN</code> values in the column.</li>
-</ul>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/pandas_advanced/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-    
-    
   </section>
 
   
@@ -946,7 +965,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

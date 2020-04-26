@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuxuanliu.tech/"/>
-  <updated>2020-04-20T17:09:06.981Z</updated>
+  <updated>2020-04-26T16:10:47.944Z</updated>
   <id>https://yuxuanliu.tech/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>IB Communication Notes</title>
-    <link href="https://yuxuanliu.tech/IB_Communication/"/>
-    <id>https://yuxuanliu.tech/IB_Communication/</id>
-    <published>2020-04-20T23:53:24.000Z</published>
-    <updated>2020-04-20T17:09:06.981Z</updated>
+    <title>IB Electrical Power notes</title>
+    <link href="https://yuxuanliu.tech/IB_Electrical_Power/"/>
+    <id>https://yuxuanliu.tech/IB_Electrical_Power/</id>
+    <published>2020-04-26T22:55:20.000Z</published>
+    <updated>2020-04-26T16:10:47.944Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="IB-Paper6-Communication-Notes"><a href="#IB-Paper6-Communication-Notes" class="headerlink" title="IB Paper6 Communication Notes"></a>IB Paper6 Communication Notes</h1><p>This is my personal notes abstract from the Communication course given by the Department of Engineering, University of Cambridge. This course introduces some basic ideas in Information Engineering includes: Analogue modulation, Frequency modulation, ADC, Baseband modulation &amp; demodulation, Passband modulation &amp; demodulation, Channel coding and Multiple Access.</p><p>Lectures is given by Dr. Venkataramanan. If you spot any mistake or have any questions, please don’t hesitate to contact me. Many thanks</p><a id="more"></a><p><img src="https://i.loli.net/2020/04/21/GSJKudTzkbI49gw.jpg" alt="1"></p><p><img src="https://i.loli.net/2020/04/21/D3R6XrBQa4ikzcx.jpg" alt="2.jpg"></p><p><img src="https://i.loli.net/2020/04/21/mgfa4UxBb3oSDPQ.jpg" alt="3.jpg"></p><p><img src="https://i.loli.net/2020/04/21/EI6vU4ysxFJe3kD.jpg" alt="4.jpg"></p><p><img src="https://i.loli.net/2020/04/21/5Rc6lEXwmdOBHgW.jpg" alt="5.jpg"></p><p><img src="https://i.loli.net/2020/04/21/NtYegnuPZ2TGXV8.jpg" alt="6.jpg"></p><p><img src="https://i.loli.net/2020/04/21/OQKAgFI56ECH8BZ.jpg" alt="7.jpg"></p><p><img src="https://i.loli.net/2020/04/21/SI2YGTPDoUp9WwV.jpg" alt="8.jpg"></p><p><img src="https://i.loli.net/2020/04/21/pES73KaJLDIo8eH.jpg" alt="9.jpg"></p><p><img src="https://i.loli.net/2020/04/21/Fy69bCkSDsQW45U.jpg" alt="10.jpg"></p><p><img src="https://i.loli.net/2020/04/21/R8AvZlrN2IP1yLm.jpg" alt="11.jpg"></p><p><img src="https://i.loli.net/2020/04/21/sY3CGnczqINASFE.jpg" alt="12.jpg"></p><p><img src="https://i.loli.net/2020/04/21/6z4Yscw5SIbTJVl.jpg" alt="13.jpg"></p><p><img src="https://i.loli.net/2020/04/21/AfWGNsuC7D2eicb.jpg" alt="14.jpg"></p><p><img src="https://i.loli.net/2020/04/21/qaHLbFT4ckdzfCn.jpg" alt="15.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="IB-Paper-5-Electrical-Power-Notes"><a href="#IB-Paper-5-Electrical-Power-Notes" class="headerlink" title="IB Paper 5 Electrical Power Notes"></a>IB Paper 5 Electrical Power Notes</h1><p>This is my personal notes abstract from the Electrical Power course given by the Department of Engineering, University of Cambridge. This course introduces Electrical Power System includes: Three Phase Power Supply, AC Generator(Synchronous Machine), Transmission Line and Induction Motor(Asynchronous Machine).</p><p>Lectures are given by Dr. Flack. If you spot any mistake or have any questions, please don’t hesitate to contact me. Many thanks</p><a id="more"></a><p><img src="https://i.loli.net/2020/04/27/wduVo3CBMxezv9T.jpg" alt="1.jpg"></p><p><img src="https://i.loli.net/2020/04/27/qaANV5x9nrzDFOi.jpg" alt="2.jpg"></p><p><img src="https://i.loli.net/2020/04/27/HyvPhjZkxeOCX6n.jpg" alt="3.jpg"></p><p><img src="https://i.loli.net/2020/04/27/AIO4hBPGo6Czklx.jpg" alt="4.jpg"></p><p><img src="https://i.loli.net/2020/04/27/me8VoqhTz7bG6pS.jpg" alt="5.jpg"></p><p><img src="https://i.loli.net/2020/04/27/pjT1ABk3FDtOEW2.jpg" alt="6.jpg"></p><p><img src="https://i.loli.net/2020/04/27/PaZOphYXVx6QwBz.jpg" alt="7.jpg"></p><p><img src="https://i.loli.net/2020/04/27/T7bjNfZW4cYsCh2.jpg" alt="8.jpg"></p><p><img src="https://i.loli.net/2020/04/27/SZNgz48Het6Uoc9.jpg" alt="9.jpg"></p><p><img src="https://i.loli.net/2020/04/27/8JlQfYKRozISZqE.jpg" alt="10.jpg"></p><p><img src="https://i.loli.net/2020/04/27/v8ibScFlQTG2KjE.jpg" alt="11.jpg"></p><p><img src="https://i.loli.net/2020/04/27/F85cNRrbXOk37eL.jpg" alt="12.jpg"></p><p><img src="https://i.loli.net/2020/04/27/PpcYgiCU2emxLHT.jpg" alt="13.jpg"></p><p><img src="https://i.loli.net/2020/04/27/mvD86fOwJXzGbNU.jpg" alt="14.jpg"></p><p><img src="https://i.loli.net/2020/04/27/JQHcbLf2R9wgMSi.jpg" alt="15.jpg"></p>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;IB-Paper6-Communication-Notes&quot;&gt;&lt;a href=&quot;#IB-Paper6-Communication-Notes&quot; class=&quot;headerlink&quot; title=&quot;IB Paper6 Communication Notes&quot;&gt;&lt;/a&gt;IB Paper6 Communication Notes&lt;/h1&gt;&lt;p&gt;This is my personal notes abstract from the Communication course given by the Department of Engineering, University of Cambridge. This course introduces some basic ideas in Information Engineering includes: Analogue modulation, Frequency modulation, ADC, Baseband modulation &amp;amp; demodulation, Passband modulation &amp;amp; demodulation, Channel coding and Multiple Access.&lt;/p&gt;
-&lt;p&gt;Lectures is given by Dr. Venkataramanan. If you spot any mistake or have any questions, please don’t hesitate to contact me. Many thanks&lt;/p&gt;
+      &lt;h1 id=&quot;IB-Paper-5-Electrical-Power-Notes&quot;&gt;&lt;a href=&quot;#IB-Paper-5-Electrical-Power-Notes&quot; class=&quot;headerlink&quot; title=&quot;IB Paper 5 Electrical Power Notes&quot;&gt;&lt;/a&gt;IB Paper 5 Electrical Power Notes&lt;/h1&gt;&lt;p&gt;This is my personal notes abstract from the Electrical Power course given by the Department of Engineering, University of Cambridge. This course introduces Electrical Power System includes: Three Phase Power Supply, AC Generator(Synchronous Machine), Transmission Line and Induction Motor(Asynchronous Machine).&lt;/p&gt;
+&lt;p&gt;Lectures are given by Dr. Flack. If you spot any mistake or have any questions, please don’t hesitate to contact me. Many thanks&lt;/p&gt;
     
     </summary>
     
@@ -36,9 +36,35 @@
       <category term="University notes" scheme="https://yuxuanliu.tech/categories/University-notes/"/>
     
     
-      <category term="Information" scheme="https://yuxuanliu.tech/tags/Information/"/>
+      <category term="Electricity" scheme="https://yuxuanliu.tech/tags/Electricity/"/>
     
       <category term="Engineering" scheme="https://yuxuanliu.tech/tags/Engineering/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IB Communication Notes</title>
+    <link href="https://yuxuanliu.tech/IB_Communication/"/>
+    <id>https://yuxuanliu.tech/IB_Communication/</id>
+    <published>2020-04-20T23:53:24.000Z</published>
+    <updated>2020-04-26T16:10:41.514Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="IB-Paper-6-Communication-Notes"><a href="#IB-Paper-6-Communication-Notes" class="headerlink" title="IB Paper 6 Communication Notes"></a>IB Paper 6 Communication Notes</h1><p>This is my personal notes abstract from the Communication course given by the Department of Engineering, University of Cambridge. This course introduces some basic ideas in Information Engineering includes: Analogue modulation, Frequency modulation, ADC, Baseband modulation &amp; demodulation, Passband modulation &amp; demodulation, Channel coding and Multiple Access.</p><p>Lectures are given by Dr. Venkataramanan. If you spot any mistake or have any questions, please don’t hesitate to contact me. Many thanks</p><a id="more"></a><p><img src="https://i.loli.net/2020/04/21/GSJKudTzkbI49gw.jpg" alt="1"></p><p><img src="https://i.loli.net/2020/04/21/D3R6XrBQa4ikzcx.jpg" alt="2.jpg"></p><p><img src="https://i.loli.net/2020/04/21/mgfa4UxBb3oSDPQ.jpg" alt="3.jpg"></p><p><img src="https://i.loli.net/2020/04/21/EI6vU4ysxFJe3kD.jpg" alt="4.jpg"></p><p><img src="https://i.loli.net/2020/04/21/5Rc6lEXwmdOBHgW.jpg" alt="5.jpg"></p><p><img src="https://i.loli.net/2020/04/21/NtYegnuPZ2TGXV8.jpg" alt="6.jpg"></p><p><img src="https://i.loli.net/2020/04/21/OQKAgFI56ECH8BZ.jpg" alt="7.jpg"></p><p><img src="https://i.loli.net/2020/04/21/SI2YGTPDoUp9WwV.jpg" alt="8.jpg"></p><p><img src="https://i.loli.net/2020/04/21/pES73KaJLDIo8eH.jpg" alt="9.jpg"></p><p><img src="https://i.loli.net/2020/04/21/Fy69bCkSDsQW45U.jpg" alt="10.jpg"></p><p><img src="https://i.loli.net/2020/04/21/R8AvZlrN2IP1yLm.jpg" alt="11.jpg"></p><p><img src="https://i.loli.net/2020/04/21/sY3CGnczqINASFE.jpg" alt="12.jpg"></p><p><img src="https://i.loli.net/2020/04/21/6z4Yscw5SIbTJVl.jpg" alt="13.jpg"></p><p><img src="https://i.loli.net/2020/04/21/AfWGNsuC7D2eicb.jpg" alt="14.jpg"></p><p><img src="https://i.loli.net/2020/04/21/qaHLbFT4ckdzfCn.jpg" alt="15.jpg"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;IB-Paper-6-Communication-Notes&quot;&gt;&lt;a href=&quot;#IB-Paper-6-Communication-Notes&quot; class=&quot;headerlink&quot; title=&quot;IB Paper 6 Communication Notes&quot;&gt;&lt;/a&gt;IB Paper 6 Communication Notes&lt;/h1&gt;&lt;p&gt;This is my personal notes abstract from the Communication course given by the Department of Engineering, University of Cambridge. This course introduces some basic ideas in Information Engineering includes: Analogue modulation, Frequency modulation, ADC, Baseband modulation &amp;amp; demodulation, Passband modulation &amp;amp; demodulation, Channel coding and Multiple Access.&lt;/p&gt;
+&lt;p&gt;Lectures are given by Dr. Venkataramanan. If you spot any mistake or have any questions, please don’t hesitate to contact me. Many thanks&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="University notes" scheme="https://yuxuanliu.tech/categories/University-notes/"/>
+    
+    
+      <category term="Engineering" scheme="https://yuxuanliu.tech/tags/Engineering/"/>
+    
+      <category term="Information" scheme="https://yuxuanliu.tech/tags/Information/"/>
     
   </entry>
   
@@ -75,9 +101,9 @@
       <category term="University notes" scheme="https://yuxuanliu.tech/categories/University-notes/"/>
     
     
-      <category term="Engineering" scheme="https://yuxuanliu.tech/tags/Engineering/"/>
-    
       <category term="Electricity" scheme="https://yuxuanliu.tech/tags/Electricity/"/>
+    
+      <category term="Engineering" scheme="https://yuxuanliu.tech/tags/Engineering/"/>
     
   </entry>
   
@@ -328,9 +354,9 @@
       <category term="Programming" scheme="https://yuxuanliu.tech/categories/Programming/"/>
     
     
-      <category term="Matplotlib" scheme="https://yuxuanliu.tech/tags/Matplotlib/"/>
-    
       <category term="Python" scheme="https://yuxuanliu.tech/tags/Python/"/>
+    
+      <category term="Matplotlib" scheme="https://yuxuanliu.tech/tags/Matplotlib/"/>
     
   </entry>
   

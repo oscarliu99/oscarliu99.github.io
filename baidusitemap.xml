@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yuxuanliu.tech/IB_Electrical_Power/</loc>
+    <lastmod>2020-04-26</lastmod>
+  </url>  <url>
     <loc>https://yuxuanliu.tech/IB_Communication/</loc>
-    <lastmod>2020-04-20</lastmod>
+    <lastmod>2020-04-26</lastmod>
   </url>  <url>
     <loc>https://yuxuanliu.tech/IB_Analogue_circuit_and_devices_part_1/</loc>
     <lastmod>2019-12-17</lastmod>
