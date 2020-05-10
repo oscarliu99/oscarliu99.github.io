@@ -59,28 +59,28 @@
 <meta name="keywords" content="Yuxuan liu, yuxuan, Python, blog, Cambridge">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Logical thinking">
-<meta property="og:url" content="https://yuxuanliu.tech/archives/2019/page/2/index.html">
+<meta property="og:url" content="https://yuxuanliu.tech/page/5/index.html">
 <meta property="og:site_name" content="Logical thinking">
 <meta property="og:description" content="Welcome to my personal blog">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Logical thinking">
 <meta name="twitter:description" content="Welcome to my personal blog">
-  <link rel="canonical" href="https://yuxuanliu.tech/archives/2019/page/2/">
+  <link rel="canonical" href="https://yuxuanliu.tech/page/5/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
+    isHome: true,
     isPost: false,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>Archive | Logical thinking</title>
+  <title>Logical thinking</title>
   
 
 
@@ -248,230 +248,153 @@
         <div class="content-wrap">
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-          <div id="content" class="content page-archive">
+          <div id="content" class="content page-home">
             
+  <section id="posts" class="posts-expand">
+      
 
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-      <span class="archive-page-counter">
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yuxuanliu.tech/python_basics/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuxuan Liu">
+      <meta itemprop="description" content="Welcome to my personal blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Logical thinking">
+    </span>
+      <header class="post-header">
+
         
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/python_basics/" class="post-title-link" itemprop="url">Python basics</a>
+            
+          </h1>
         
-        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 08-09-2019 11:32:01" itemprop="dateCreated datePublished" datetime="2019-09-08T11:32:01+01:00">08-09-2019</time>
+            </span>
           
-        
-        Um..! 21 posts in total. Keep on posting.
-      </span>
-      
+            
 
-      
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 12-09-2019 11:25:38" itemprop="dateModified" datetime="2019-09-12T11:25:38+01:00">12-09-2019</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a></span>
 
-  
-  
-  
+                
+                
+              
+            </span>
+          
 
+          
+            
   
+  <span class="post-meta-item">
     
-    <div class="collection-title">
-      <h1 class="archive-year" id="archive-year-2019">2019</h1>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    <span class="post-meta-item-text">Comments: </span>
+  
+    <a href="/python_basics/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/python_basics/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p><code>\n</code> will create a new line in a string. <code>print(&quot;apple\npear&quot;)</code></p>
+</li>
+<li><p><code>string.lower()</code> will change every character in a string to lower cases.</p>
+</li>
+<li><p><code>string.upper()</code> will change every character in a string to upper cases.</p>
+</li>
+<li><p><code>len(string)</code> will return the length of the string.</p>
+</li>
+<li><p><code>string[3]</code> will could index a string(start from zero)</p>
+</li>
+<li><p><code>string.index(A)</code> will return the position where <code>A</code> first time appear in the string. If <code>A</code> is consisted of multiple characters, it will return the position of the first character in <code>A</code>. If <code>A</code> can’t be found in the string, you will get an error</p>
+</li>
+<li><p><code>string.find(A)</code> very similar to <code>.index(A)</code>. The difference is that if we couldn’t find <code>A</code> in the string, it will return <code>-1</code> instead of an error.</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/python_basics/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
     </div>
-  
-  
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/pandas_visulisation/" itemprop="url">
-            
-              <span itemprop="name">Pandas visulisation basics</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-16T18:01:53+01:00"
-              content="16-09-2019">
-          09-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-  
-
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/datetime_summary/" itemprop="url">
-            
-              <span itemprop="name">Python datetime summary</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-16T00:03:21+01:00"
-              content="16-09-2019">
-          09-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-  
-
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/Matplotlib_basics/" itemprop="url">
-            
-              <span itemprop="name">Matplotlib basics</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-13T23:55:53+01:00"
-              content="13-09-2019">
-          09-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-  
-
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/pandas_advanced/" itemprop="url">
-            
-              <span itemprop="name">Pandas advanced</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-12T15:21:17+01:00"
-              content="12-09-2019">
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-  
-
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/pandas_basics/" itemprop="url">
-            
-              <span itemprop="name">Pandas basics</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-11T23:36:17+01:00"
-              content="11-09-2019">
-          09-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-
-    </div>
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
   </div>
   
   
   
+  </article>
+
+    
+    
+    
+  </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2019/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2019/page/3/">3</a><a class="page-number" href="/archives/2019/page/4/">4</a><a class="extend next" rel="next" href="/archives/2019/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
   </nav>
-
 
 
           </div>

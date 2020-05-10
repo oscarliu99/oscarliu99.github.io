@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[IB Electromagnetism Waves and Fields notes]]></title>
+    <url>%2FIB_EM_waves_and_field%2F</url>
+    <content type="text"><![CDATA[IB Paper 5 EM Waves and Fields NotesThis is my personal notes abstract from the EM waves &amp; fields course given by the Department of Engineering, University of Cambridge. This course introduces some concepts on top of the course in IA, it includes the following topics: Transmission lines, Maxwell Equations, EM waves in dielectric, Antennas, Reflection and refraction of EM waves, EM waves in conducting medium. Lectures are given by Dr. Flewitt. If you spot any mistake or have any questions, please don’t hesitate to contact me. Many thanks]]></content>
+      <categories>
+        <category>University notes</category>
+      </categories>
+      <tags>
+        <tag>Electricity</tag>
+        <tag>Engineering</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[IB Electrical Power notes]]></title>
     <url>%2FIB_Electrical_Power%2F</url>
     <content type="text"><![CDATA[IB Paper 5 Electrical Power NotesThis is my personal notes abstract from the Electrical Power course given by the Department of Engineering, University of Cambridge. This course introduces Electrical Power System includes: Three Phase Power Supply, AC Generator(Synchronous Machine), Transmission Line and Induction Motor(Asynchronous Machine). Lectures are given by Dr. Flack. If you spot any mistake or have any questions, please don’t hesitate to contact me. Many thanks]]></content>
@@ -118,8 +130,8 @@
         <category>Programming</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>Matplotlib</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
