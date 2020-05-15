@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[IB Linear Systems and Control notes]]></title>
+    <url>%2FIB_Linear_System_and_Control%2F</url>
+    <content type="text"><![CDATA[IB Paper 6 Linear Systems &amp; Control NotesThis is my personal notes abstract from the Linear Systems and Control course given by the Department of Engineering, University of Cambridge. This course introduces basic ideas in Linear System and Control Theory. It includes the following topics: Signal &amp; System, Laplace Transform, Impulse Response, Step Response, Transfer Function, Stability &amp; Poles, Frequency Response &amp; Steady State Response, Feedback Control System, Bold Diagram, PID Control, Nyquist Diagram and Feedback Stability. Lectures are given by Dr. Lestas. If you spot any mistake or have any questions, please don’t hesitate to contact me. Many thanks]]></content>
+      <categories>
+        <category>University notes</category>
+      </categories>
+      <tags>
+        <tag>Information</tag>
+        <tag>Engineering</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[IB Signal and Data Analysis notes]]></title>
     <url>%2FIB_Signal_and_Data_Analysis%2F</url>
     <content type="text"><![CDATA[IB Paper 6 Signal and Data Analysis NotesThis is my personal notes abstract from the Signal and Data Analysis course given by the Department of Engineering, University of Cambridge. This course introduces basic tools in data analysis including: Fourier’s Series, Fourier’s Transform and Sampling theory. Lectures are given by Dr. Godsill. If you spot any mistake or have any questions, please don’t hesitate to contact me. Many thanks]]></content>
@@ -8,8 +20,8 @@
         <category>University notes</category>
       </categories>
       <tags>
-        <tag>Engineering</tag>
         <tag>Information</tag>
+        <tag>Engineering</tag>
       </tags>
   </entry>
   <entry>
@@ -20,8 +32,8 @@
         <category>University notes</category>
       </categories>
       <tags>
-        <tag>Electricity</tag>
         <tag>Engineering</tag>
+        <tag>Electricity</tag>
       </tags>
   </entry>
   <entry>
@@ -32,8 +44,8 @@
         <category>University notes</category>
       </categories>
       <tags>
-        <tag>Electricity</tag>
         <tag>Engineering</tag>
+        <tag>Electricity</tag>
       </tags>
   </entry>
   <entry>
@@ -44,8 +56,8 @@
         <category>University notes</category>
       </categories>
       <tags>
-        <tag>Engineering</tag>
         <tag>Information</tag>
+        <tag>Engineering</tag>
       </tags>
   </entry>
   <entry>
@@ -56,20 +68,8 @@
         <category>University notes</category>
       </categories>
       <tags>
+        <tag>Engineering</tag>
         <tag>Electricity</tag>
-        <tag>Engineering</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[IB Linear system notes 1]]></title>
-    <url>%2FIB_Linear_system_1%2F</url>
-    <content type="text"><![CDATA[Lecture 1 Block diagram: It represents flow of information. Blocks are systems. They have equations and are represented by blocks. Inputs and outputs of blocks are signal. They usually have units, are functions of time and are represented by the connections(arrows). Lecture 2 Linear system: $f(u_{1})+f(u_{2})=f(u_{1}+u_{2})$ Satisfy the principal of superposition. Casual: output at $t$ only depends on inputs before $t$ but not inputs after $t$. Time-invariant: as long as values of inputs are the same, values of outputs will be same. Independent of when the input is applied. If a system can be described by a linear differential equation with constant coefficients, the system must be linear. We can approximate a system to be linear for small perturbations from equilibrium(摄动). See the example below, we assume $\dot x=0$ at $(x_{0},y_{0})$, $x = x_{0}+\delta{x}$ and $y = y_{0}+\delta{y}$ $\because \dot{x}=f(x,y)$ $\therefore \dot{x_{0}}=f(x_{0},y_{0})=0$ $\dot{x_{0}}+\dot{\delta x} = f(x_{0}+\delta{x},y_{0}+\delta{y})$ Using Taylor expansion $\dot{\delta x} = f(x_{0},y_{0})+\frac{\partial f(x,y)}{\partial x}(x_{0}+\delta x - x_{0})+\frac{\partial f(x,y)}{\partial y}(y_{0}+\delta y - y_{0})$ $\dot{\delta{x}} = \frac{\partial f(x,y)}{\partial x}\delta x+\frac{\partial f(x,y)}{\partial y}\delta y$ $\dot{\delta x}=A\delta{x}+B\delta{y}$ Lecture 3​ Laplace transform revision: Definition:$$G(s)=\mathcal{L}(g(t))=\int_{0}^{\infty}g(t)\cdot(e^{-st})dt$$ Linearity: the operation of taking Laplace transform is linear.$$\mathcal{L}(\alpha g_{1}(t)+\beta g_{2}(t))=\mathcal{L}(\alpha g_{1}(t))+\mathcal{L}(\beta g_{2}(t))$$ Useful tricks: shift in $s$:$$\mathcal{L}(e^{-\alpha t}g(t)) = G(s+\alpha)$$ Multiply by $t$:$$\mathcal{L}(t\cdot g(t))=\frac {d}{ds}(G(s))$$ Shift in $t$:$$\mathcal{L}(g(t-T))=e^{-sT}G(s)$$ Convolution:$$\mathcal{L}(\int ^{t}_{0} f(\tau)g(t-\tau)d\tau) =\mathcal{L}(f(t))\cdot \mathcal{L}(g(t))$$ Transform of derivatives: differentiation(in the t domain) corresponds to multiply by s(in the s domain). Integration of derivatives: integration(in the t domain) corresponds to divide by s(in the s domain). Final value theorems:$$\lim _{t \rightarrow \infty} y(t)=\lim _{s \rightarrow 0} s \bar{y}(s)$$ Initial value theorems:$$\lim _{t \rightarrow 0^{+}} y(t)=\lim _{s \rightarrow \infty} s \bar{y}(s)$$ Lecture 4 Transfer function($G(s)$): $Y(s)=G(s)\cdot U(s)$ where $Y(s)$ is the Laplace transform of the output and $U(s)$ is the Laplace transform of the input. $\mathcal{L}(y(t))=\mathcal{L}(\int ^{t}_{0} f(\tau)g(t-\tau)d\tau) =\mathcal{L}(u(t))\cdot \mathcal{L}(g(t))$ states that Laplace transform of the output equals the Laplace transform of input times the Laplace transform of the impulse response As a result $\mathcal{L}(g(t))=G(s)$ Laplace transform of the impulse response is the transfer function. We could get the transfer function by finding the impulse response but it is generally easier to find transfer function from differential equations. Laplace transform simplifies calculation by turning a convolution to a multiplication. Notes from Supervision 1 There is always a input signal(usually desired value) and a output signal(usually true value). Output is subtracted from the input leaving error. When doing the inverse of the Laplace transform, always multiply expression by $H(t)$ or state $t&gt;0$]]></content>
-      <categories>
-        <category>University notes</category>
-      </categories>
-      <tags>
-        <tag>Engineering</tag>
-        <tag>Linear system</tag>
       </tags>
   </entry>
   <entry>

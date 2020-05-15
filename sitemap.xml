@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yuxuanliu.tech/IB_Linear_System_and_Control/</loc>
+    
+    <lastmod>2020-05-15T16:37:39.470Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yuxuanliu.tech/IB_Signal_and_Data_Analysis/</loc>
     
     <lastmod>2020-05-13T14:00:02.655Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://yuxuanliu.tech/c++_basics/</loc>
     
     <lastmod>2019-12-14T07:15:08.330Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuxuanliu.tech/IB_Linear_system_1/</loc>
-    
-    <lastmod>2019-10-24T00:28:04.723Z</lastmod>
     
   </url>
   
